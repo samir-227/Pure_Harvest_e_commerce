@@ -1,11 +1,10 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_hub/core/models/page_view_item_model.dart';
 import 'package:fruits_hub/core/utlis/app_images.dart';
-import 'package:fruits_hub/core/utlis/app_texte_style.dart';
+
+import '../../../../../core/utlis/app_text_style.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem({super.key, required this.pageViewItemModel});
@@ -20,7 +19,7 @@ class PageViewItem extends StatelessWidget {
             children: [
               Positioned.fill(
                 child: SvgPicture.asset(
-                  AppImages.assetsImagesItem1BackgroundImage,
+                  AppImages.imagesItem1BackgroundImage,
                   fit: BoxFit.fill,
                 ),
               ),

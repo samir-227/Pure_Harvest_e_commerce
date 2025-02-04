@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/models/page_view_item_model.dart';
 import 'package:fruits_hub/core/utlis/app_images.dart';
-import 'package:fruits_hub/core/utlis/app_texte_style.dart';
+import 'package:fruits_hub/core/utlis/app_text_style.dart';
+
 import 'package:fruits_hub/features/on_boarding/presentation/views/widgets/page_view_item.dart';
 
 class OnBoardingPageView extends StatelessWidget {
@@ -13,8 +14,8 @@ class OnBoardingPageView extends StatelessWidget {
       children: const [
         PageViewItem(
           pageViewItemModel: PageViewItemModel(
-            backgroundImage: AppImages.assetsImagesItem1BackgroundImage,
-            image: AppImages.assetsImagesItem1Image,
+            backgroundImage: AppImages.imagesItem1BackgroundImage,
+            image: AppImages.imagesItem1Image,
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -32,8 +33,8 @@ class OnBoardingPageView extends StatelessWidget {
         ),
         PageViewItem(
           pageViewItemModel: PageViewItemModel(
-            backgroundImage: AppImages.assetsImagesItem2BackgroundImage,
-            image: AppImages.assetsImagesItem2Image,
+            backgroundImage: AppImages.imagesItem2BackgroundImage,
+            image: AppImages.imagesItem2Image,
             title: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
