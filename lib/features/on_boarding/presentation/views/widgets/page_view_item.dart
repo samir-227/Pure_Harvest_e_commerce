@@ -1,8 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_hub/core/models/page_view_item_model.dart';
 import 'package:fruits_hub/core/utlis/app_images.dart';
+import 'package:fruits_hub/core/utlis/app_texte_style.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem({super.key, required this.pageViewItemModel});
@@ -31,13 +34,27 @@ class PageViewItem extends StatelessWidget {
                 ),
               ),
               const Positioned(
-                  top: 0,
-                  right: 0,
-                  child: Padding(
-                      padding: EdgeInsets.all(16), child: Text('تخطي'))),
+                top: 0,
+                right: 0,
+                child: Padding(
+                  padding: EdgeInsets.all(16),
+                  child: Text('تخطي'),
+                ),
+              ),
             ],
           ),
-        )
+        ),
+        const SizedBox(height: 64),
+        pageViewItemModel.title,
+        const SizedBox(height: 24),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Text(
+            textAlign: TextAlign.center,
+            pageViewItemModel.subtitle,
+            style: TextStyles.semiBold13,
+          ),
+        ),
       ],
     );
   }
