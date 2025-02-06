@@ -49,6 +49,66 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Welcome to the `
+  String get welcomeTitle {
+    return Intl.message(
+      'Welcome to the ',
+      name: 'welcomeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search and Shop`
+  String get welcomeTitle2 {
+    return Intl.message(
+      'Search and Shop',
+      name: 'welcomeTitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discover a unique shopping experience with FruitHUB. Explore our wide range of fresh and high-quality fruits and get the best deals and top quality.`
+  String get subtitle1 {
+    return Intl.message(
+      'Discover a unique shopping experience with FruitHUB. Explore our wide range of fresh and high-quality fruits and get the best deals and top quality.',
+      name: 'subtitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We offer you the best carefully selected fruits. Check out the details, images, and reviews to ensure you choose the perfect fruit.`
+  String get subtitle2 {
+    return Intl.message(
+      'We offer you the best carefully selected fruits. Check out the details, images, and reviews to ensure you choose the perfect fruit.',
+      name: 'subtitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Started`
+  String get buttonText {
+    return Intl.message(
+      'Get Started',
+      name: 'buttonText',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

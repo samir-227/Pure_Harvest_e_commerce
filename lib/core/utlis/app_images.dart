@@ -6,9 +6,9 @@ class AppImages {
 
   static const String imagesItem1Image = "assets/images/item-1-image.svg";
 
-  static const String imagesItem2BackgroundImage = "assets/images/item-2-background-image.svg";
-
   static const String imagesItem2Image = "assets/images/item-2-image.svg";
+
+  static const String imagesPageViewItem2BackgroundImage = "assets/images/page_view_item2_background_image.svg";
 
   static const String imagesPlant = "assets/images/Plant.svg";
 

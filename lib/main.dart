@@ -18,13 +18,14 @@ class FruitsHub extends StatelessWidget {
         fontFamily: 'Cairo',
         scaffoldBackgroundColor: Colors.white,
       ),
-      localizationsDelegates: [
+      localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale: Locale('ar'),
+      supportedLocales: S.delegate.supportedLocales,
+      locale: const Locale('ar', 'eg'),
       onGenerateRoute: onGenerateRoute,
       initialRoute: SplashView.routeName,
       debugShowCheckedModeBanner: false,
