@@ -2,8 +2,10 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:fruits_hub/constants.dart';
+import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_hub/core/utlis/app_colors.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
+import 'package:fruits_hub/features/login/presentation/views/login_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
@@ -40,9 +42,10 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
     return Column(
       children: [
         Expanded(
-            child: OnBoardingPageView(
-          pageController: pageController,
-        )),
+          child: OnBoardingPageView(
+            pageController: pageController,
+          ),
+        ),
         DotsIndicator(
           dotsCount: 2,
           decorator: DotsDecorator(
@@ -60,8 +63,13 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           child: Padding(
             padding: EdgeInsets.symmetric(
                 horizontal: kHorizontalPadding, vertical: 15),
-            child:
-                CustomButton(text: S.of(context).buttonText, onPressed: () {}),
+            child: CustomButton(
+              text: S.of(context).buttonText,
+              onPressed: () {
+                Prefs.setBool(kIsOnBoardingViewSeen, true);
+                Navigator.pushReplacementNamed(context, LoginView.routeName);
+              },
+            ),
           ),
         ),
         const SizedBox(height: 48),

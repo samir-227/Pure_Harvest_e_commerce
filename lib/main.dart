@@ -1,10 +1,22 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruits_hub/core/helper/on_generate_route_fun.dart';
 import 'package:fruits_hub/features/splash/presentation/views/splash_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
-void main() {
+import 'core/services/shared_preferences_singleton.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Prefs.init();
+  // DevicePreview(
+  //   enabled: true,
+  //   tools: const [
+  //     ...DevicePreview.defaultTools,
+  //   ],
+  //   builder: (context) => const FruitsHub(),
+  // );
   runApp(const FruitsHub());
 }
 
