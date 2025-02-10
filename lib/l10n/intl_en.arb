@@ -5,6 +5,10 @@
 "subtitle2": "We offer you the best carefully selected fruits. Check out the details, images, and reviews to ensure you choose the perfect fruit.",
 "skip": "Skip",
 "buttonText": "Get Started",
-"appBarLoginTitle": "Login"
+"appBarLoginTitle": "Login",
+"forgetPassword": "Forget Password?",
+"login": "Login",
+"dontHaveAccount": "Don't have an account?",
+"register": "Sign Up"
 
 }

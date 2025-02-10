@@ -24,6 +24,12 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("Login"),
         "buttonText": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "dontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "forgetPassword":
+            MessageLookupByLibrary.simpleMessage("Forget Password?"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "register": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "subtitle1": MessageLookupByLibrary.simpleMessage(
             "Discover a unique shopping experience with FruitHUB. Explore our wide range of fresh and high-quality fruits and get the best deals and top quality."),
