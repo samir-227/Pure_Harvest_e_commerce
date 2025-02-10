@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "buttonText": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "subtitle1": MessageLookupByLibrary.simpleMessage(

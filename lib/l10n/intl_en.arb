@@ -3,6 +3,8 @@
 "welcomeTitle2": "Search and Shop",
 "subtitle1": "Discover a unique shopping experience with FruitHUB. Explore our wide range of fresh and high-quality fruits and get the best deals and top quality.",
 "subtitle2": "We offer you the best carefully selected fruits. Check out the details, images, and reviews to ensure you choose the perfect fruit.",
-  "skip": "Skip",
-  "buttonText": "Get Started"
+"skip": "Skip",
+"buttonText": "Get Started",
+"appBarLoginTitle": "Login"
+
 }
