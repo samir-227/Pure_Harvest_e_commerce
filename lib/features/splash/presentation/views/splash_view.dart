@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/constants.dart';
 import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
-import 'package:fruits_hub/features/login/presentation/views/login_view.dart';
+import 'package:fruits_hub/features/login/presentation/views/sing_in_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:fruits_hub/features/splash/presentation/views/widgets/splash_view_body.dart';
 
@@ -32,7 +32,7 @@ class _SplashViewState extends State<SplashView> {
       Future.delayed(
         const Duration(seconds: 3),
         () {
-          Navigator.pushReplacementNamed(context, LoginView.routeName);
+          Navigator.pushReplacementNamed(context, SingInView.routeName);
         },
       );
     } else {
