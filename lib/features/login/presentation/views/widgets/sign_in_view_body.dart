@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/constants.dart';
 import 'package:fruits_hub/core/utlis/app_colors.dart';
+import 'package:fruits_hub/core/utlis/app_images.dart';
 import 'package:fruits_hub/core/utlis/app_text_style.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/core/widgets/custom_text_form_field.dart';
+import 'package:fruits_hub/features/login/presentation/views/widgets/dont_have_account_widget.dart';
+import 'package:fruits_hub/features/login/presentation/views/widgets/or_divider.dart';
+import 'package:fruits_hub/features/login/presentation/views/widgets/social_login_button.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
 class SingInViewBody extends StatelessWidget {
@@ -54,34 +58,30 @@ class SingInViewBody extends StatelessWidget {
             const SizedBox(
               height: 33,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  S.of(context).dontHaveAccount,
-                  style: TextStyles.semiBold16.copyWith(
-                    color: const Color(0xff949D9E),
-                    height: 1.40,
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                    padding:
-                        MaterialStateProperty.all(EdgeInsets.only(right: 5)),
-                  ),
-                  child: Text(
-                    S.of(context).register,
-                    style: TextStyles.semiBold16.copyWith(
-                      color: AppColors.primaryColor,
-                      height: 1.40,
-                    ),
-                  ),
-                ),
-              ],
+            const DontHaveAccountWidget(),
+            const SizedBox(
+              height: 33,
+            ),
+            const OrDivider(),
+            const SizedBox(
+              height: 33,
+            ),
+            SocialLoginButton(
+              title: S.of(context).loginWithGoogle,
+              icon: AppImages.imagesGoogle,
             ),
             const SizedBox(
-              height: 37,
+              height: 16,
+            ),
+            SocialLoginButton(
+                title: S.of(context).loginWithApple,
+                icon: AppImages.imagesApple),
+            const SizedBox(
+              height: 16,
+            ),
+            SocialLoginButton(
+              title: S.of(context).loginWithFacebook,
+              icon: AppImages.imagesFacebook,
             ),
           ],
         ),

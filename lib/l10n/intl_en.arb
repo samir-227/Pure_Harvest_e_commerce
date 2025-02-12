@@ -9,6 +9,11 @@
 "forgetPassword": "Forget Password?",
 "login": "Login",
 "dontHaveAccount": "Don't have an account?",
-"register": "Sign Up"
+"register": "Sign Up",
+"loginWithGoogle": "Login with Google",
+"loginWithApple": "Login with Apple",
+"loginWithFacebook": "Login with Facebook",
+"orDividerText": "Or"
+
 
 }

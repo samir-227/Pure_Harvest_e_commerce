@@ -10,5 +10,9 @@
 "forgetPassword": "نسيت كلمة المرور؟",
 "login": "تسجيل الدخول",
 "dontHaveAccount":"لا تمتلك حساب؟",
-"register": "قم بإنشاء حساب"
+"register": "قم بإنشاء حساب",
+"loginWithGoogle": "تسجيل بواسطة جوجل",
+"loginWithApple": "تسجيل بواسطة أبل",
+"loginWithFacebook": "تسجيل بواسطة فيسبوك",
+"orDividerText": "أو"
 }

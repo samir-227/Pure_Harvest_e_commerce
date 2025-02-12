@@ -159,6 +159,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Login with Google`
+  String get loginWithGoogle {
+    return Intl.message(
+      'Login with Google',
+      name: 'loginWithGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login with Apple`
+  String get loginWithApple {
+    return Intl.message(
+      'Login with Apple',
+      name: 'loginWithApple',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login with Facebook`
+  String get loginWithFacebook {
+    return Intl.message(
+      'Login with Facebook',
+      name: 'loginWithFacebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Or`
+  String get orDividerText {
+    return Intl.message(
+      'Or',
+      name: 'orDividerText',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
