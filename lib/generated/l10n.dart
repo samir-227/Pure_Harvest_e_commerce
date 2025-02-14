@@ -259,6 +259,26 @@ class S {
       args: [],
     );
   }
+
+  /// `By creating an account, you agree to `
+  String get TermsAndConditions {
+    return Intl.message(
+      'By creating an account, you agree to ',
+      name: 'TermsAndConditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms and Conditions of use`
+  String get Policy {
+    return Intl.message(
+      'Terms and Conditions of use',
+      name: 'Policy',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

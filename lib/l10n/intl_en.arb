@@ -19,7 +19,10 @@
 "loginWithFacebook": "Login with Facebook",
 "orDividerText": "Or",
 "fullname": "Full Name",
-"createNewAccount": "Create new account"
+"createNewAccount": "Create new account",
+"TermsAndConditions": "By creating an account, you agree to ",
+"Policy": "Terms and Conditions of use"
+
 
 
 

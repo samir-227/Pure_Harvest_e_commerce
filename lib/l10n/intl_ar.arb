@@ -20,7 +20,9 @@
 "loginWithFacebook": "تسجيل بواسطة فيسبوك",
 "orDividerText": "أو",
 "fullname": "الاسم الكامل",
-"createNewAccount": "إنشاء حساب جديد"
+"createNewAccount": "إنشاء حساب جديد",
+"TermsAndConditions": "من خلال إنشاء حساب، فإنك توافق على ",
+"policy": "الشروط وأحكامنا الخاصة بنا"
 
 
 }
