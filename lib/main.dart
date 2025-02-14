@@ -5,11 +5,16 @@ import 'package:fruits_hub/core/helper/on_generate_route_fun.dart';
 import 'package:fruits_hub/core/utlis/app_colors.dart';
 import 'package:fruits_hub/features/splash/presentation/views/splash_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
-
+// Import the generated file
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'core/services/shared_preferences_singleton.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await Prefs.init();
   // DevicePreview(
   //   enabled: true,
