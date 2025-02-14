@@ -120,6 +120,16 @@ class S {
     );
   }
 
+  /// `Sign Up`
+  String get appBarRegisterTitle {
+    return Intl.message(
+      'Sign Up',
+      name: 'appBarRegisterTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Forget Password?`
   String get forgetPassword {
     return Intl.message(
@@ -140,11 +150,41 @@ class S {
     );
   }
 
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Don't have an account?`
   String get dontHaveAccount {
     return Intl.message(
       'Don\'t have an account?',
       name: 'dontHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have an account?`
+  String get doYouHaveAccount {
+    return Intl.message(
+      'You have an account?',
+      name: 'doYouHaveAccount',
       desc: '',
       args: [],
     );
@@ -195,6 +235,26 @@ class S {
     return Intl.message(
       'Or',
       name: 'orDividerText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get fullname {
+    return Intl.message(
+      'Full Name',
+      name: 'fullname',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create new account`
+  String get createNewAccount {
+    return Intl.message(
+      'Create new account',
+      name: 'createNewAccount',
       desc: '',
       args: [],
     );

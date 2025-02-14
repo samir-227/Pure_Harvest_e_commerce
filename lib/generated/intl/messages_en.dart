@@ -23,11 +23,18 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("Login"),
+        "appBarRegisterTitle": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "buttonText": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "createNewAccount":
+            MessageLookupByLibrary.simpleMessage("Create new account"),
+        "doYouHaveAccount":
+            MessageLookupByLibrary.simpleMessage("You have an account?"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forget Password?"),
+        "fullname": MessageLookupByLibrary.simpleMessage("Full Name"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginWithApple":
             MessageLookupByLibrary.simpleMessage("Login with Apple"),
@@ -36,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("Login with Google"),
         "orDividerText": MessageLookupByLibrary.simpleMessage("Or"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
         "register": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "subtitle1": MessageLookupByLibrary.simpleMessage(

@@ -7,12 +7,20 @@
 "skip" : "تخطي",
 "buttonText":"ابدأ الان",
 "appBarLoginTitle": "تسجيل دخول",
+"appBarRegisterTitle":"حساب جديد",
 "forgetPassword": "نسيت كلمة المرور؟",
 "login": "تسجيل الدخول",
+"email": "البريد الالكتروني",
+"password": "كلمة المرور",
 "dontHaveAccount":"لا تمتلك حساب؟",
+"doYouHaveAccount": "تمتلك حساب بالفعل؟",
 "register": "قم بإنشاء حساب",
 "loginWithGoogle": "تسجيل بواسطة جوجل",
 "loginWithApple": "تسجيل بواسطة أبل",
 "loginWithFacebook": "تسجيل بواسطة فيسبوك",
-"orDividerText": "أو"
+"orDividerText": "أو",
+"fullname": "الاسم الكامل",
+"createNewAccount": "إنشاء حساب جديد"
+
+
 }

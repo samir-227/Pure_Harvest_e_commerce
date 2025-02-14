@@ -5,9 +5,9 @@ import 'package:fruits_hub/core/utlis/app_images.dart';
 import 'package:fruits_hub/core/utlis/app_text_style.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/core/widgets/custom_text_form_field.dart';
-import 'package:fruits_hub/features/login/presentation/views/widgets/dont_have_account_widget.dart';
-import 'package:fruits_hub/features/login/presentation/views/widgets/or_divider.dart';
-import 'package:fruits_hub/features/login/presentation/views/widgets/social_login_button.dart';
+import 'package:fruits_hub/features/auth/presentation/views/widget/dont_have_account_widget.dart';
+import 'package:fruits_hub/features/auth/presentation/views/widget/or_divider.dart';
+import 'package:fruits_hub/features/auth/presentation/views/widget/social_login_button.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
 class SingInViewBody extends StatelessWidget {
@@ -24,17 +24,17 @@ class SingInViewBody extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-            const CustomTextFormField(
-              hintText: 'البريد الالكتروني',
+            CustomTextFormField(
+              hintText: S.of(context).email,
               keyboardType: TextInputType.emailAddress,
             ),
             const SizedBox(
               height: 16,
             ),
-            const CustomTextFormField(
-              hintText: 'كلمة المرور',
+            CustomTextFormField(
+              hintText: S.of(context).password,
               keyboardType: TextInputType.visiblePassword,
-              suffixIcon: Icon(
+              suffixIcon: const Icon(
                 Icons.remove_red_eye_rounded,
                 color: Color(0xffC9CECF),
               ),

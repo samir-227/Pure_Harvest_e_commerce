@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/utlis/app_text_style.dart';
-import 'package:fruits_hub/generated/l10n.dart';
 
-AppBar buildAppBar(BuildContext context) {
+AppBar buildAppBar(
+  BuildContext context, {
+  required String title,
+}) {
   return AppBar(
     backgroundColor: Colors.transparent,
     centerTitle: true,
     title: Text(
-      S.of(context).appBarLoginTitle,
+      title,
       style: TextStyles.bold23,
     ),
     elevation: 0,

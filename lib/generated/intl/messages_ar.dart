@@ -23,11 +23,19 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+        "appBarRegisterTitle":
+            MessageLookupByLibrary.simpleMessage("حساب جديد"),
         "buttonText": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
+        "createNewAccount":
+            MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+        "doYouHaveAccount":
+            MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginWithApple":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
@@ -36,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
         "orDividerText": MessageLookupByLibrary.simpleMessage("أو"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "register": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
         "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "subtitle1": MessageLookupByLibrary.simpleMessage(
