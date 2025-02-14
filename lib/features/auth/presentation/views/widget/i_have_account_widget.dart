@@ -19,7 +19,9 @@ class IHaveAccountWidget extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           style: ButtonStyle(
             padding: MaterialStateProperty.all(const EdgeInsets.only(right: 5)),
           ),

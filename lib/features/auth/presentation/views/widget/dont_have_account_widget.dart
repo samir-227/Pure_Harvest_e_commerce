@@ -23,7 +23,7 @@ class DontHaveAccountWidget extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            Navigator.pushReplacementNamed(context, SignUpView.routeName);
+            Navigator.pushNamed(context, SignUpView.routeName);
           },
           style: ButtonStyle(
             padding: MaterialStateProperty.all(const EdgeInsets.only(right: 5)),
