@@ -4,7 +4,10 @@ import 'package:flutter/widgets.dart';
 import 'package:fruits_hub/core/utlis/app_colors.dart';
 import 'package:fruits_hub/core/utlis/app_text_style.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/custom_check_box.dart';
+<<<<<<< HEAD
 import 'package:fruits_hub/generated/l10n.dart';
+=======
+>>>>>>> a84af2fa36bd3fcabef348d6a6924f15a83e3307
 
 class TermsAndConditionWidget extends StatefulWidget {
   const TermsAndConditionWidget({super.key});
@@ -38,6 +41,7 @@ class _TermsAndConditionWidgetState extends State<TermsAndConditionWidget> {
         Expanded(
           child: Text.rich(
             TextSpan(
+<<<<<<< HEAD
               text: S.of(context).TermsAndConditions,
               style: TextStyles.semiBold13.copyWith(
                 color: const Color(0xFF949D9E),
@@ -46,6 +50,16 @@ class _TermsAndConditionWidgetState extends State<TermsAndConditionWidget> {
                 TextSpan(
                   text: S.of(context).Policy,
                   style: const TextStyle(
+=======
+              text: 'من خلال إنشاء حساب، فإنك توافق على ',
+              style: TextStyles.semiBold13.copyWith(
+                color: const Color(0xFF949D9E),
+              ),
+              children: const [
+                TextSpan(
+                  text: 'الشروط وأحكامنا الخاصة بنا',
+                  style: TextStyle(
+>>>>>>> a84af2fa36bd3fcabef348d6a6924f15a83e3307
                     color: AppColors.lightPrimaryColor,
                   ),
                 ),
