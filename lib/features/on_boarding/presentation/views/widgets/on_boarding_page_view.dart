@@ -24,17 +24,17 @@ class OnBoardingPageView extends StatelessWidget {
                 TextSpan(
                   text: S.of(context).welcomeTitle,
                   style: TextStyles.bold23.copyWith(),
-                  children: const [
+                  children: [
                     TextSpan(
                       text: ' Fruit',
                       style: TextStyle(
-                        color: AppColors.kPrimaryColor,
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                     ),
                     TextSpan(
                       text: 'HUB',
                       style: TextStyle(
-                        color: Color(0xFFF4A91F),
+                        color: Theme.of(context).colorScheme.secondaryContainer,
                       ),
                     ),
                   ],

@@ -49,10 +49,10 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         DotsIndicator(
           dotsCount: 2,
           decorator: DotsDecorator(
-            activeColor: AppColors.kPrimaryColor,
+            activeColor: Theme.of(context).colorScheme.primary,
             color: currentPage == 1
-                ? AppColors.kPrimaryColor
-                : AppColors.kLightPrimaryColor,
+                ? Theme.of(context).colorScheme.primary
+                :Theme.of(context).colorScheme.secondary,
           ),
         ),
         Visibility(

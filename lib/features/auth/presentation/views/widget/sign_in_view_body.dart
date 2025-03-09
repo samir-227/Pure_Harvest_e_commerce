@@ -45,7 +45,7 @@ class SingInViewBody extends StatelessWidget {
             Text(
               S.of(context).forgetPassword,
               style: TextStyles.semiBold13.copyWith(
-                color: AppColors.kLightPrimaryColor,
+                color: Theme.of(context).colorScheme.secondary,
               ),
             ),
             const SizedBox(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_hub/core/utlis/app_colors.dart';
 import 'package:fruits_hub/core/utlis/app_text_style.dart';
 
 class CustomButton extends StatelessWidget {
@@ -13,7 +12,7 @@ class CustomButton extends StatelessWidget {
       height: 54,
       child: TextButton(
         style: TextButton.styleFrom(
-            backgroundColor: AppColors.kPrimaryColor,
+            backgroundColor: Theme.of(context).colorScheme.primary,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             )),

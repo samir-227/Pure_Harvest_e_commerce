@@ -28,7 +28,7 @@ class IHaveAccountWidget extends StatelessWidget {
           child: Text(
             S.of(context).login,
             style: TextStyles.semiBold16.copyWith(
-              color: AppColors.kPrimaryColor,
+              color: Theme.of(context).colorScheme.primary,
               height: 1.40,
             ),
           ),

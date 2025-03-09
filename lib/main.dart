@@ -5,7 +5,7 @@ import 'package:fruits_hub/core/utlis/app_colors.dart';
 import 'package:fruits_hub/features/splash/presentation/views/splash_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 // Import the generated file
-import 'core/theme/theme_service.dart';
+import 'core/theme/theme_data.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'core/services/shared_preferences_singleton.dart';
@@ -25,12 +25,13 @@ class FruitsHub extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeService.light(),
-      darkTheme: ThemeService.dark(),
+      theme: AppThemes.lightTheme,
+      darkTheme: AppThemes.darkTheme,
+      themeMode: ThemeMode.light,
       //   fontFamily: 'Cairo',
       //   scaffoldBackgroundColor: Colors.white,
       //   colorScheme: ColorScheme.fromSeed(seedColor: AppColors.kPrimaryColor),
-      //   useMaterial3: true,
+     
       // ),
       localizationsDelegates: const [
         S.delegate,
