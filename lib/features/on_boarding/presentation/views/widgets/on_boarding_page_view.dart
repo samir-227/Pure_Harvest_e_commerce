@@ -28,7 +28,7 @@ class OnBoardingPageView extends StatelessWidget {
                     TextSpan(
                       text: ' Fruit',
                       style: TextStyle(
-                        color: AppColors.primaryColor,
+                        color: AppColors.kPrimaryColor,
                       ),
                     ),
                     TextSpan(

@@ -48,7 +48,7 @@ class _TermsAndConditionWidgetState extends State<TermsAndConditionWidget> {
                 TextSpan(
                   text: ' ${S.of(context).Policy} ',
                   style: TextStyles.semiBold13.copyWith(
-                    color: AppColors.lightPrimaryColor,
+                    color: AppColors.kLightPrimaryColor,
                   ),
                 ),
               ],

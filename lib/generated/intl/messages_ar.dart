@@ -22,38 +22,39 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "TermsAndConditions": MessageLookupByLibrary.simpleMessage(
-            "من خلال إنشاء حساب، فإنك توافق على "),
-        "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
-        "appBarRegisterTitle":
-            MessageLookupByLibrary.simpleMessage("حساب جديد"),
-        "buttonText": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
-        "createNewAccount":
-            MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
-        "doYouHaveAccount":
-            MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟"),
-        "dontHaveAccount":
-            MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
-        "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
-        "forgetPassword":
-            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
-        "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
-        "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
-        "loginWithApple":
-            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
-        "loginWithFacebook":
-            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة فيسبوك"),
-        "loginWithGoogle":
-            MessageLookupByLibrary.simpleMessage("تسجيل بواسطة جوجل"),
-        "orDividerText": MessageLookupByLibrary.simpleMessage("أو"),
-        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
-        "register": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
-        "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
-        "subtitle1": MessageLookupByLibrary.simpleMessage(
-            "اكتشف تجربة تسوق فريدة مع FruitHUB .استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية"),
-        "subtitle2": MessageLookupByLibrary.simpleMessage(
-            "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية"),
-        "welcomeTitle": MessageLookupByLibrary.simpleMessage("مرحبا بك في "),
-        "welcomeTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق")
-      };
+    "TermsAndConditions": MessageLookupByLibrary.simpleMessage(
+      "من خلال إنشاء حساب، فإنك توافق على ",
+    ),
+    "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+    "appBarRegisterTitle": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+    "buttonText": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
+    "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+    "doYouHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "تمتلك حساب بالفعل؟",
+    ),
+    "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
+    "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "loginWithApple": MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
+    "loginWithFacebook": MessageLookupByLibrary.simpleMessage(
+      "تسجيل بواسطة فيسبوك",
+    ),
+    "loginWithGoogle": MessageLookupByLibrary.simpleMessage(
+      "تسجيل بواسطة جوجل",
+    ),
+    "orDividerText": MessageLookupByLibrary.simpleMessage("أو"),
+    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "register": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+    "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+    "subtitle1": MessageLookupByLibrary.simpleMessage(
+      "اكتشف تجربة تسوق فريدة مع FruitHUB .استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية",
+    ),
+    "subtitle2": MessageLookupByLibrary.simpleMessage(
+      "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
+    ),
+    "welcomeTitle": MessageLookupByLibrary.simpleMessage("مرحبا بك في "),
+    "welcomeTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+  };
 }

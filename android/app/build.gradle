@@ -1,5 +1,19 @@
+buildscript {
+    ext {
+        kotlin_version = '1.8.10'  // Use a recent Kotlin version, e.g., 1.8.10
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Add the Kotlin Gradle plugin if not present
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // Other existing dependencies...
+    }
+}
 plugins {
-    id "com.android.application"
+    id "com.android.application" version '8.1.0'
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
 }
@@ -24,7 +38,7 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.example.fruits_hub"
-    compileSdk flutter.compileSdkVersion
+    compileSdk 35
     ndkVersion flutter.ndkVersion
 
     compileOptions {

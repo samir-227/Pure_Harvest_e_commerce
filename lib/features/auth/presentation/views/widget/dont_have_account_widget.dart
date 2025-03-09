@@ -31,7 +31,7 @@ class DontHaveAccountWidget extends StatelessWidget {
           child: Text(
             S.of(context).register,
             style: TextStyles.semiBold16.copyWith(
-              color: AppColors.primaryColor,
+              color: AppColors.kPrimaryColor,
               height: 1.40,
             ),
           ),

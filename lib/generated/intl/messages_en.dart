@@ -22,39 +22,46 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "Policy":
-            MessageLookupByLibrary.simpleMessage("Terms and Conditions of use"),
-        "TermsAndConditions": MessageLookupByLibrary.simpleMessage(
-            "By creating an account, you agree to "),
-        "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("Login"),
-        "appBarRegisterTitle": MessageLookupByLibrary.simpleMessage("Sign Up"),
-        "buttonText": MessageLookupByLibrary.simpleMessage("Get Started"),
-        "createNewAccount":
-            MessageLookupByLibrary.simpleMessage("Create new account"),
-        "doYouHaveAccount":
-            MessageLookupByLibrary.simpleMessage("You have an account?"),
-        "dontHaveAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "email": MessageLookupByLibrary.simpleMessage("Email"),
-        "forgetPassword":
-            MessageLookupByLibrary.simpleMessage("Forget Password?"),
-        "fullname": MessageLookupByLibrary.simpleMessage("Full Name"),
-        "login": MessageLookupByLibrary.simpleMessage("Login"),
-        "loginWithApple":
-            MessageLookupByLibrary.simpleMessage("Login with Apple"),
-        "loginWithFacebook":
-            MessageLookupByLibrary.simpleMessage("Login with Facebook"),
-        "loginWithGoogle":
-            MessageLookupByLibrary.simpleMessage("Login with Google"),
-        "orDividerText": MessageLookupByLibrary.simpleMessage("Or"),
-        "password": MessageLookupByLibrary.simpleMessage("Password"),
-        "register": MessageLookupByLibrary.simpleMessage("Sign Up"),
-        "skip": MessageLookupByLibrary.simpleMessage("Skip"),
-        "subtitle1": MessageLookupByLibrary.simpleMessage(
-            "Discover a unique shopping experience with FruitHUB. Explore our wide range of fresh and high-quality fruits and get the best deals and top quality."),
-        "subtitle2": MessageLookupByLibrary.simpleMessage(
-            "We offer you the best carefully selected fruits. Check out the details, images, and reviews to ensure you choose the perfect fruit."),
-        "welcomeTitle": MessageLookupByLibrary.simpleMessage("Welcome to the "),
-        "welcomeTitle2": MessageLookupByLibrary.simpleMessage("Search and Shop")
-      };
+    "Policy": MessageLookupByLibrary.simpleMessage(
+      "Terms and Conditions of use",
+    ),
+    "TermsAndConditions": MessageLookupByLibrary.simpleMessage(
+      "By creating an account, you agree to ",
+    ),
+    "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("Login"),
+    "appBarRegisterTitle": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "buttonText": MessageLookupByLibrary.simpleMessage("Get Started"),
+    "createNewAccount": MessageLookupByLibrary.simpleMessage(
+      "Create new account",
+    ),
+    "doYouHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "You have an account?",
+    ),
+    "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "Don\'t have an account?",
+    ),
+    "email": MessageLookupByLibrary.simpleMessage("Email"),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
+    "fullname": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "login": MessageLookupByLibrary.simpleMessage("Login"),
+    "loginWithApple": MessageLookupByLibrary.simpleMessage("Login with Apple"),
+    "loginWithFacebook": MessageLookupByLibrary.simpleMessage(
+      "Login with Facebook",
+    ),
+    "loginWithGoogle": MessageLookupByLibrary.simpleMessage(
+      "Login with Google",
+    ),
+    "orDividerText": MessageLookupByLibrary.simpleMessage("Or"),
+    "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "register": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "subtitle1": MessageLookupByLibrary.simpleMessage(
+      "Discover a unique shopping experience with FruitHUB. Explore our wide range of fresh and high-quality fruits and get the best deals and top quality.",
+    ),
+    "subtitle2": MessageLookupByLibrary.simpleMessage(
+      "We offer you the best carefully selected fruits. Check out the details, images, and reviews to ensure you choose the perfect fruit.",
+    ),
+    "welcomeTitle": MessageLookupByLibrary.simpleMessage("Welcome to the "),
+    "welcomeTitle2": MessageLookupByLibrary.simpleMessage("Search and Shop"),
+  };
 }
