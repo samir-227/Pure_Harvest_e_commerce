@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:fruits_hub/core/utlis/app_colors.dart';
-import 'package:fruits_hub/core/utlis/app_text_style.dart';
+import 'package:fruits_hub/core/theme/app_text_style.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/custom_check_box.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
@@ -19,6 +16,7 @@ bool isTermsAccepted = false;
 class _TermsAndConditionWidgetState extends State<TermsAndConditionWidget> {
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return Row(
       children: [
         Transform.translate(
@@ -42,13 +40,13 @@ class _TermsAndConditionWidgetState extends State<TermsAndConditionWidget> {
                 TextSpan(
                   text: S.of(context).TermsAndConditions,
                   style: TextStyles.semiBold13.copyWith(
-                    color: const Color(0xFF949D9E),
+                    color: colors.onSurfaceVariant,
                   ),
                 ),
                 TextSpan(
                   text: ' ${S.of(context).Policy} ',
                   style: TextStyles.semiBold13.copyWith(
-                    color: Theme.of(context).colorScheme.secondary,
+                    color: colors.secondary,
                   ),
                 ),
               ],

@@ -1,9 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:fruits_hub/constants.dart';
+import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
-import 'package:fruits_hub/core/utlis/app_colors.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sing_in_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
@@ -39,6 +37,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return Column(
       children: [
         Expanded(
@@ -49,10 +48,10 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         DotsIndicator(
           dotsCount: 2,
           decorator: DotsDecorator(
-            activeColor: Theme.of(context).colorScheme.primary,
+            activeColor: colors.primary,
             color: currentPage == 1
-                ? Theme.of(context).colorScheme.primary
-                :Theme.of(context).colorScheme.secondary,
+                ? colors.primary
+                : colors.secondary,
           ),
         ),
         Visibility(

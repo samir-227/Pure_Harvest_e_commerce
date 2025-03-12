@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_hub/constants.dart';
-import 'package:fruits_hub/core/utlis/app_colors.dart';
-import 'package:fruits_hub/core/utlis/app_images.dart';
-import 'package:fruits_hub/core/utlis/app_text_style.dart';
+import 'package:fruits_hub/core/constants/constants.dart';
+import 'package:fruits_hub/core/constants/app_images.dart';
+import 'package:fruits_hub/core/theme/app_text_style.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/dont_have_account_widget.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/or_divider.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/social_login_button.dart';
 import 'package:fruits_hub/generated/l10n.dart';
+import 'package:provider/provider.dart';
+
+import '../../../../on_boarding/presentation/provider/theme_provider.dart';
 
 class SingInViewBody extends StatelessWidget {
   const SingInViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    final colors = Theme.of(context).colorScheme;
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
       child: SingleChildScrollView(
@@ -23,6 +27,13 @@ class SingInViewBody extends StatelessWidget {
           children: [
             const SizedBox(
               height: 24,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                themeProvider.toggleTheme();
+              },
+              child: Text(
+                  themeProvider.isDarkMode ? 'الوضع الفاتح' : 'الوضع الداكن'),
             ),
             CustomTextFormField(
               hintText: S.of(context).email,
@@ -34,9 +45,9 @@ class SingInViewBody extends StatelessWidget {
             CustomTextFormField(
               hintText: S.of(context).password,
               keyboardType: TextInputType.visiblePassword,
-              suffixIcon: const Icon(
+              suffixIcon: Icon(
                 Icons.remove_red_eye_rounded,
-                color: Color(0xffC9CECF),
+                color: colors.onSurfaceVariant,
               ),
             ),
             const SizedBox(
@@ -45,7 +56,7 @@ class SingInViewBody extends StatelessWidget {
             Text(
               S.of(context).forgetPassword,
               style: TextStyles.semiBold13.copyWith(
-                color: Theme.of(context).colorScheme.secondary,
+                color: colors.secondary,
               ),
             ),
             const SizedBox(

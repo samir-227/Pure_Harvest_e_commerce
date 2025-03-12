@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_hub/core/utlis/app_colors.dart';
-import 'package:fruits_hub/core/utlis/app_text_style.dart';
+import 'package:fruits_hub/core/theme/app_text_style.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
 class IHaveAccountWidget extends StatelessWidget {
@@ -8,13 +7,14 @@ class IHaveAccountWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
           S.of(context).doYouHaveAccount,
           style: TextStyles.semiBold16.copyWith(
-            color: const Color(0xff949D9E),
+            color: colors.onSurfaceVariant,
             height: 1.40,
           ),
         ),
@@ -23,13 +23,12 @@ class IHaveAccountWidget extends StatelessWidget {
             Navigator.pop(context);
           },
           style: ButtonStyle(
-            padding: MaterialStateProperty.all(const EdgeInsets.only(right: 5)),
+            padding: WidgetStateProperty.all(const EdgeInsets.only(right: 5)),
           ),
           child: Text(
             S.of(context).login,
             style: TextStyles.semiBold16.copyWith(
-              color: Theme.of(context).colorScheme.primary,
-              height: 1.40,
+              color: colors.primary,
             ),
           ),
         ),

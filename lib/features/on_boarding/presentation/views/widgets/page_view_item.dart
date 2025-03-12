@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fruits_hub/constants.dart';
+import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/models/page_view_item_model.dart';
 import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
-import 'package:fruits_hub/core/utlis/app_images.dart';
+import 'package:fruits_hub/core/constants/app_images.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sing_in_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
-import '../../../../../core/utlis/app_text_style.dart';
+import '../../../../../core/theme/app_text_style.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_hub/core/utlis/app_text_style.dart';
+import 'package:fruits_hub/core/theme/app_text_style.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
 class OrDivider extends StatelessWidget {
@@ -10,10 +10,7 @@ class OrDivider extends StatelessWidget {
     return Row(
       children: <Widget>[
         const Expanded(
-          child: Divider(
-            thickness: 1,
-            color: Color(0xFFDCDEDE),
-          ),
+          child: Divider(),
         ),
         const SizedBox(width: 18),
         Text(
@@ -22,10 +19,7 @@ class OrDivider extends StatelessWidget {
         ),
         const SizedBox(width: 18),
         const Expanded(
-          child: Divider(
-            thickness: 1,
-            color: Color(0xFFDCDEDE),
-          ),
+          child: Divider(),
         ),
       ],
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:fruits_hub/core/utlis/app_text_style.dart';
+import 'package:fruits_hub/core/theme/app_text_style.dart';
 
 class SocialLoginButton extends StatelessWidget {
   const SocialLoginButton({
@@ -12,14 +12,15 @@ class SocialLoginButton extends StatelessWidget {
   final String icon;
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return SizedBox(
       height: 65,
       width: double.infinity,
       child: TextButton(
           style: ButtonStyle(
-            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            shape: WidgetStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
-                side: const BorderSide(width: 1, color: Color(0xFFDCDEDE)),
+                side: BorderSide(width: 1, color: colors.outline),
                 borderRadius: BorderRadius.circular(16),
               ),
             ),
@@ -38,7 +39,7 @@ class SocialLoginButton extends StatelessWidget {
               title,
               style: TextStyles.semiBold16.copyWith(
                 height: 1.40,
-                color: Colors.black,
+                color: colors.onSurface,
               ),
             ),
           )

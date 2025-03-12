@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_hub/constants.dart';
+import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/i_have_account_widget.dart';
@@ -11,6 +11,7 @@ class SignUpBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
       child: SingleChildScrollView(
@@ -37,15 +38,15 @@ class SignUpBody extends StatelessWidget {
             CustomTextFormField(
               hintText: S.of(context).password,
               keyboardType: TextInputType.visiblePassword,
-              suffixIcon: const Icon(
+              suffixIcon: Icon(
                 Icons.remove_red_eye_rounded,
-                color: Color(0xffC9CECF),
+                color: colors.onSurfaceVariant,
               ),
             ),
             const SizedBox(
               height: 16,
             ),
-            TermsAndConditionWidget(),
+            const TermsAndConditionWidget(),
             const SizedBox(
               height: 30,
             ),

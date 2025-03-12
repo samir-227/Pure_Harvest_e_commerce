@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/models/page_view_item_model.dart';
-import 'package:fruits_hub/core/utlis/app_colors.dart';
-import 'package:fruits_hub/core/utlis/app_images.dart';
-import 'package:fruits_hub/core/utlis/app_text_style.dart';
+import 'package:fruits_hub/core/constants/app_images.dart';
+import 'package:fruits_hub/core/theme/app_text_style.dart';
 
 import 'package:fruits_hub/features/on_boarding/presentation/views/widgets/page_view_item.dart';
 import 'package:fruits_hub/generated/l10n.dart';
@@ -12,6 +11,7 @@ class OnBoardingPageView extends StatelessWidget {
   final PageController pageController;
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return PageView(
       controller: pageController,
       children: [
@@ -28,13 +28,13 @@ class OnBoardingPageView extends StatelessWidget {
                     TextSpan(
                       text: ' Fruit',
                       style: TextStyle(
-                        color: Theme.of(context).colorScheme.primary,
+                        color: colors.primary,
                       ),
                     ),
                     TextSpan(
                       text: 'HUB',
                       style: TextStyle(
-                        color: Theme.of(context).colorScheme.secondaryContainer,
+                        color: colors.secondaryContainer,
                       ),
                     ),
                   ],
@@ -53,7 +53,7 @@ class OnBoardingPageView extends StatelessWidget {
                   Text(
                     S.of(context).welcomeTitle2,
                     textAlign: TextAlign.center,
-                    style: TextStyles.bold23.copyWith(fontFamily: 'cairo'),
+                    style: TextStyles.bold23,
                   ),
                 ],
               ),

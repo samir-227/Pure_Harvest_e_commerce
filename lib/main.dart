@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:fruits_hub/core/helper/on_generate_route_fun.dart';
-import 'package:fruits_hub/core/utlis/app_colors.dart';
+import 'package:fruits_hub/core/helper/app_router.dart';
+import 'package:fruits_hub/features/on_boarding/presentation/provider/theme_provider.dart';
 import 'package:fruits_hub/features/splash/presentation/views/splash_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 // Import the generated file
 import 'core/theme/theme_data.dart';
-import 'firebase_options.dart';
+import 'core/utlis/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'core/services/shared_preferences_singleton.dart';
 
@@ -15,6 +17,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
   await Prefs.init();
   runApp(const FruitsHub());
 }
@@ -24,26 +27,44 @@ class FruitsHub extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: AppThemes.lightTheme,
-      darkTheme: AppThemes.darkTheme,
-      themeMode: ThemeMode.light,
-      //   fontFamily: 'Cairo',
-      //   scaffoldBackgroundColor: Colors.white,
-      //   colorScheme: ColorScheme.fromSeed(seedColor: AppColors.kPrimaryColor),
-     
-      // ),
-      localizationsDelegates: const [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
-      locale: const Locale('ar', 'eg'),
-      onGenerateRoute: onGenerateRoute,
-      initialRoute: SplashView.routeName,
-      debugShowCheckedModeBanner: false,
+    return FutureBuilder(
+      future:
+          SharedPreferences.getInstance(), // Ensure SharedPreferences is ready
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          return ChangeNotifierProvider(
+            create: (_) => ThemeProvider()..loadCurrentMode(),
+            child: Consumer<ThemeProvider>(
+              builder: (context, themeProvider, child) {
+                return MaterialApp(
+                  theme: AppThemes.lightTheme,
+                  darkTheme: AppThemes.darkTheme,
+                  themeMode: themeProvider.isDarkMode
+                      ? ThemeMode.dark
+                      : ThemeMode.light, // Dynamic theme mode
+                  localizationsDelegates: const [
+                    S.delegate,
+                    GlobalMaterialLocalizations.delegate,
+                    GlobalWidgetsLocalizations.delegate,
+                    GlobalCupertinoLocalizations.delegate,
+                  ],
+                  supportedLocales: S.delegate.supportedLocales,
+                  locale: const Locale('ar', 'eg'),
+                  onGenerateRoute: onGenerateRoute,
+                  initialRoute: SplashView.routeName,
+                  debugShowCheckedModeBanner: false,
+                );
+              },
+            ),
+          );
+        } else {
+          return const MaterialApp(
+            home: Scaffold(
+              body: Center(child: CircularProgressIndicator()),
+            ),
+          );
+        }
+      },
     );
   }
 }
