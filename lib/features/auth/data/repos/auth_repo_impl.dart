@@ -6,12 +6,13 @@ import 'package:fruits_hub/features/auth/data/models/user_model.dart';
 import 'package:fruits_hub/features/auth/domain/entities/user_entity.dart';
 import 'package:fruits_hub/features/auth/domain/repos/auth_repo.dart';
 
-class AuthRepoImpl implements AuthRepo {
+class AuthRepoImpl implements IAuthRepo {
   final FirebaseService firebaseService;
 
   AuthRepoImpl({required this.firebaseService});
   @override
-  Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
+  // convert userModel to userEntity
+  Future<Either<Failure, UserEntity>> signUp(
       String email, String password, String name) async {
     try {
       final user = await firebaseService.createUserWithEmailAndPassword(
@@ -23,4 +24,18 @@ class AuthRepoImpl implements AuthRepo {
       throw CustomException(message: e.message);
     }
   }
+  
+  @override
+  Future<Either<Failure, UserEntity>> logIn(String email, String password) {
+    // TODO: implement logIn
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<Either<Failure, void>> logOut(String email, String password) {
+    // TODO: implement logOut
+    throw UnimplementedError();
+  }
+  
+ 
 }

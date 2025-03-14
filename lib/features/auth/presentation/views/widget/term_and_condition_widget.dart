@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_hub/core/theme/app_text_style.dart';
+import 'package:fruits_hub/core/theming/app_text_style.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/custom_check_box.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 

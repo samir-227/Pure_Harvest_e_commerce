@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/constants/app_images.dart';
-import 'package:fruits_hub/core/theme/app_text_style.dart';
+import 'package:fruits_hub/core/theming/app_text_style.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/dont_have_account_widget.dart';

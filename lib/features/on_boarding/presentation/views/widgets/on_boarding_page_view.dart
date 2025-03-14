@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/models/page_view_item_model.dart';
 import 'package:fruits_hub/core/constants/app_images.dart';
-import 'package:fruits_hub/core/theme/app_text_style.dart';
+import 'package:fruits_hub/core/theming/app_text_style.dart';
 
 import 'package:fruits_hub/features/on_boarding/presentation/views/widgets/page_view_item.dart';
 import 'package:fruits_hub/generated/l10n.dart';

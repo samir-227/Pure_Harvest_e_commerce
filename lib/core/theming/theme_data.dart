@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_hub/core/theme/fonts.dart';
+import 'package:fruits_hub/core/theming/fonts.dart';
 
 import 'colors.dart';
 

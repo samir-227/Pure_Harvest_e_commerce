@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:fruits_hub/core/helper/app_router.dart';
+import 'package:fruits_hub/core/routing/app_router.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/provider/theme_provider.dart';
 import 'package:fruits_hub/features/splash/presentation/views/splash_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-// Import the generated file
-import 'core/theme/theme_data.dart';
-import 'core/utlis/firebase_options.dart';
+import 'core/theming/theme_data.dart';
+import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'core/services/shared_preferences_singleton.dart';
 
