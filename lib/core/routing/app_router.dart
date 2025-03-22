@@ -7,8 +7,8 @@ import 'package:fruits_hub/features/splash/presentation/views/splash_view.dart';
 // Generates a route based on the given [RouteSettings].
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
-    case SplashView.routeName:
-      return MaterialPageRoute(builder: (_) => const SplashView());
+    // case SplashView.routeName:
+    //   return MaterialPageRoute(builder: (_) => const SplashView());
     case OnBoardingView.routeName:
       return MaterialPageRoute(builder: (_) => const OnBoardingView());
     case SingInView.routeName:

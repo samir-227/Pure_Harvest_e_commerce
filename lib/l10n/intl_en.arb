@@ -1,29 +1,30 @@
 {
-"welcomeTitle": "Welcome to the ",
-"welcomeTitle2": "Search and Shop",
-"subtitle1": "Discover a unique shopping experience with FruitHUB. Explore our wide range of fresh and high-quality fruits and get the best deals and top quality.",
-"subtitle2": "We offer you the best carefully selected fruits. Check out the details, images, and reviews to ensure you choose the perfect fruit.",
-"skip": "Skip",
-"buttonText": "Get Started",
-"appBarLoginTitle": "Login",
-"appBarRegisterTitle":"Sign Up",
-"forgetPassword": "Forget Password?",
-"login": "Login",
-"email": "Email",
-"password": "Password",
-"dontHaveAccount": "Don't have an account?",
-"doYouHaveAccount": "You have an account?",
-"register": "Sign Up",
-"loginWithGoogle": "Login with Google",
-"loginWithApple": "Login with Apple",
-"loginWithFacebook": "Login with Facebook",
-"orDividerText": "Or",
-"fullname": "Full Name",
-"createNewAccount": "Create new account",
-"TermsAndConditions": "By creating an account, you agree to ",
-"Policy": "Terms and Conditions of use"
-
-
-
-
-}
+    "welcomeTitle": "Welcome to the ",
+    "welcomeTitle2": "Search and Shop",
+    "subtitle1": "Discover a unique shopping experience with FruitHUB. Explore our wide range of fresh and high-quality fruits and get the best deals and top quality.",
+    "subtitle2": "We offer you the best carefully selected fruits. Check out the details, images, and reviews to ensure you choose the perfect fruit.",
+    "skip": "Skip",
+    "buttonText": "Get Started",
+    "appBarLoginTitle": "Login",
+    "appBarRegisterTitle":"Sign Up",
+    "forgetPassword": "Forget Password?",
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "dontHaveAccount": "Don't have an account?",
+    "doYouHaveAccount": "You have an account?",
+    "register": "Sign Up",
+    "loginWithGoogle": "Login with Google",
+    "loginWithApple": "Login with Apple",
+    "loginWithFacebook": "Login with Facebook",
+    "orDividerText": "Or",
+    "fullname": "Full Name",
+    "createNewAccount": "Create new account",
+    "TermsAndConditions": "By creating an account, you agree to ",
+    "Policy": "Terms and Conditions of use"
+    
+    
+    
+    
+    }
+    

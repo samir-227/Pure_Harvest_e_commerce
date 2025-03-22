@@ -7,10 +7,11 @@ import 'package:fruits_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/dont_have_account_widget.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/or_divider.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/social_login_button.dart';
+import 'package:fruits_hub/features/settings/presentation/provider/theme_provider.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../on_boarding/presentation/provider/theme_provider.dart';
+import '../../../../settings/presentation/provider/locale_provider.dart';
 
 class SingInViewBody extends StatelessWidget {
   const SingInViewBody({super.key});
@@ -18,6 +19,7 @@ class SingInViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
+    final localeProvider = Provider.of<LocaleProvider>(context);
     final colors = Theme.of(context).colorScheme;
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
@@ -26,7 +28,7 @@ class SingInViewBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             const SizedBox(
-              height: 24,
+              height: 10,
             ),
             ElevatedButton(
               onPressed: () {
@@ -34,6 +36,22 @@ class SingInViewBody extends StatelessWidget {
               },
               child: Text(
                   themeProvider.isDarkMode ? 'الوضع الفاتح' : 'الوضع الداكن'),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                final newLocale = localeProvider.locale.languageCode == 'ar'
+                    ? const Locale('en')
+                    : const Locale('ar');
+                localeProvider.setLocale(newLocale);
+                print(localeProvider.locale);
+              },
+              child: Text('تغيير اللغة'),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             CustomTextFormField(
               hintText: S.of(context).email,
