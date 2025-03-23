@@ -4,10 +4,10 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/models/page_view_item_model.dart';
-import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_hub/core/constants/app_images.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sing_in_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
+import '../../../../../core/cache/cache_helper.dart';
 import '../../../../../core/theming/app_text_style.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -45,7 +45,7 @@ class PageViewItem extends StatelessWidget {
                   visible: isVisible,
                   child: GestureDetector(
                     onTap: () {
-                      Prefs.setBool(kIsOnBoardingViewSeen, true);
+                      CacheHelper.set(key: kIsOnBoardingViewSeen, value: true);
                       Navigator.pushReplacementNamed(
                           context, SingInView.routeName);
                     },

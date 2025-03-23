@@ -1,7 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:fruits_hub/core/cache/cache_helper.dart';
 import 'package:fruits_hub/core/constants/constants.dart';
-import 'package:fruits_hub/core/services/shared_preferences_singleton.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sing_in_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
@@ -49,9 +49,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           dotsCount: 2,
           decorator: DotsDecorator(
             activeColor: colors.primary,
-            color: currentPage == 1
-                ? colors.primary
-                : colors.secondary,
+            color: currentPage == 1 ? colors.primary : colors.secondary,
           ),
         ),
         Visibility(
@@ -65,7 +63,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             child: CustomButton(
               text: S.of(context).buttonText,
               onPressed: () {
-                Prefs.setBool(kIsOnBoardingViewSeen, true);
+                CacheHelper.set(key: kIsOnBoardingViewSeen, value: true);
                 Navigator.pushReplacementNamed(context, SingInView.routeName);
               },
             ),

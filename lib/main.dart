@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:fruits_hub/core/cache/cache_helper.dart';
 import 'package:fruits_hub/core/routing/app_router.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart'
     show OnBoardingView;
 import 'package:fruits_hub/features/settings/presentation/provider/locale_provider.dart';
-import 'package:fruits_hub/features/splash/presentation/views/splash_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -12,7 +12,7 @@ import 'core/theming/theme_data.dart';
 import 'features/settings/presentation/provider/theme_provider.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'core/services/shared_preferences_singleton.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  await Prefs.init();
+  await CacheHelper.init();
   runApp(
     MultiProvider(
       providers: [
