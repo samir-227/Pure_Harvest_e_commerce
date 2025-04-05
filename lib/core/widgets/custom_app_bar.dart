@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
+import 'package:go_router/go_router.dart';
 
 AppBar buildAppBar(
   BuildContext context, {
@@ -15,7 +16,7 @@ AppBar buildAppBar(
       icon: const Icon(
         Icons.arrow_back_ios,
       ),
-      onPressed: () => Navigator.pop(context),
+      onPressed: () => context.pop(),
     ),
   );
 }

@@ -6,6 +6,7 @@ import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sing_in_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
+import 'package:go_router/go_router.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -64,7 +65,8 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               text: S.of(context).buttonText,
               onPressed: () {
                 CacheHelper.set(key: kIsOnBoardingViewSeen, value: true);
-                Navigator.pushReplacementNamed(context, SingInView.routeName);
+                context.push(SingInView.routeName);
+                
               },
             ),
           ),

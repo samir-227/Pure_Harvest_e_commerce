@@ -7,7 +7,7 @@ class SingInView extends StatelessWidget {
   const SingInView({
     super.key,
   });
-  static const routeName = 'login';
+  static const routeName = '/login';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:fruits_hub/core/cache/cache_helper.dart';
 import 'package:fruits_hub/core/routing/app_router.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart'
@@ -13,14 +14,14 @@ import 'features/settings/presentation/provider/theme_provider.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+ final WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await CacheHelper.init();
+  FlutterNativeSplash.remove();
   runApp(
     MultiProvider(
       providers: [
@@ -44,7 +45,8 @@ class FruitsHub extends StatelessWidget {
         if (snapshot.connectionState == ConnectionState.done) {
           return Consumer<ThemeProvider>(
             builder: (context, themeProvider, child) {
-              return MaterialApp(
+              return MaterialApp.router(
+                routerConfig: AppRouter.router,
                 theme: AppThemes.lightTheme,
                 darkTheme: AppThemes.darkTheme,
                 themeMode: themeProvider.isDarkMode
@@ -58,17 +60,17 @@ class FruitsHub extends StatelessWidget {
                 ],
                 supportedLocales: S.delegate.supportedLocales,
                 locale: context.watch<LocaleProvider>().locale,
-                onGenerateRoute: onGenerateRoute,
-                initialRoute: OnBoardingView.routeName,
+                // onGenerateRoute: onGenerateRoute,
+                // initialRoute: OnBoardingView.routeName,
                 debugShowCheckedModeBanner: false,
               );
             },
           );
         } else {
-          return const MaterialApp(
-            home: Scaffold(
-              body: Center(child: CircularProgressIndicator()),
-            ),
+          return MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            routerConfig: AppRouter.router,
+            builder: (context, child) => CircularProgressIndicator(),
           );
         }
       },

@@ -6,7 +6,7 @@ import 'widget/sign_up_body.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
-  static const String routeName = 'singUp';
+  static const String routeName = '/singUp';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
