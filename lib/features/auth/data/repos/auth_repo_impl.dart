@@ -12,30 +12,39 @@ class AuthRepoImpl implements IAuthRepo {
   AuthRepoImpl({required this.firebaseService});
   @override
   // convert userModel to userEntity
-  Future<Either<Failure, UserEntity>> signUp(
+  Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword(
       String email, String password, String name) async {
     try {
       final user = await firebaseService.createUserWithEmailAndPassword(
-        email,
-        password,
-      );
+          email: email, password: password);
       return Right(UserModel.fromFireBase(user));
     } on CustomException catch (e) {
       throw CustomException(message: e.message);
     }
   }
-  
+
+
   @override
-  Future<Either<Failure, UserEntity>> logIn(String email, String password) {
-    // TODO: implement logIn
+  Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(String email, String password) {
+    // TODO: implement signInWithEmailAndPassword
     throw UnimplementedError();
   }
   
   @override
-  Future<Either<Failure, void>> logOut(String email, String password) {
-    // TODO: implement logOut
+  Future<Either<Failure, UserEntity>> signInWithApple(String email, String password) {
+    // TODO: implement signInWithApple
     throw UnimplementedError();
   }
   
- 
+  @override
+  Future<Either<Failure, UserEntity>> signInWithFacebook(String email, String password) {
+    // TODO: implement signInWithFacebook
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<Either<Failure, UserEntity>> signInWithGoogle(String email, String password) {
+    // TODO: implement signInWithGoogle
+    throw UnimplementedError();
+  }
 }

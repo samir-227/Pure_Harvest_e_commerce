@@ -36,6 +36,7 @@ class SignUpBody extends StatelessWidget {
               height: 16,
             ),
             CustomTextFormField(
+              obscureText: true,
               hintText: S.of(context).password,
               keyboardType: TextInputType.visiblePassword,
               suffixIcon: Icon(
