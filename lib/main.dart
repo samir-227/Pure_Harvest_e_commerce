@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:fruits_hub/core/cache/cache_helper.dart';
+import 'package:fruits_hub/core/helpers/cache_helper.dart';
 import 'package:fruits_hub/fruits_hub.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
