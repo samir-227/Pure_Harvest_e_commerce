@@ -22,7 +22,9 @@
 "fullname": "الاسم الكامل",
 "createNewAccount": "إنشاء حساب جديد",
 "TermsAndConditions": "من خلال إنشاء حساب، فإنك توافق على ",
-"policy": "الشروط وأحكامنا الخاصة بنا"
+"policy": "الشروط وأحكامنا الخاصة بنا",
+"PleaseAcceptTermsAndConditions": "يجب عليك الموافقة على الشروط والإحكام",
+"UserNotVerified": "المستخدم غير موثق"
 
 
 }

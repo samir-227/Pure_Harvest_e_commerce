@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
-import 'package:fruits_hub/features/auth/presentation/views/sing_up.dart';
+import 'package:fruits_hub/features/auth/presentation/views/sing_up_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 import 'package:go_router/go_router.dart';
 

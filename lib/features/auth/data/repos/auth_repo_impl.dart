@@ -19,31 +19,40 @@ class AuthRepoImpl implements IAuthRepo {
           email: email, password: password);
       return Right(UserModel.fromFireBase(user));
     } on CustomException catch (e) {
-      throw CustomException(message: e.message);
+      return left(ServerFailure(message: e.message));
+    } catch (e) {
+      return left(
+        ServerFailure(
+          message: 'Implementation حدث خطأ ما. الرجاء المحاولة مرة اخرى.',
+        ),
+      );
     }
   }
 
-
   @override
-  Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(String email, String password) {
+  Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
+      String email, String password) {
     // TODO: implement signInWithEmailAndPassword
     throw UnimplementedError();
   }
-  
+
   @override
-  Future<Either<Failure, UserEntity>> signInWithApple(String email, String password) {
+  Future<Either<Failure, UserEntity>> signInWithApple(
+      String email, String password) {
     // TODO: implement signInWithApple
     throw UnimplementedError();
   }
-  
+
   @override
-  Future<Either<Failure, UserEntity>> signInWithFacebook(String email, String password) {
+  Future<Either<Failure, UserEntity>> signInWithFacebook(
+      String email, String password) {
     // TODO: implement signInWithFacebook
     throw UnimplementedError();
   }
-  
+
   @override
-  Future<Either<Failure, UserEntity>> signInWithGoogle(String email, String password) {
+  Future<Either<Failure, UserEntity>> signInWithGoogle(
+      String email, String password) {
     // TODO: implement signInWithGoogle
     throw UnimplementedError();
   }

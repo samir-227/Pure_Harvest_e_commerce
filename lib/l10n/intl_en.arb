@@ -21,7 +21,9 @@
     "fullname": "Full Name",
     "createNewAccount": "Create new account",
     "TermsAndConditions": "By creating an account, you agree to ",
-    "Policy": "Terms and Conditions of use"
+    "Policy": "Terms and Conditions of use",
+    "PleaseAcceptTermsAndConditions" : "Please accept terms and conditions",
+    "UserNotVerified": "User not verified"
     
     
     

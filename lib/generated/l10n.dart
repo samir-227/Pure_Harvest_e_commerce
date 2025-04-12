@@ -239,6 +239,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Please accept terms and conditions`
+  String get PleaseAcceptTermsAndConditions {
+    return Intl.message(
+      'Please accept terms and conditions',
+      name: 'PleaseAcceptTermsAndConditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User not verified`
+  String get UserNotVerified {
+    return Intl.message(
+      'User not verified',
+      name: 'UserNotVerified',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

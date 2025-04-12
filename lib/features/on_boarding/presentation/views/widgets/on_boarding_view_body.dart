@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/helpers/cache_helper.dart';
 import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
-import 'package:fruits_hub/features/auth/presentation/views/sing_in_view.dart';
+import 'package:fruits_hub/features/auth/presentation/views/sign_in_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 import 'package:go_router/go_router.dart';

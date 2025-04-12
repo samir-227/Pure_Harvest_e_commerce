@@ -1,8 +1,27 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruits_hub/core/errors/exceptions.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseService {
+  static Future<void> firebaseUserState() async {
+    FirebaseAuth.instance.authStateChanges().listen((User? user) {
+      if (user == null) {
+        print('User is currently signed out!');
+      } else {
+        print('User is signed in!');
+      }
+    });
+  }
+
+  static Future<void> sendEmailVerification() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null && !user.emailVerified) {
+      await user.sendEmailVerification();
+    }
+  }
+
   // Method to create a new user with email and password
   Future<User> createUserWithEmailAndPassword({
     required String email,
@@ -19,23 +38,23 @@ class FirebaseService {
       return credential.user!;
     } on FirebaseAuthException catch (e) {
       // Handle Firebase authentication exceptions
-      print(
-          "Exception in FirebaseAuthService.createUserWithEmailAndPassword: ${e.toString()} and code is ${e.code}");
+      log("Exception in FirebaseAuthService.createUserWithEmailAndPassword: ${e.toString()} and code is ${e.code}");
       if (e.code == 'weak-password') {
         throw CustomException(message: 'الرقم السري ضعيف جداً.');
       } else if (e.code == 'email-already-in-use') {
         throw CustomException(message: 'البريد الالكتروني مستخدم بالفعل.');
       } else if (e.code == 'network-request-failed') {
         throw CustomException(message: 'تاكد من اتصالك بالانترنت.');
+      } else if (e.code == 'invalid-email') {
+        throw CustomException(message: 'البريد الالكتروني غير صحيح.');
       } else {
         throw CustomException(
             message: 'لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى.');
       }
     } catch (e) {
-      print(
-          "Exception in FirebaseAuthService.createUserWithEmailAndPassword: ${e.toString()}");
+      log("Exception in FirebaseAuthService.createUserWithEmailAndPassword: ${e.toString()}");
       throw CustomException(
-          message: 'Failed to create user, please try again.');
+          message: 'لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى.');
     }
   }
 
@@ -70,8 +89,7 @@ class FirebaseService {
             message: 'لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى.');
       }
     } catch (e) {
-      print(
-          "Exception in FirebaseAuthService.signInWithEmailAndPassword: ${e.toString()}");
+      log("Exception in FirebaseAuthService.signInWithEmailAndPassword: ${e.toString()}");
       throw CustomException(
           message: 'لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى.');
     }

@@ -22,8 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "PleaseAcceptTermsAndConditions": MessageLookupByLibrary.simpleMessage(
+      "يجب عليك الموافقة على الشروط والإحكام",
+    ),
     "TermsAndConditions": MessageLookupByLibrary.simpleMessage(
       "من خلال إنشاء حساب، فإنك توافق على ",
+    ),
+    "UserNotVerified": MessageLookupByLibrary.simpleMessage(
+      "المستخدم غير موثق",
     ),
     "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "appBarRegisterTitle": MessageLookupByLibrary.simpleMessage("حساب جديد"),
