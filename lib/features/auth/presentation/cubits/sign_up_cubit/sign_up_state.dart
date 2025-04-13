@@ -4,7 +4,7 @@ class SignUpState {}
 
 class SignUpInitial extends SignUpState {}
 
-class SignUpCubitLoading extends SignUpState {}
+class SignUpLoading extends SignUpState {}
 
 class SignUpFailure extends SignUpState {
   final String message;

@@ -72,6 +72,7 @@ class FirebaseService {
 
       return credential.user!;
     } on FirebaseAuthException catch (e) {
+            log("Exception in FirebaseAuthService.signInWithEmailAndPassword: ${e.toString()} and code is ${e.code}");
       // Handle Firebase authentication exceptions
       if (e.code == 'user-not-found') {
         throw CustomException(

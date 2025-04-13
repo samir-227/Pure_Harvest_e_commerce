@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/helpers/cache_helper.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sign_in_view.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sing_up_view.dart';
+import 'package:fruits_hub/features/home/presentation/view/main_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:go_router/go_router.dart';
 
 import '../constants/constants.dart';
-
-
 
 sealed class AppRouter {
   static final navigatorKey = GlobalKey<NavigatorState>();
@@ -38,6 +37,11 @@ sealed class AppRouter {
         path: SignUpView.routeName,
         name: SignUpView.routeName,
         builder: (context, state) => const SignUpView(),
+      ),
+      GoRoute(
+        path: MainView.routeName,
+        name: MainView.routeName,
+        builder: (context, state) => const MainView(),
       ),
     ],
   );
