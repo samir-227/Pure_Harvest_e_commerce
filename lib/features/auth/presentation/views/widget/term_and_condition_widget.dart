@@ -14,7 +14,6 @@ class TermsAndConditionWidget extends StatefulWidget {
 
 bool isTermsAccepted = false;
 
-
 class _TermsAndConditionWidgetState extends State<TermsAndConditionWidget> {
   @override
   Widget build(BuildContext context) {
@@ -25,10 +24,9 @@ class _TermsAndConditionWidgetState extends State<TermsAndConditionWidget> {
           offset: const Offset(0, -8),
           child: CustomCheckBox(
             onChanged: (value) {
-              setState(() {
-                isTermsAccepted = value;
-                widget.onChanged(value);
-              });
+              isTermsAccepted = value;
+              widget.onChanged(value);
+              setState(() {});
             },
             isChecked: isTermsAccepted,
           ),

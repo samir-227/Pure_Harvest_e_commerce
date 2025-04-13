@@ -14,7 +14,7 @@ class SocialLoginButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     return SizedBox(
-      height: 65,
+      height: 64,
       width: double.infinity,
       child: TextButton(
           style: ButtonStyle(

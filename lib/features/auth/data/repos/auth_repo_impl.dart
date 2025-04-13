@@ -23,7 +23,7 @@ class AuthRepoImpl implements IAuthRepo {
     } catch (e) {
       return left(
         ServerFailure(
-          message: 'Implementation حدث خطأ ما. الرجاء المحاولة مرة اخرى.',
+          message: 'حدث خطأ ما. الرجاء المحاولة مرة اخرى.',
         ),
       );
     }

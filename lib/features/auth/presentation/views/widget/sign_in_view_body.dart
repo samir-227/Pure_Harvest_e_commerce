@@ -28,37 +28,14 @@ class SingInViewBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             const SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                themeProvider.toggleTheme();
-              },
-              child: Text(
-                  themeProvider.isDarkMode ? 'الوضع الفاتح' : 'الوضع الداكن'),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                final newLocale = localeProvider.locale.languageCode == 'ar'
-                    ? const Locale('en')
-                    : const Locale('ar');
-                localeProvider.setLocale(newLocale);
-                print(localeProvider.locale);
-              },
-              child: Text('تغيير اللغة'),
-            ),
-            const SizedBox(
-              height: 10,
+              height: 25,
             ),
             CustomTextFormField(
               hintText: S.of(context).email,
               keyboardType: TextInputType.emailAddress,
             ),
             const SizedBox(
-              height: 16,
+              height: 20,
             ),
             CustomTextFormField(
               hintText: S.of(context).password,
@@ -78,35 +55,35 @@ class SingInViewBody extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 33,
+              height: 35,
             ),
             CustomButton(
               text: S.of(context).login,
               onPressed: () {},
             ),
             const SizedBox(
-              height: 33,
+              height: 24,
             ),
             const DontHaveAccountWidget(),
             const SizedBox(
-              height: 33,
+              height: 32,
             ),
             const OrDivider(),
             const SizedBox(
-              height: 33,
+              height: 20,
             ),
             SocialLoginButton(
               title: S.of(context).loginWithGoogle,
               icon: AppImages.imagesGoogle,
             ),
             const SizedBox(
-              height: 16,
+              height: 20,
             ),
             SocialLoginButton(
                 title: S.of(context).loginWithApple,
                 icon: AppImages.imagesApple),
             const SizedBox(
-              height: 16,
+              height: 20,
             ),
             SocialLoginButton(
               title: S.of(context).loginWithFacebook,

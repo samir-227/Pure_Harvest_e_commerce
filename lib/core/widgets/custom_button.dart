@@ -9,12 +9,12 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 54,
+      height: 64,
       child: TextButton(
         style: TextButton.styleFrom(
             backgroundColor: Theme.of(context).colorScheme.primary,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(20),
             )),
         onPressed: onPressed,
         child: Text(

@@ -1,13 +1,11 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub/core/constants/constants.dart';
-import 'package:fruits_hub/core/networking/firebase_auth_service.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/core/widgets/custom_error_bar.dart';
 import 'package:fruits_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/i_have_account_widget.dart';
+import 'package:fruits_hub/features/auth/presentation/views/widget/password_field.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/term_and_condition_widget.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
@@ -28,7 +26,7 @@ class _SignUpBodyState extends State<SignUpBody> {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
+
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
       child: SingleChildScrollView(
@@ -60,18 +58,9 @@ class _SignUpBodyState extends State<SignUpBody> {
               const SizedBox(
                 height: 16,
               ),
-              CustomTextFormField(
-                obscureText: true,
-                hintText: S.of(context).password,
-                keyboardType: TextInputType.visiblePassword,
-                suffixIcon: Icon(
-                  Icons.remove_red_eye_rounded,
-                  color: colors.onSurfaceVariant,
-                ),
-                onSaved: (value) {
-                  password = value!;
-                },
-              ),
+              PasswordField(onSaved: (value) {
+                password = value!;
+              }),
               const SizedBox(
                 height: 16,
               ),
@@ -87,7 +76,8 @@ class _SignUpBodyState extends State<SignUpBody> {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
                     if (!termsAccepted) {
-                      buildErrorBar(context, S.of(context).PleaseAcceptTermsAndConditions);
+                      buildErrorBar(context,
+                          S.of(context).PleaseAcceptTermsAndConditions);
                       return;
                     }
 
@@ -96,52 +86,50 @@ class _SignUpBodyState extends State<SignUpBody> {
                           email: email,
                           password: password,
                         );
-                        
-
                   } else {
                     setState(() {
                       autovalidateMode = AutovalidateMode.always;
                     });
                   }
 
-                //   if (formKey.currentState!.validate()) {
-                //     formKey.currentState!.save();
+                  //   if (formKey.currentState!.validate()) {
+                  //     formKey.currentState!.save();
 
-                //     if (!termsAccepted) {
-                //       ScaffoldMessenger.of(context).showSnackBar(
-                //         SnackBar(
-                //           content: Text(
-                //               S.of(context).PleaseAcceptTermsAndConditions),
-                //         ),
-                //       );
-                //       return;
-                //     }
+                  //     if (!termsAccepted) {
+                  //       ScaffoldMessenger.of(context).showSnackBar(
+                  //         SnackBar(
+                  //           content: Text(
+                  //               S.of(context).PleaseAcceptTermsAndConditions),
+                  //         ),
+                  //       );
+                  //       return;
+                  //     }
 
-                //     try {
-                //       // Create user account
-                //       await context
-                //           .read<SignUpCubit>()
-                //           .createUserWithEmailAndPassword(
-                //             name: name,
-                //             email: email,
-                //             password: password,
-                //           );
+                  //     try {
+                  //       // Create user account
+                  //       await context
+                  //           .read<SignUpCubit>()
+                  //           .createUserWithEmailAndPassword(
+                  //             name: name,
+                  //             email: email,
+                  //             password: password,
+                  //           );
 
-                //       // Send email verification
-                //       await FirebaseService.sendEmailVerification();
+                  //       // Send email verification
+                  //       await FirebaseService.sendEmailVerification();
 
-                //       // Navigate to verification screen or show success message
-                //     } catch (e) {
-                //       // Handle generic errors
-                //       ScaffoldMessenger.of(context).showSnackBar(
-                //         SnackBar(content: Text('خطا في الانشاء ')),
-                //       );
-                //     }
-                //   } else {
-                //     setState(() {
-                //       autovalidateMode = AutovalidateMode.always;
-                //     });
-                //   }
+                  //       // Navigate to verification screen or show success message
+                  //     } catch (e) {
+                  //       // Handle generic errors
+                  //       ScaffoldMessenger.of(context).showSnackBar(
+                  //         SnackBar(content: Text('خطا في الانشاء ')),
+                  //       );
+                  //     }
+                  //   } else {
+                  //     setState(() {
+                  //       autovalidateMode = AutovalidateMode.always;
+                  //     });
+                  //   }
                 },
               ),
               const SizedBox(
