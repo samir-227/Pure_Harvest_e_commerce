@@ -46,7 +46,7 @@ class FirebaseService {
       } else if (e.code == 'network-request-failed') {
         throw CustomException(message: 'تاكد من اتصالك بالانترنت.');
       } else if (e.code == 'invalid-email') {
-        throw CustomException(message: 'البريد الالكتروني غير صحيح.');
+        throw CustomException(message: 'البريد الكتروني غير صحيح.');
       } else {
         throw CustomException(
             message: 'لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى.');

@@ -259,6 +259,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Email not verified please verify your email`
+  String get EmailNotVerified {
+    return Intl.message(
+      'Email not verified please verify your email',
+      name: 'EmailNotVerified',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

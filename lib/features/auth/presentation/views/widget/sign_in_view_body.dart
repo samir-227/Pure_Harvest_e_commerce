@@ -28,6 +28,7 @@ class _SingInViewBodyState extends State<SingInViewBody> {
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   @override
   Widget build(BuildContext context) {
+    
     final colors = Theme.of(context).colorScheme;
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),

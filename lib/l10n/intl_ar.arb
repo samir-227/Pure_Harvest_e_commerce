@@ -24,7 +24,8 @@
 "TermsAndConditions": "من خلال إنشاء حساب، فإنك توافق على ",
 "policy": "الشروط وأحكامنا الخاصة بنا",
 "PleaseAcceptTermsAndConditions": "يجب عليك الموافقة على الشروط والإحكام",
-"UserNotVerified": "المستخدم غير موثق"
+"UserNotVerified": "المستخدم غير موثق",
+"EmailNotVerified": "البريد الالكتروني غير موثق من فضلك قم بالتحقق من البريد الالكتروني"
 
 
 }

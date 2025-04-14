@@ -15,7 +15,8 @@ BlocConsumer<SignUpCubit, SignUpState> signUpBodyBlocConsumer() {
       if (state is SignUpSuccess) {
         FirebaseAuth.instance.currentUser!.sendEmailVerification();
         Navigator.pop(context);
-      } else if (state is SignUpFailure) {
+      }
+      if (state is SignUpFailure) {
         buildErrorBar(context, state.message);
       }
     },

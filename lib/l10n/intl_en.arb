@@ -23,7 +23,8 @@
     "TermsAndConditions": "By creating an account, you agree to ",
     "Policy": "Terms and Conditions of use",
     "PleaseAcceptTermsAndConditions" : "Please accept terms and conditions",
-    "UserNotVerified": "User not verified"
+    "UserNotVerified": "User not verified",
+    "EmailNotVerified": "Email not verified please verify your email"
     
     
     
