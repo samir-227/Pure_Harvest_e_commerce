@@ -6,10 +6,11 @@ class SocialLoginButton extends StatelessWidget {
   const SocialLoginButton({
     super.key,
     required this.title,
-    required this.icon,
+    required this.icon, this.onPressed,
   });
   final String title;
   final String icon;
+  final  void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
@@ -25,7 +26,7 @@ class SocialLoginButton extends StatelessWidget {
               ),
             ),
           ),
-          onPressed: () {},
+          onPressed: onPressed,
           child: ListTile(
             visualDensity: const VisualDensity(
               vertical: VisualDensity.minimumDensity,

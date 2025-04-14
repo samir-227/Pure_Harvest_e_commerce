@@ -10,10 +10,7 @@ abstract class IAuthRepo {
   );
   Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
       String email, String password);
-  Future<Either<Failure, UserEntity>> signInWithGoogle(
-      String email, String password);
-  Future<Either<Failure, UserEntity>> signInWithFacebook(
-      String email, String password);
-  Future<Either<Failure, UserEntity>> signInWithApple(
-      String email, String password);
+  Future<Either<Failure, UserEntity>> signInWithGoogle();
+  Future<Either<Failure, UserEntity>> signInWithFacebook();
+  Future<Either<Failure, UserEntity>> signInWithApple();
 }

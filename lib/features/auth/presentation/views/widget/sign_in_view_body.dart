@@ -28,7 +28,6 @@ class _SingInViewBodyState extends State<SingInViewBody> {
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   @override
   Widget build(BuildContext context) {
-    
     final colors = Theme.of(context).colorScheme;
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
@@ -95,6 +94,9 @@ class _SingInViewBodyState extends State<SingInViewBody> {
                 height: 20,
               ),
               SocialLoginButton(
+                onPressed: () {
+                  context.read<SignInCubit>().signInWithGoogle();
+                },
                 title: S.of(context).loginWithGoogle,
                 icon: AppImages.imagesGoogle,
               ),

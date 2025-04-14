@@ -49,26 +49,34 @@ class AuthRepoImpl implements IAuthRepo {
         ),
       );
     }
-      }
+  }
 
   @override
-  Future<Either<Failure, UserEntity>> signInWithApple(
-      String email, String password) {
+  Future<Either<Failure, UserEntity>> signInWithGoogle() async {
+    try {
+      final user = await firebaseService.signInWithGoogle();
+      return Right(UserModel.fromFireBase(user));
+    } on CustomException catch (e) {
+      return left(ServerFailure(message: e.message));
+    } catch (e) {
+      log(" Exception in AuthRepoImpl.signInWithGoogle: ${e.toString()}");
+      return left(
+        ServerFailure(
+          message: 'حدث خطأ ما. الرجاء المحاولة مرة اخرى.',
+        ),
+      );
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithApple() {
     // TODO: implement signInWithApple
     throw UnimplementedError();
   }
 
   @override
-  Future<Either<Failure, UserEntity>> signInWithFacebook(
-      String email, String password) {
+  Future<Either<Failure, UserEntity>> signInWithFacebook() {
     // TODO: implement signInWithFacebook
-    throw UnimplementedError();
-  }
-
-  @override
-  Future<Either<Failure, UserEntity>> signInWithGoogle(
-      String email, String password) {
-    // TODO: implement signInWithGoogle
     throw UnimplementedError();
   }
 }
