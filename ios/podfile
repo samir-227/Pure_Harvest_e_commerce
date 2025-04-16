@@ -1,0 +1,17 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '13'
+
+# CocoaPods analytics sends network requests during installation to
+# improve the CocoaPods experience. It greatly helps to anonymously
+# identify issues and improve the search functionality.
+# To opt-out of analytics, add the lines below to your Podfile.
+# pod 'CocoaPodsAnalytics', '~> 0.1.0'
+
+target 'Runner' do
+  use_frameworks!
+  # Flutter Pods
+  pod 'Flutter', :path => '../flutter'
+  pod 'FlutterPluginRegistrant', :path => '../flutter/plugins/flutter_plugin_registrant/plugin/ios'
+  # Other Pods
+  pod 'flutter_secure_storage', :path => '../plugins/flutter_secure_storage/ios'
+end

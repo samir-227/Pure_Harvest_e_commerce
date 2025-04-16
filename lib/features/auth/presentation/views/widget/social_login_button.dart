@@ -6,11 +6,12 @@ class SocialLoginButton extends StatelessWidget {
   const SocialLoginButton({
     super.key,
     required this.title,
-    required this.icon, this.onPressed,
+    required this.icon,
+    this.onPressed,
   });
   final String title;
   final String icon;
-  final  void Function()? onPressed;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
@@ -21,7 +22,7 @@ class SocialLoginButton extends StatelessWidget {
           style: ButtonStyle(
             shape: WidgetStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
-                side: BorderSide(width: 1, color: colors.outline),
+                side: BorderSide(width: 3, color: colors.outline),
                 borderRadius: BorderRadius.circular(16),
               ),
             ),
