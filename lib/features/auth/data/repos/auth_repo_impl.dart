@@ -69,14 +69,25 @@ class AuthRepoImpl implements IAuthRepo {
   }
 
   @override
-  Future<Either<Failure, UserEntity>> signInWithApple() {
-    // TODO: implement signInWithApple
-    throw UnimplementedError();
+  Future<Either<Failure, UserEntity>> signInWithFacebook() async {
+    try {
+      final user = firebaseService.signInWithFacebook();
+      return Right(UserModel.fromFireBase(await user));
+    } on CustomException catch (e) {
+      return left(ServerFailure(message: e.message));
+    } catch (e) {
+      log(" Exception in AuthRepoImpl.signInWithFacebook: ${e.toString()}");
+      return left(
+        ServerFailure(
+          message: 'حدث خطأ ما. الرجاء المحاولة مرة اخرى.',
+        ),
+      );
+    }
   }
 
   @override
-  Future<Either<Failure, UserEntity>> signInWithFacebook() {
-    // TODO: implement signInWithFacebook
+  Future<Either<Failure, UserEntity>> signInWithApple() {
+    // TODO: implement signInWithApple
     throw UnimplementedError();
   }
 }

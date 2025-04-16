@@ -59,7 +59,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           maintainAnimation: true,
           maintainState: true,
           child: Padding(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
                 horizontal: kHorizontalPadding, vertical: 15),
             child: CustomButton(
               text: S.of(context).buttonText,

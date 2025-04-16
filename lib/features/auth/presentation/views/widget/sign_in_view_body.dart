@@ -30,7 +30,7 @@ class _SingInViewBodyState extends State<SingInViewBody> {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+      padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
       child: SingleChildScrollView(
         child: Form(
           key: formKey,
@@ -110,6 +110,9 @@ class _SingInViewBodyState extends State<SingInViewBody> {
                 height: 20,
               ),
               SocialLoginButton(
+                onPressed: () {
+                  context.read<SignInCubit>().signInWithFacebook();
+                },
                 title: S.of(context).loginWithFacebook,
                 icon: AppImages.imagesFacebook,
               ),

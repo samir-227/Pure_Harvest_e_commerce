@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:fruits_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
