@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -103,12 +104,18 @@ class _SingInViewBodyState extends State<SingInViewBody> {
               const SizedBox(
                 height: 20,
               ),
-              SocialLoginButton(
-                  title: S.of(context).loginWithApple,
-                  icon: AppImages.imagesApple),
-              const SizedBox(
-                height: 20,
-              ),
+              Platform.isIOS
+                  ? Column(
+                      children: [
+                        SocialLoginButton(
+                            title: S.of(context).loginWithApple,
+                            icon: AppImages.imagesApple),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                      ],
+                    )
+                  : const SizedBox(),
               SocialLoginButton(
                 onPressed: () {
                   context.read<SignInCubit>().signInWithFacebook();

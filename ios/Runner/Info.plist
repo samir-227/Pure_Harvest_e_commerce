@@ -61,6 +61,26 @@
 			<string>com.googleusercontent.apps.550455957560-q4hjftin1g0g1048537cmueb0comjb0b</string>
 				</array>
 			</dict>
-		</array>		
+		</array>	
+		<key>CFBundleURLTypes</key>
+		<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+			<string>fb3938147563165444</string>
+			</array>
+		</dict>
+		</array>
+		<key>FacebookAppID</key>
+		<string>3938147563165444</string>
+		<key>FacebookClientToken</key>
+		<string>5cbc7dbfd02c66cf67706c31f88b4f77</string>
+		<key>FacebookDisplayName</key>
+		<string>{your-app-name}</string>
+		<key>LSApplicationQueriesSchemes</key>
+		<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		</array>	
 	</dict>
 </plist>
