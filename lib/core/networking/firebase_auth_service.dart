@@ -120,18 +120,6 @@ class FirebaseService {
     return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
   }
 
-  // Future<User> signInWithFacebook() async {
-  //   final LoginResult loginResult = await FacebookAuth.instance.login();
-
-  //   // Create a credential from the access token
-  //   final OAuthCredential facebookAuthCredential =
-  //       FacebookAuthProvider.credential(loginResult.accessToken!.tokenString);
-
-  //   return (await FirebaseAuth.instance
-  //           .signInWithCredential(facebookAuthCredential))
-  //       .user!;
-  // }
-
   String generateNonce([int length = 32]) {
     const charset =
         '0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._';
