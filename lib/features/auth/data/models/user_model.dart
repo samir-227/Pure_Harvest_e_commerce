@@ -10,4 +10,17 @@ class UserModel extends UserEntity with EquatableMixin {
     return UserModel(
         email: user.email ?? '', name: user.displayName ?? '', uId: user.uid);
   }
+    factory UserModel.fromEntity(UserEntity user) {
+    return UserModel(
+      name: user.name,
+      email: user.email,
+      uId: user.uId,
+    );
+  }
+  factory UserModel.fromMap(Map<String, dynamic> map) {
+    return UserModel(
+        email: map['email'] ?? '',
+        name: map['name'] ?? '',
+        uId: map['uId'] ?? '');
+  }
 }

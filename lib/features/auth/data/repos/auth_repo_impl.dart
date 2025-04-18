@@ -109,7 +109,8 @@ class AuthRepoImpl implements IAuthRepo {
   Future addUser({required UserEntity user}) async {
     await databaseService.addUser(
       path: BackendEndpoint.addUserData,
-      data: user.toMap(),
+      data: UserModel.fromEntity(user).toMap(),
+      documentId: user.uId,
     );
   }
 }
