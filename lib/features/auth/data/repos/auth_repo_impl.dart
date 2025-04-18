@@ -67,12 +67,20 @@ class AuthRepoImpl implements IAuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> signInWithGoogle() async {
+    User? user;
     try {
-      final user = await firebaseService.signInWithGoogle();
+       user = await firebaseService.signInWithGoogle();
+      
       return Right(UserModel.fromFireBase(user));
     } on CustomException catch (e) {
+      if(user != null){
+        await user.delete();
+      }
       return left(ServerFailure(message: e.message));
     } catch (e) {
+      if(user != null){
+        await user.delete();
+      }
       log(" Exception in AuthRepoImpl.signInWithGoogle: ${e.toString()}");
       return left(
         ServerFailure(
@@ -84,12 +92,19 @@ class AuthRepoImpl implements IAuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> signInWithFacebook() async {
+    User? user;
     try {
-      final user = firebaseService.signInWithFacebook();
-      return Right(UserModel.fromFireBase(await user));
+       user = await firebaseService.signInWithFacebook();
+      return Right(UserModel.fromFireBase( user));
     } on CustomException catch (e) {
+      if(user != null){
+        await user.delete();
+      }
       return left(ServerFailure(message: e.message));
     } catch (e) {
+      if(user != null){
+        await user.delete();
+      }
       log(" Exception in AuthRepoImpl.signInWithFacebook: ${e.toString()}");
       return left(
         ServerFailure(

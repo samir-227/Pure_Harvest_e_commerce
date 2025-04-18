@@ -109,15 +109,22 @@ class FirebaseService {
 
   // Method to sign in a user with Google
   Future<User> signInWithGoogle() async {
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-    final GoogleSignInAuthentication? googleAuth =
-        await googleUser?.authentication;
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth?.accessToken,
-      idToken: googleAuth?.idToken,
-    );
+    try {
+      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+      final GoogleSignInAuthentication? googleAuth =
+          await googleUser?.authentication;
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
 
-    return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
+      return (await FirebaseAuth.instance.signInWithCredential(credential))
+          .user!;
+    } on Exception catch (e) {
+      log("Exception in FirebaseAuthService.signInWithGoogle: ${e.toString()}");
+      throw CustomException(
+          message: 'لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى.');
+    }
   }
 
   String generateNonce([int length = 32]) {
