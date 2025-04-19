@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "EmailNotVerified": MessageLookupByLibrary.simpleMessage(
       "البريد الالكتروني غير موثق من فضلك قم بالتحقق من البريد الالكتروني",
     ),
+    "GoodAfternoon": MessageLookupByLibrary.simpleMessage("مساء الخير"),
+    "GoodMorning": MessageLookupByLibrary.simpleMessage("صباح الخير"),
     "PleaseAcceptTermsAndConditions": MessageLookupByLibrary.simpleMessage(
       "يجب عليك الموافقة على الشروط والإحكام",
     ),

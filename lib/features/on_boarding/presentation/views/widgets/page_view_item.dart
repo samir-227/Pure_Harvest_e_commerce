@@ -7,6 +7,7 @@ import 'package:fruits_hub/core/models/page_view_item_model.dart';
 import 'package:fruits_hub/core/constants/app_images.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sign_in_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../../core/helpers/cache_helper.dart';
 import '../../../../../core/theming/app_text_style.dart';
 
@@ -46,8 +47,7 @@ class PageViewItem extends StatelessWidget {
                   child: GestureDetector(
                     onTap: () {
                       CacheHelper.set(key: kIsOnBoardingViewSeen, value: true);
-                      Navigator.pushReplacementNamed(
-                          context, SingInView.routeName);
+                      context.pushReplacementNamed(SingInView.routeName);
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(16),

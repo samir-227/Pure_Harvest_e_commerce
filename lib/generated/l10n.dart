@@ -269,6 +269,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Good Morning`
+  String get GoodMorning {
+    return Intl.message(
+      'Good Morning',
+      name: 'GoodMorning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Good Afternoon`
+  String get GoodAfternoon {
+    return Intl.message(
+      'Good Afternoon',
+      name: 'GoodAfternoon',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
