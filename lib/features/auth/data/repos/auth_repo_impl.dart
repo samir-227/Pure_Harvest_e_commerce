@@ -71,7 +71,13 @@ class AuthRepoImpl implements IAuthRepo {
     User? user;
     try {
       user = await firebaseService.signInWithGoogle();
-
+      var isUserExist = await databaseService.isDataExist(
+          documentId: user.uid, path: BackendEndpoint.addUserData);
+      if (isUserExist) {
+        await getCurrentUser(uId: user.uid);
+      } else {
+        await addUser(user: UserModel.fromFireBase(user));
+      }
       return Right(UserModel.fromFireBase(user));
     } on CustomException catch (e) {
       if (user != null) {
@@ -96,6 +102,13 @@ class AuthRepoImpl implements IAuthRepo {
     User? user;
     try {
       user = await firebaseService.signInWithFacebook();
+      var isUserExist = await databaseService.isDataExist(
+          documentId: user.uid, path: BackendEndpoint.addUserData);
+      if (isUserExist) {
+        await getCurrentUser(uId: user.uid);
+      } else {
+        await addUser(user: UserModel.fromFireBase(user));
+      }
       return Right(UserModel.fromFireBase(user));
     } on CustomException catch (e) {
       if (user != null) {
