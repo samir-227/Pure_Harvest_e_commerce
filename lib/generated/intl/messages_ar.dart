@@ -58,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "orDividerText": MessageLookupByLibrary.simpleMessage("أو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "register": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+    "searchBarHintText": MessageLookupByLibrary.simpleMessage("ابحث عن ...."),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "subtitle1": MessageLookupByLibrary.simpleMessage(
       "اكتشف تجربة تسوق فريدة مع FruitHUB .استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية",

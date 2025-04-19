@@ -289,6 +289,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Search about...`
+  String get searchBarHintText {
+    return Intl.message(
+      'Search about...',
+      name: 'searchBarHintText',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

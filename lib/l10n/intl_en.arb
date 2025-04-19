@@ -26,7 +26,8 @@
     "UserNotVerified": "User not verified",
     "EmailNotVerified": "Email not verified please verify your email",
     "GoodMorning": "Good Morning",
-    "GoodAfternoon": "Good Afternoon"
+    "GoodAfternoon": "Good Afternoon",
+    "searchBarHintText": "Search about..."
     
     
     

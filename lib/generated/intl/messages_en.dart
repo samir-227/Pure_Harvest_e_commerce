@@ -65,6 +65,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "orDividerText": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "register": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "searchBarHintText": MessageLookupByLibrary.simpleMessage(
+      "Search about...",
+    ),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "subtitle1": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide range of fresh and high-quality fruits and get the best deals and top quality.",

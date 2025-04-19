@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub/core/constants/app_images.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
-import 'package:fruits_hub/core/utlis/app_images.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/custom_notification_icon.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
