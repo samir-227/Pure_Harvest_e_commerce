@@ -9,30 +9,41 @@ class CustomSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: 48,
+    return Container(
+      decoration: const BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Color(0x0A000000),
+            blurRadius: 9,
+            offset: Offset(0, 2),
+            spreadRadius: 0,
+          )
+        ],
+      ),
       child: TextField(
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
-          prefixIconConstraints: const BoxConstraints(
-              maxWidth: double.infinity, maxHeight: double.infinity),
           border: const OutlineInputBorder(borderSide: BorderSide.none),
           hintText: S.of(context).searchBarHintText,
           hintStyle: TextStyles.regular16,
           prefixIcon: Padding(
-            padding: const EdgeInsets.only(left: 24, right: 8),
-            child: SvgPicture.asset(
-              AppImages.imagesSearchIcon,
+            padding: const EdgeInsets.only(left: 26, right: 8),
+            child: SizedBox(
+              child: SvgPicture.asset(
+                AppImages.imagesSearchIcon,
+              ),
               width: 24,
             ),
           ),
           suffixIcon: Padding(
             padding: const EdgeInsets.only(left: 16),
-            child: SvgPicture.asset(
-              AppImages.imagesFilter,
-              fit: BoxFit.scaleDown,
+            child: SizedBox(
+              width: 20,
+              child: SvgPicture.asset(
+                AppImages.imagesFilter,
+                fit: BoxFit.scaleDown,
+              ),
             ),
           ),
         ),

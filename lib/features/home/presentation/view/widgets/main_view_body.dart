@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/best_seller_bar.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/custom_search_bar.dart';
+import 'package:fruits_hub/features/home/presentation/view/widgets/featured_item.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/user_app_bar.dart';
 
 class MainViewBody extends StatelessWidget {
@@ -13,17 +13,18 @@ class MainViewBody extends StatelessWidget {
       child: Scaffold(
         body: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: kHorizontalPadding,
-            vertical: kVerticalPadding,
+            horizontal: 12,
           ),
           child: SingleChildScrollView(
             child: Column(
               children: [
                 UserAppBar(),
-                SizedBox(height: 16),
+                SizedBox(height: 8),
                 CustomSearchBar(),
+                SizedBox(height: 8),
+                FeaturedItem(),
                 SizedBox(height: 16),
-                BestSellerBar()
+                BestSellerBar(),
               ],
             ),
           ),

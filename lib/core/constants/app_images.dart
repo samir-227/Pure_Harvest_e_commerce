@@ -4,9 +4,13 @@ class AppImages {
   
   static const String imagesApple = "assets/images/apple.svg";
 
+  static const String imagesBannerDiscountImage = "assets/images/banner_discount_image.png";
+
   static const String imagesCheck = "assets/images/Check.svg";
 
   static const String imagesFacebook = "assets/images/facebook.svg";
+
+  static const String imagesFeaturedItemBackground = "assets/images/featured_item_background.svg";
 
   static const String imagesFilter = "assets/images/filter.svg";
 

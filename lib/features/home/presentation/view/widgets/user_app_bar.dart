@@ -10,39 +10,58 @@ class UserAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        CircleAvatar(
-          radius: 24,
-          backgroundImage: Image.asset(AppImages.imagesProfileImage).image,
+    return
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: [
+        //     CircleAvatar(
+        //       radius: 24,
+        //       backgroundImage: Image.asset(AppImages.imagesProfileImage).image,
+        //     ),
+        //     const SizedBox(
+        //       width: 11,
+        //     ),
+        //     Column(
+        //       crossAxisAlignment: CrossAxisAlignment.start,
+        //       children: [
+        //         Text(
+        //           S.of(context).GoodMorning,
+        //           style: TextStyles.regular16.copyWith(
+        //             color: colors.onSurfaceVariant,
+        //           ),
+        //         ),
+        //         const SizedBox(
+        //           height: 2,
+        //         ),
+        //         Text(
+        //           'سمير مدحت',
+        //           style: TextStyles.bold16.copyWith(
+        //             color: colors.onSurface,
+        //           ),
+        //         ),
+        //       ],
+        //     ),
+        //     const Spacer(),
+        //     const CustomNotificationIcon(),
+        //   ],
+        // );
+        ListTile(
+      contentPadding: const EdgeInsets.all(0),
+      trailing: const CustomNotificationIcon(),
+      leading: Image.asset(AppImages.imagesProfileImage),
+      title: Text(
+        S.of(context).GoodMorning,
+        style: TextStyles.regular16.copyWith(
+          color: colors.onSurfaceVariant,
         ),
-        const SizedBox(
-          width: 11,
+      ),
+      subtitle: Text(
+        'سمير مدحت',
+        textAlign: TextAlign.right,
+        style: TextStyles.bold16.copyWith(
+          color: colors.onSurface,
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              S.of(context).GoodMorning,
-              style: TextStyles.regular16.copyWith(
-                color: colors.onSurfaceVariant,
-              ),
-            ),
-            const SizedBox(
-              height: 2,
-            ),
-            Text(
-              'سمير مدحت',
-              style: TextStyles.bold16.copyWith(
-                color: colors.onSurface,
-              ),
-            ),
-          ],
-        ),
-        const Spacer(),
-        const CustomNotificationIcon(),
-      ],
+      ),
     );
   }
 }
