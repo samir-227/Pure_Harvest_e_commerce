@@ -25,14 +25,14 @@ class CustomSearchBar extends StatelessWidget {
             padding: const EdgeInsets.only(left: 24, right: 8),
             child: SvgPicture.asset(
               AppImages.imagesSearchIcon,
-              width: 30,
+              width: 24,
             ),
           ),
           suffixIcon: Padding(
             padding: const EdgeInsets.only(left: 16),
             child: SvgPicture.asset(
               AppImages.imagesFilter,
-              width: 30,
+              fit: BoxFit.scaleDown,
             ),
           ),
         ),

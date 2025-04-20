@@ -28,6 +28,8 @@
 "EmailNotVerified": "البريد الالكتروني غير موثق من فضلك قم بالتحقق من البريد الالكتروني",
 "GoodMorning": "صباح الخير",
 "GoodAfternoon": "مساء الخير",
-"searchBarHintText": "ابحث عن ...."
+"searchBarHintText": "ابحث عن ....",
+"bestSeller": "الاكثر مبيعا",
+"more": "المزيد"
 
 }

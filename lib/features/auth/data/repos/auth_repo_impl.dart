@@ -78,6 +78,7 @@ class AuthRepoImpl implements IAuthRepo {
       } else {
         await addUser(user: UserModel.fromFireBase(user));
       }
+      //  await addUser(user: UserModel.fromFireBase(user));
       return Right(UserModel.fromFireBase(user));
     } on CustomException catch (e) {
       if (user != null) {

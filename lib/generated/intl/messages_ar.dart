@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "appBarRegisterTitle": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+    "bestSeller": MessageLookupByLibrary.simpleMessage("الاكثر مبيعا"),
     "buttonText": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
     "doYouHaveAccount": MessageLookupByLibrary.simpleMessage(
@@ -55,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "loginWithGoogle": MessageLookupByLibrary.simpleMessage(
       "تسجيل بواسطة جوجل",
     ),
+    "more": MessageLookupByLibrary.simpleMessage("المزيد"),
     "orDividerText": MessageLookupByLibrary.simpleMessage("أو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "register": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
