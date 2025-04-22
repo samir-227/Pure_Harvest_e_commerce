@@ -11,68 +11,66 @@ class FeaturedItem extends StatelessWidget {
   Widget build(BuildContext context) {
     var itemWidth = MediaQuery.of(context).size.width - 32;
     final colors = Theme.of(context).colorScheme;
-    return SizedBox(
-      width: itemWidth,
-      child: AspectRatio(
-        aspectRatio: 342 / 158,
-        child: Stack(
-          children: [
-            Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
-                image: DecorationImage(
-                    image: AssetImage(AppImages.imagesBannerDiscountImage),
-                    fit: BoxFit.cover),
-              ),
-              alignment: Alignment.bottomRight,
-              child: Container(
-                padding: const EdgeInsets.only(right: 33),
-                width: itemWidth * .5,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(4),
+      child: SizedBox(
+        width: itemWidth,
+        child: AspectRatio(
+          aspectRatio: 342 / 158,
+          child: Stack(
+            children: [
+              Container(
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: Svg(AppImages.imagesFeaturedItemBackground),
-                      fit: BoxFit.fill),
+                      image: AssetImage(AppImages.imagesBannerDiscountImage),
+                      fit: BoxFit.cover),
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(
-                      height: 25,
-                    ),
-                    Text(
-                      'عروض العيد',
-                      style: TextStyles.regular13.copyWith(
-                        color: colors.onPrimary,
+                alignment: Alignment.bottomRight,
+                child: Container(
+                  padding: const EdgeInsets.only(right: 33),
+                  width: itemWidth * .5,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: Svg(AppImages.imagesFeaturedItemBackground),
+                        fit: BoxFit.fill),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(
+                        height: 32,
                       ),
-                    ),
-                    const Spacer(),
-                    Text(
-                      'خصم %25',
-                      style: TextStyles.bold19.copyWith(
-                        color: colors.onPrimary,
+                      Text(
+                        'عروض العيد',
+                        style: TextStyles.regular13.copyWith(
+                          color: colors.onPrimary,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 8),
-                    SizedBox(
-                      height: 32,
-                      child: FeaturedItemButton(colors: colors),
-                    ),
-                    const SizedBox(
-                      height: 29,
-                    ),
-                  ],
+                      const Spacer(),
+                      Text(
+                        'خصم %25',
+                        style: TextStyles.bold19.copyWith(
+                          color: colors.onPrimary,
+                          height: 1,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      SizedBox(
+                        height: 32,
+                        child: FeaturedItemButton(colors: colors),
+                      ),
+                      const SizedBox(
+                        height: 29,
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 }
-
-

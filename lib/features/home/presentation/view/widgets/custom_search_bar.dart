@@ -21,6 +21,7 @@ class CustomSearchBar extends StatelessWidget {
         ],
       ),
       child: TextField(
+        keyboardType: TextInputType.text,
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
@@ -28,22 +29,18 @@ class CustomSearchBar extends StatelessWidget {
           hintText: S.of(context).searchBarHintText,
           hintStyle: TextStyles.regular16,
           prefixIcon: Padding(
-            padding: const EdgeInsets.only(left: 26, right: 8),
+            padding: const EdgeInsets.only(left: 16, right: 8),
             child: SizedBox(
               child: SvgPicture.asset(
                 AppImages.imagesSearchIcon,
               ),
-              width: 24,
             ),
           ),
-          suffixIcon: Padding(
-            padding: const EdgeInsets.only(left: 16),
-            child: SizedBox(
-              width: 20,
-              child: SvgPicture.asset(
-                AppImages.imagesFilter,
-                fit: BoxFit.scaleDown,
-              ),
+          suffixIcon: SizedBox(
+            width: 20,
+            child: SvgPicture.asset(
+              AppImages.imagesFilter,
+              fit: BoxFit.scaleDown,
             ),
           ),
         ),

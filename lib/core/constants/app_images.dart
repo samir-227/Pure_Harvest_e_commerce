@@ -43,5 +43,11 @@ class AppImages {
   static const String imagesSplashViewDarkTheme = "assets/images/splash_view_dark_theme.png";
 
   static const String imagesSplashViewLightTheme = "assets/images/splash_view_light_theme.png";
+
+  static const String imagesStrawberryTestImage = "assets/images/strawberry_test_image.png";
+
+  static const String imagesWatermelon = "assets/images/watermelon.svg";
+
+  static const String imagesWatermelonTestImage = "assets/images/watermelon_test_image.png";
 }
 
