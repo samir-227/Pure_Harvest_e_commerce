@@ -40,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "appBarRegisterTitle": MessageLookupByLibrary.simpleMessage("حساب جديد"),
     "bestSeller": MessageLookupByLibrary.simpleMessage("الاكثر مبيعا"),
     "buttonText": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
+    "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
     "doYouHaveAccount": MessageLookupByLibrary.simpleMessage(
       "تمتلك حساب بالفعل؟",
@@ -48,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+    "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "loginWithApple": MessageLookupByLibrary.simpleMessage("تسجيل بواسطة أبل"),
     "loginWithFacebook": MessageLookupByLibrary.simpleMessage(
@@ -59,6 +61,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "more": MessageLookupByLibrary.simpleMessage("المزيد"),
     "orDividerText": MessageLookupByLibrary.simpleMessage("أو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
+    "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "register": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "searchBarHintText": MessageLookupByLibrary.simpleMessage("ابحث عن ...."),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),

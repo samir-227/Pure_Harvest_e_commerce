@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "appBarRegisterTitle": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "bestSeller": MessageLookupByLibrary.simpleMessage("Best Seller"),
     "buttonText": MessageLookupByLibrary.simpleMessage("Get Started"),
+    "cart": MessageLookupByLibrary.simpleMessage("Cart"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create new account",
     ),
@@ -55,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
     "fullname": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "home": MessageLookupByLibrary.simpleMessage("Home"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "loginWithApple": MessageLookupByLibrary.simpleMessage("Login with Apple"),
     "loginWithFacebook": MessageLookupByLibrary.simpleMessage(
@@ -66,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "more": MessageLookupByLibrary.simpleMessage("More"),
     "orDividerText": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "products": MessageLookupByLibrary.simpleMessage("Products"),
+    "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "register": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "searchBarHintText": MessageLookupByLibrary.simpleMessage(
       "Search about...",

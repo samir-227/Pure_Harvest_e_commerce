@@ -29,7 +29,11 @@
     "GoodAfternoon": "Good Afternoon",
     "searchBarHintText": "Search about...",
     "bestSeller": "Best Seller",
-    "more": "More"
+    "more": "More",
+    "home": "Home",
+    "cart": "Cart",
+    "profile": "Profile",
+    "products": "Products"
     
     
     

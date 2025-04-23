@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/best_seller_bar.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/best_selling_grid_view.dart';
+import 'package:fruits_hub/features/home/presentation/view/widgets/custom_button_navigation_bar.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/custom_search_bar.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/featured_list_of_item.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/user_app_bar.dart';
@@ -12,6 +13,7 @@ class MainViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
+        bottomNavigationBar: CustomButtonNavigationBar(),
         body: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: 12,
