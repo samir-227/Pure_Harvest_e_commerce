@@ -32,6 +32,8 @@ class AppImages {
 
   static const String imagesItem2Image = "assets/images/item-2-image.svg";
 
+  static const String imagesNotification = "assets/images/notification.svg";
+
   static const String imagesOutlineHome = "assets/images/outline/home.svg";
 
   static const String imagesOutlineProducts = "assets/images/outline/products.svg";

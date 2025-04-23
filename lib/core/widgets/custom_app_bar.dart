@@ -5,12 +5,14 @@ import 'package:go_router/go_router.dart';
 AppBar buildAppBar(
   BuildContext context, {
   required String title,
+  List<Widget>? actions,
 }) {
   return AppBar(
+    actions: actions,
     centerTitle: true,
     title: Text(
       title,
-      style: TextStyles.bold23,
+      style: TextStyles.bold19,
     ),
     leading: IconButton(
       icon: const Icon(

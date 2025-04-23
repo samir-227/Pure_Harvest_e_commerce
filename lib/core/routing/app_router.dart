@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/helpers/cache_helper.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sign_in_view.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sing_up_view.dart';
+import 'package:fruits_hub/features/best_selling_product/presentation/views/best_selling_product_view.dart';
 import 'package:fruits_hub/features/home/presentation/view/main_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:go_router/go_router.dart';
@@ -42,6 +43,11 @@ sealed class AppRouter {
         path: MainView.routeName,
         name: MainView.routeName,
         builder: (context, state) => const MainView(),
+      ),
+      GoRoute(
+        path: BestSellingProductView.routeName,
+        name: BestSellingProductView.routeName,
+        builder: (context, state) => const BestSellingProductView(),
       ),
     ],
   );

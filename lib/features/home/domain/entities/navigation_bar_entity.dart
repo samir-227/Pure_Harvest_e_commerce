@@ -20,6 +20,11 @@ class BottomNavigationBarEntity {
         inActiveImage: AppImages.imagesOutlineHome,
       ),
       BottomNavigationBarEntity(
+        title: S.of(context).products,
+        activeImage: AppImages.imagesBoldProducts,
+        inActiveImage: AppImages.imagesOutlineProducts,
+      ),
+      BottomNavigationBarEntity(
         title: S.of(context).cart,
         activeImage: AppImages.imagesBoldShoppingCart,
         inActiveImage: AppImages.imagesOutlineShoppingCart,
@@ -28,11 +33,6 @@ class BottomNavigationBarEntity {
         title: S.of(context).profile,
         activeImage: AppImages.imagesBoldUser,
         inActiveImage: AppImages.imagesOutlineUser,
-      ),
-      BottomNavigationBarEntity(
-        title: S.of(context).products,
-        activeImage: AppImages.imagesBoldProducts,
-        inActiveImage: AppImages.imagesOutlineProducts,
       ),
     ];
   }
