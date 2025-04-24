@@ -3,8 +3,10 @@ import 'dart:developer';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruits_hub/core/constants/backend_endpoint.dart';
+import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/errors/exceptions.dart';
 import 'package:fruits_hub/core/errors/failure.dart';
+import 'package:fruits_hub/core/helpers/cache_helper.dart';
 import 'package:fruits_hub/core/networking/data_base_service.dart';
 import 'package:fruits_hub/core/networking/firebase_auth_service.dart';
 import 'package:fruits_hub/features/auth/data/models/user_model.dart';
@@ -53,6 +55,9 @@ class AuthRepoImpl implements IAuthRepo {
       final user = await firebaseService.signInWithEmailAndPassword(
           email: email, password: password);
       var userEntity = await getCurrentUser(uId: user.uid);
+
+      var isUserLoggedIn = await firebaseService.isLoggedIn();
+      CacheHelper.set(key: 'isUserLoggedIn', value: isUserLoggedIn);
       return Right(userEntity);
     } on CustomException catch (e) {
       return left(ServerFailure(message: e.message));
@@ -78,7 +83,8 @@ class AuthRepoImpl implements IAuthRepo {
       } else {
         await addUser(user: UserModel.fromFireBase(user));
       }
-      //  await addUser(user: UserModel.fromFireBase(user));
+      var isUserLoggedIn = await firebaseService.isLoggedIn();
+      CacheHelper.set(key: kIsUserLoggedIn, value: isUserLoggedIn);
       return Right(UserModel.fromFireBase(user));
     } on CustomException catch (e) {
       if (user != null) {

@@ -17,8 +17,14 @@ sealed class AppRouter {
       if (state.fullPath?.isNotEmpty ?? false) return state.fullPath;
       final bool isSkipped =
           CacheHelper.getBool(key: kIsOnBoardingViewSeen) ?? false;
+      final bool isSignedIn = CacheHelper.getBool(key: kIsUserLoggedIn) ?? false;
       if (isSkipped) {
-        return SingInView.routeName;
+        if (isSignedIn) {
+          return MainView.routeName;
+        }else {
+           return SingInView.routeName;
+        }
+       
       } else {
         return OnBoardingView.routeName;
       }

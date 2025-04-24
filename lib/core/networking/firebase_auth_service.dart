@@ -10,6 +10,7 @@ import 'package:fruits_hub/core/errors/exceptions.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseService {
+
   static Future<void> firebaseUserState() async {
     FirebaseAuth.instance.authStateChanges().listen((User? user) {
       if (user == null) {
@@ -19,6 +20,7 @@ class FirebaseService {
       }
     });
   }
+   bool isLoggedIn() => FirebaseAuth.instance.currentUser != null;
 
   static Future<void> sendEmailVerification() async {
     final user = FirebaseAuth.instance.currentUser;
