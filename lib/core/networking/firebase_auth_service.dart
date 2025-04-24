@@ -11,11 +11,16 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseService {
 
+  /// Listens for changes in the authentication state of the user.
+  /// Logs whether the user is signed in or signed out.
   static Future<void> firebaseUserState() async {
+    // Listen to authentication state changes.
     FirebaseAuth.instance.authStateChanges().listen((User? user) {
       if (user == null) {
+        // Log when the user is signed out.
         log('User is currently signed out!');
       } else {
+        // Log when the user is signed in.
         log('User is signed in!');
       }
     });

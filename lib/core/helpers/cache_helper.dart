@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class CacheHelper {
   static late SharedPreferences _prefs;
 
- static const  _storage = FlutterSecureStorage();
+  static const _storage = FlutterSecureStorage();
 
   static Future<void> init() async {
     _prefs = await SharedPreferences.getInstance();
@@ -28,8 +28,8 @@ class CacheHelper {
   }
 
   // Retrieving data
-  static String? getString({required String key}) {
-    return _prefs.getString(key);
+  static String getString({required String key}) {
+    return _prefs.getString(key) ?? '';
   }
 
   static int? getInt({required String key}) {
@@ -59,7 +59,8 @@ class CacheHelper {
   }
 
   // Writing Secure Data
-  static Future<void> setSecureData({required String key, required String value}) async {
+  static Future<void> setSecureData(
+      {required String key, required String value}) async {
     _storage.write(key: key, value: value);
   }
 
@@ -77,5 +78,4 @@ class CacheHelper {
   static Future<void> deleteAllSecureData() async {
     await _storage.deleteAll();
   }
-
 }
