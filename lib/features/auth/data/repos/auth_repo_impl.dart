@@ -71,7 +71,7 @@ class AuthRepoImpl implements IAuthRepo {
           email: email, password: password);
 
       // Check if user is already logged in
-      var isUserLoggedIn = await firebaseService.isLoggedIn();
+      var isUserLoggedIn = firebaseService.isLoggedIn();
       CacheHelper.set(key: 'isUserLoggedIn', value: isUserLoggedIn);
 
       // Get current user
@@ -113,7 +113,7 @@ class AuthRepoImpl implements IAuthRepo {
         // Add user to database
         await addUser(user: UserModel.fromFireBase(user));
       }
-      var isUserLoggedIn = await firebaseService.isLoggedIn();
+      var isUserLoggedIn = firebaseService.isLoggedIn();
       CacheHelper.set(key: kIsUserLoggedIn, value: isUserLoggedIn);
       return Right(UserModel.fromFireBase(user));
     } on CustomException catch (e) {
@@ -193,8 +193,9 @@ class AuthRepoImpl implements IAuthRepo {
   /// Get current user
   @override
   Future<UserEntity> getCurrentUser({required String uId}) async {
-    var user = await databaseService.getData(
+    var snapshot = await databaseService.getData(
         path: BackendEndpoint.addUserData, documentId: uId);
+        var user = snapshot.data() as Map<String, dynamic>;
     return UserModel.fromJson(user);
   }
 
