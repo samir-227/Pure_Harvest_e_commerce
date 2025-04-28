@@ -1,9 +1,11 @@
 
 
 import 'package:equatable/equatable.dart';
+import 'package:flutter/widgets.dart';
 import 'package:fruits_hub/core/entities/review_entity.dart';
 
 class ProductEntity extends Equatable {
+  
   final String name;
   final String code;
   final String description;
