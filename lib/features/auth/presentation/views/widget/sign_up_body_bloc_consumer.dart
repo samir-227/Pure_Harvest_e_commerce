@@ -16,7 +16,7 @@ BlocConsumer<SignUpCubit, SignUpState> signUpBodyBlocConsumer() {
         Navigator.pop(context);
       }
       if (state is SignUpFailure) {
-        buildErrorBar(context, state.message);
+        CustomErrorWidget(message: state.message);
       }
     },
     builder: (context, state) {

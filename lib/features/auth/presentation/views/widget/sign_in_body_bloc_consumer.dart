@@ -15,11 +15,11 @@ BlocConsumer<SignInCubit, SignInState> signInBodyConsumer() {
         if (FirebaseAuth.instance.currentUser!.emailVerified) {
           context.goNamed(MainView.routeName);
         } else {
-          return buildErrorBar(context, S.of(context).EmailNotVerified);
+           CustomErrorWidget(message: S.of(context).EmailNotVerified);
         }
       }
       if (state is SignInFailure) {
-        buildErrorBar(context, state.message);
+        CustomErrorWidget(message: state.message);
       }
     },
     builder: (context, state) {

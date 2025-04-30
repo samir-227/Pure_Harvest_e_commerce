@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
 
-void buildErrorBar(BuildContext context, String message) {
-   ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(content: Text(message),
-    backgroundColor: Theme.of(context).colorScheme.error,),
-  );
+class CustomErrorWidget extends StatelessWidget {
+  const CustomErrorWidget({
+    super.key,
+    required this.message,
+  });
+
+  final String message;
+
+  @override
+  Widget build(BuildContext context) {
+    return SnackBar(
+      content: Text(message),
+      backgroundColor: Theme.of(context).colorScheme.error,
+    );
+  }
 }

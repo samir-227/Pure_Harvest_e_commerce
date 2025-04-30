@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub/core/entities/product_entity.dart';
 import 'package:fruits_hub/core/widgets/product_item.dart';
 
 class BestSellingGridView extends StatelessWidget {
-  const BestSellingGridView({super.key});
-
+  const BestSellingGridView({super.key, required this.products});
+  final List<ProductEntity> products;
   @override
   Widget build(BuildContext context) {
     return SliverGrid.builder(
@@ -13,8 +14,10 @@ class BestSellingGridView extends StatelessWidget {
         crossAxisSpacing: 16,
         mainAxisSpacing: 8,
       ),
-      itemCount: 8,
-      itemBuilder: (context, index) => const ProductItem(),
+      itemCount: products.length,
+      itemBuilder: (context, index) => ProductItem(
+        product: products[index],
+      ),
     );
   }
 }

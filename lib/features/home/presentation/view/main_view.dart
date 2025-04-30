@@ -6,6 +6,6 @@ class MainView extends StatelessWidget {
   static const String routeName = '/main';
   @override
   Widget build(BuildContext context) {
-    return const MainViewBody();
+    return const HomeView();
   }
 }

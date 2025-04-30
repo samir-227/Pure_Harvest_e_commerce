@@ -26,7 +26,6 @@ class _SignUpBodyState extends State<SignUpBody> {
 
   @override
   Widget build(BuildContext context) {
-
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
       child: SingleChildScrollView(
@@ -76,8 +75,9 @@ class _SignUpBodyState extends State<SignUpBody> {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
                     if (!termsAccepted) {
-                      buildErrorBar(context,
-                          S.of(context).PleaseAcceptTermsAndConditions);
+                      CustomErrorWidget(
+                          message:
+                              S.of(context).PleaseAcceptTermsAndConditions);
                       return;
                     }
 
