@@ -33,7 +33,10 @@
     "home": "Home",
     "cart": "Cart",
     "profile": "Profile",
-    "products": "Products"
+    "products": "Products",
+    "ourProducts": "Our Products",
+    "bestSelling": "Best Selling",
+    "result": "Result"
     
     
     

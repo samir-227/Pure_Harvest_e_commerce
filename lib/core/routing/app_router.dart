@@ -4,6 +4,7 @@ import 'package:fruits_hub/features/auth/presentation/views/sign_in_view.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sing_up_view.dart';
 import 'package:fruits_hub/features/best_selling_product/presentation/views/best_selling_product_view.dart';
 import 'package:fruits_hub/features/home/presentation/view/main_view.dart';
+import 'package:fruits_hub/features/home/presentation/view/products_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -17,14 +18,14 @@ sealed class AppRouter {
       if (state.fullPath?.isNotEmpty ?? false) return state.fullPath;
       final bool isSkipped =
           CacheHelper.getBool(key: kIsOnBoardingViewSeen) ?? false;
-      final bool isSignedIn = CacheHelper.getBool(key: kIsUserLoggedIn) ?? false;
+      final bool isSignedIn =
+          CacheHelper.getBool(key: kIsUserLoggedIn) ?? false;
       if (isSkipped) {
         if (isSignedIn) {
           return MainView.routeName;
-        }else {
-           return SingInView.routeName;
+        } else {
+          return SingInView.routeName;
         }
-       
       } else {
         return OnBoardingView.routeName;
       }
@@ -54,6 +55,11 @@ sealed class AppRouter {
         path: BestSellingProductView.routeName,
         name: BestSellingProductView.routeName,
         builder: (context, state) => const BestSellingProductView(),
+      ),
+      GoRoute(
+        path: ProductsView.routeName,
+        name: ProductsView.routeName,
+        builder: (context, state) => const ProductsView(),
       ),
     ],
   );

@@ -24,6 +24,8 @@ class AppImages {
 
   static const String imagesFilter = "assets/images/filter.svg";
 
+  static const String imagesFilter2 = "assets/images/filter2.svg";
+
   static const String imagesGoogle = "assets/images/google.svg";
 
   static const String imagesItem1BackgroundImage = "assets/images/item-1-background-image.svg";

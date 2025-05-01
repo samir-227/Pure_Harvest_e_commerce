@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub/core/cubits/products_cubit/products_cubit.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/best_seller_bar.dart';
-import 'package:fruits_hub/features/home/presentation/view/widgets/best_selling_grid_view_builder.dart';
-import 'package:fruits_hub/features/home/presentation/view/widgets/custom_button_navigation_bar.dart';
+import 'package:fruits_hub/features/home/presentation/view/widgets/products_grid_view_builder.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/custom_search_bar.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/featured_list_of_item.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/user_app_bar.dart';
@@ -23,13 +22,13 @@ class _HomeViewBodyState extends State<HomeViewBody> {
     super.initState();
     context.read<ProductsCubit>().getBestSellingProducts();
   }
+
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      bottomNavigationBar: CustomButtonNavigationBar(),
       body: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: 12,
+          horizontal: 16,
         ),
         child: CustomScrollView(slivers: [
           SliverToBoxAdapter(
@@ -46,7 +45,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
               ],
             ),
           ),
-          BestSellingGridViewBuilder(),
+          ProductsGridViewBuilder(),
         ]),
       ),
     );

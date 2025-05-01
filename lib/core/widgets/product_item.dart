@@ -38,8 +38,8 @@ class ProductItem extends StatelessWidget {
                     ? Flexible(
                         child: CustomNetworkImage(imageUrl: product.imageUrl!))
                     : const SizedBox(
-                        height: 80,
-                        width: 80,
+                        height: 75,
+                        width: 75,
                       ),
                 const SizedBox(
                   height: 24,
