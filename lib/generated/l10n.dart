@@ -320,6 +320,11 @@ class S {
     return Intl.message('Cart', name: 'cart', desc: '', args: []);
   }
 
+  /// `Cart`
+  String get theCart {
+    return Intl.message('Cart', name: 'theCart', desc: '', args: []);
+  }
+
   /// `Profile`
   String get profile {
     return Intl.message('Profile', name: 'profile', desc: '', args: []);
@@ -353,6 +358,11 @@ class S {
   /// `Result`
   String get result {
     return Intl.message('Result', name: 'result', desc: '', args: []);
+  }
+
+  /// `Watermelon`
+  String get watermelon {
+    return Intl.message('Watermelon', name: 'watermelon', desc: '', args: []);
   }
 }
 

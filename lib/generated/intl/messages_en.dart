@@ -84,6 +84,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "subtitle2": MessageLookupByLibrary.simpleMessage(
       "We offer you the best carefully selected fruits. Check out the details, images, and reviews to ensure you choose the perfect fruit.",
     ),
+    "theCart": MessageLookupByLibrary.simpleMessage("Cart"),
+    "watermelon": MessageLookupByLibrary.simpleMessage("Watermelon"),
     "welcomeTitle": MessageLookupByLibrary.simpleMessage("Welcome to the "),
     "welcomeTitle2": MessageLookupByLibrary.simpleMessage("Search and Shop"),
   };

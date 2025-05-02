@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/cubits/products_cubit/products_cubit.dart';
 import 'package:fruits_hub/core/widgets/custom_app_bar.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/custom_search_bar.dart';
@@ -38,7 +39,7 @@ class _ProductViewBodyState extends State<ProductViewBody> {
             SliverToBoxAdapter(
               child: Column(
                 children: [
-                  const SizedBox(height: 16),
+                  const SizedBox(height: kVerticalPadding),
                   const CustomSearchBar(),
                   const SizedBox(height: 16),
                   ProductHeaderBar(

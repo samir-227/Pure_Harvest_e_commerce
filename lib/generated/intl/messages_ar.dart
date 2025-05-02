@@ -75,6 +75,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "subtitle2": MessageLookupByLibrary.simpleMessage(
       "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
     ),
+    "theCart": MessageLookupByLibrary.simpleMessage("السلة"),
+    "watermelon": MessageLookupByLibrary.simpleMessage("بطيخ"),
     "welcomeTitle": MessageLookupByLibrary.simpleMessage("مرحبا بك في "),
     "welcomeTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
   };

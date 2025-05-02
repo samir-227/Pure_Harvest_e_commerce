@@ -20,7 +20,7 @@ class LightThemeColors {
   static const Color onSurface = Color(0xFFFFFFFF); // Main text
   static const Color onBackground = Color(0xFFFFFFFF); // Text on background
 
-  static const Color outline = Color(0xFFE6E9EA); // Borders
+  static const Color outline = Color(0xffF3F5F7); // Borders
 }
 
 // Dark Theme Colors
@@ -42,5 +42,5 @@ class DarkThemeColors {
   static const Color onSurface = Color(0xFFFFFFFF); // Main text
   static const Color onBackground = Color(0xFFFFFFFF); // Text on background
 
-  static const Color outline = Color(0xFFB0B0B0); // Borders
+  static const Color outline = Color(0xffF3F5F7); // Borders
 }

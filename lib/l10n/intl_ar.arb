@@ -33,11 +33,13 @@
 "more": "المزيد",
 "home": "الرئيسية",
 "cart": "سلة التسوق",
+"theCart":"السلة",
 "profile": "حسابي",
 "products": "المنتجات",
 "ourProducts": "منتجاتنا",
 "bestSelling": "الاكثر مبيعا",
-"result": "نتائج"
+"result": "نتائج",
+"watermelon": "بطيخ"
 
 
 }

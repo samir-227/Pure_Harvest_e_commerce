@@ -32,11 +32,13 @@
     "more": "More",
     "home": "Home",
     "cart": "Cart",
+    "theCart":"Cart",
     "profile": "Profile",
     "products": "Products",
     "ourProducts": "Our Products",
     "bestSelling": "Best Selling",
-    "result": "Result"
+    "result": "Result",
+    "watermelon": "Watermelon"
     
     
     

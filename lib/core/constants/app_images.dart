@@ -68,6 +68,8 @@ class AppImages {
 
   static const String imagesStrawberryTestImage = "assets/images/strawberry_test_image.png";
 
+  static const String imagesTrash = "assets/images/trash.svg";
+
   static const String imagesWatermelon = "assets/images/watermelon.svg";
 
   static const String imagesWatermelonTestImage = "assets/images/watermelon_test_image.png";
