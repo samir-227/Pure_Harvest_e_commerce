@@ -45,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "UserNotVerified": MessageLookupByLibrary.simpleMessage(
       "User not verified",
     ),
+    "address": MessageLookupByLibrary.simpleMessage("Address"),
     "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("Login"),
     "appBarRegisterTitle": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "bestSeller": MessageLookupByLibrary.simpleMessage("Best Seller"),
@@ -76,13 +77,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "orDividerText": MessageLookupByLibrary.simpleMessage("Or"),
     "ourProducts": MessageLookupByLibrary.simpleMessage("Our Products"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "payment": MessageLookupByLibrary.simpleMessage("Payment"),
     "products": MessageLookupByLibrary.simpleMessage("Products"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "register": MessageLookupByLibrary.simpleMessage("Sign Up"),
     "result": MessageLookupByLibrary.simpleMessage("Result"),
+    "review": MessageLookupByLibrary.simpleMessage("Review"),
     "searchBarHintText": MessageLookupByLibrary.simpleMessage(
       "Search about...",
     ),
+    "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "subtitle1": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide range of fresh and high-quality fruits and get the best deals and top quality.",

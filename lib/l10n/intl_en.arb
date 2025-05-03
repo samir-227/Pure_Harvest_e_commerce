@@ -40,7 +40,11 @@
     "result": "Result",
     "watermelon": "Watermelon",
     "ProductAddedToCart": "Product added to cart",
-    "ProductRemovedFromCart": "Product removed from cart"
+    "ProductRemovedFromCart": "Product removed from cart",
+    "shipping": "Shipping",
+    "payment": "Payment",
+    "address": "Address",
+    "review": "Review"
     
     
     

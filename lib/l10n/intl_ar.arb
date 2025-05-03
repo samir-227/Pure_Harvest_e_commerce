@@ -1,5 +1,4 @@
 {
-    
 "welcomeTitle": "مرحبا بك في ",
 "welcomeTitle2": "ابحث وتسوق",
 "subtitle1": "اكتشف تجربة تسوق فريدة مع FruitHUB .استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية",
@@ -41,6 +40,11 @@
 "result": "نتائج",
 "watermelon": "بطيخ",
 "ProductAddedToCart": "تمت اضافة المنتج الى السلة",
-"ProductRemovedFromCart": "تمت ازالة المنتج من السلة"
+"ProductRemovedFromCart": "تمت ازالة المنتج من السلة",
+"shipping": "الشحن",
+"payment": "الدفع",
+"address": "العنوان",
+"review": "المراجعة"
+
 
 }

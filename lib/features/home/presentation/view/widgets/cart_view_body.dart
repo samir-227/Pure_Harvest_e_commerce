@@ -25,7 +25,9 @@ class CartViewBody extends StatelessWidget {
                     height: kVerticalPadding,
                   ),
                   buildAppBar(context,
-                      title: S.of(context).theCart, showNotification: false),
+                      title: S.of(context).theCart,
+                      showNotification: false,
+                      showBackButton: false),
                   const SizedBox(
                     height: 16,
                   ),
@@ -50,11 +52,14 @@ class CartViewBody extends StatelessWidget {
             ),
           ],
         ),
-        Positioned(
-            left: 16,
-            right: 16,
-            bottom: MediaQuery.of(context).size.height * .09,
-            child: const CustomCartButton())
+        context.watch<CartCubit>().cartEntity.cartItems.isEmpty
+            ? const SizedBox()
+            : Positioned(
+                left: 16,
+                right: 16,
+                bottom: MediaQuery.of(context).size.height * .09,
+                child: const CustomCartButton(),
+              )
       ],
     );
   }

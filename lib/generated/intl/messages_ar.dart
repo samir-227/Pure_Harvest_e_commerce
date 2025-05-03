@@ -42,6 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "UserNotVerified": MessageLookupByLibrary.simpleMessage(
       "المستخدم غير موثق",
     ),
+    "address": MessageLookupByLibrary.simpleMessage("العنوان"),
     "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
     "appBarRegisterTitle": MessageLookupByLibrary.simpleMessage("حساب جديد"),
     "bestSeller": MessageLookupByLibrary.simpleMessage("الاكثر مبيعا"),
@@ -69,11 +70,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "orDividerText": MessageLookupByLibrary.simpleMessage("أو"),
     "ourProducts": MessageLookupByLibrary.simpleMessage("منتجاتنا"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
     "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
     "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "register": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
     "result": MessageLookupByLibrary.simpleMessage("نتائج"),
+    "review": MessageLookupByLibrary.simpleMessage("المراجعة"),
     "searchBarHintText": MessageLookupByLibrary.simpleMessage("ابحث عن ...."),
+    "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "subtitle1": MessageLookupByLibrary.simpleMessage(
       "اكتشف تجربة تسوق فريدة مع FruitHUB .استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية",
