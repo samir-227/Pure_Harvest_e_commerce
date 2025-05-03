@@ -39,7 +39,8 @@
 "ourProducts": "منتجاتنا",
 "bestSelling": "الاكثر مبيعا",
 "result": "نتائج",
-"watermelon": "بطيخ"
-
+"watermelon": "بطيخ",
+"ProductAddedToCart": "تمت اضافة المنتج الى السلة",
+"ProductRemovedFromCart": "تمت ازالة المنتج من السلة"
 
 }

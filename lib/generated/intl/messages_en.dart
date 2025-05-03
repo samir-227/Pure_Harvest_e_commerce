@@ -33,6 +33,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "Policy": MessageLookupByLibrary.simpleMessage(
       "Terms and Conditions of use",
     ),
+    "ProductAddedToCart": MessageLookupByLibrary.simpleMessage(
+      "Product added to cart",
+    ),
+    "ProductRemovedFromCart": MessageLookupByLibrary.simpleMessage(
+      "Product removed from cart",
+    ),
     "TermsAndConditions": MessageLookupByLibrary.simpleMessage(
       "By creating an account, you agree to ",
     ),

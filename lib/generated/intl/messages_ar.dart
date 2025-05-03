@@ -30,6 +30,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "PleaseAcceptTermsAndConditions": MessageLookupByLibrary.simpleMessage(
       "يجب عليك الموافقة على الشروط والإحكام",
     ),
+    "ProductAddedToCart": MessageLookupByLibrary.simpleMessage(
+      "تمت اضافة المنتج الى السلة",
+    ),
+    "ProductRemovedFromCart": MessageLookupByLibrary.simpleMessage(
+      "تمت ازالة المنتج من السلة",
+    ),
     "TermsAndConditions": MessageLookupByLibrary.simpleMessage(
       "من خلال إنشاء حساب، فإنك توافق على ",
     ),

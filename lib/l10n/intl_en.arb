@@ -38,7 +38,9 @@
     "ourProducts": "Our Products",
     "bestSelling": "Best Selling",
     "result": "Result",
-    "watermelon": "Watermelon"
+    "watermelon": "Watermelon",
+    "ProductAddedToCart": "Product added to cart",
+    "ProductRemovedFromCart": "Product removed from cart"
     
     
     

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:fruits_hub/core/entities/product_entity.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
 import 'package:fruits_hub/core/widgets/custom_network_image.dart';
+import 'package:fruits_hub/features/home/presentation/cubits/cart_cubit/cart_cubit.dart';
 
 class ProductItem extends StatelessWidget {
   const ProductItem({super.key, required this.product});
@@ -80,7 +82,9 @@ class ProductItem extends StatelessWidget {
                     trailing: CircleAvatar(
                       backgroundColor: colors.primary,
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          context.read<CartCubit>().addProduct(product);
+                        },
                         icon: Icon(Icons.add, color: colors.onPrimary),
                       ),
                     ))

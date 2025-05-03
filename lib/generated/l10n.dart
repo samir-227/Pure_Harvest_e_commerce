@@ -364,6 +364,26 @@ class S {
   String get watermelon {
     return Intl.message('Watermelon', name: 'watermelon', desc: '', args: []);
   }
+
+  /// `Product added to cart`
+  String get ProductAddedToCart {
+    return Intl.message(
+      'Product added to cart',
+      name: 'ProductAddedToCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product removed from cart`
+  String get ProductRemovedFromCart {
+    return Intl.message(
+      'Product removed from cart',
+      name: 'ProductRemovedFromCart',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

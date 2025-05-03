@@ -1,12 +1,16 @@
+import 'package:equatable/equatable.dart';
 import 'package:fruits_hub/core/entities/product_entity.dart';
 
-class CartItemEntity {
+class CartItemEntity extends Equatable {
   final ProductEntity product;
-  int count;
-  CartItemEntity({required this.product, this.count = 0});
-  num calculateTotalPrice() => product.price * count;
-  num calculateTotalWeights() => product.unitAmount * count;
-  
-  incrementCount() => count++;
-  decrementCount() => count--;
+  int quantity;
+  CartItemEntity({required this.product, this.quantity = 0});
+  num calculateTotalPrice() => product.price * quantity;
+  num calculateTotalWeights() => product.unitAmount * quantity;
+
+  int incrementQuantity() => quantity++;
+  int decrementQuantity() => quantity--;
+
+  @override
+  List<Object?> get props => [product];
 }

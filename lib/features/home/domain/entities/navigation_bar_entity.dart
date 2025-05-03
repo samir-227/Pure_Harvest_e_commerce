@@ -1,7 +1,9 @@
+
+import 'package:equatable/equatable.dart';
 import 'package:fruits_hub/core/constants/app_images.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
-class BottomNavigationBarEntity {
+class BottomNavigationBarEntity extends Equatable {
   final String title;
   final String activeImage;
   final String inActiveImage;
@@ -36,4 +38,7 @@ class BottomNavigationBarEntity {
       ),
     ];
   }
+  
+  @override
+  List<Object?> get props => throw UnimplementedError();
 }

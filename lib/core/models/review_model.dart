@@ -1,6 +1,7 @@
+import 'package:equatable/equatable.dart';
 import 'package:fruits_hub/core/entities/review_entity.dart';
 
-class ReviewModel {
+class ReviewModel extends Equatable {
   final String name;
   final String image;
   final num ratting;
@@ -50,4 +51,7 @@ class ReviewModel {
       'reviewDescription': reviewDescription
     };
   }
+  
+  @override
+  List<Object?> get props => throw UnimplementedError();
 }

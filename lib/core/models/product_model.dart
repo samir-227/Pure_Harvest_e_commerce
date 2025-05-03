@@ -1,10 +1,11 @@
+import 'package:equatable/equatable.dart';
 import 'package:fruits_hub/core/entities/product_entity.dart';
 import 'package:fruits_hub/core/helpers/get_avg_rating_func.dart';
 
 import 'review_model.dart';
 
 
-class ProductModel {
+class ProductModel extends Equatable {
   final String name;
   final String code;
   final String description;
@@ -89,4 +90,7 @@ class ProductModel {
       'reviews': reviews.map((e) => e.toJson()).toList()
     };
   }
+  
+  @override
+  List<Object?> get props => throw UnimplementedError();
 }
