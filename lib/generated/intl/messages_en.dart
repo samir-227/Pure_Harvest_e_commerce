@@ -30,6 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "PleaseAcceptTermsAndConditions": MessageLookupByLibrary.simpleMessage(
       "Please accept terms and conditions",
     ),
+    "PleaseSelectPaymentMethod": MessageLookupByLibrary.simpleMessage(
+      "Please select payment method",
+    ),
     "Policy": MessageLookupByLibrary.simpleMessage(
       "Terms and Conditions of use",
     ),
@@ -52,6 +55,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "bestSelling": MessageLookupByLibrary.simpleMessage("Best Selling"),
     "buttonText": MessageLookupByLibrary.simpleMessage("Get Started"),
     "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+    "cashOnDelivery": MessageLookupByLibrary.simpleMessage("Cash On Delivery"),
+    "cod": MessageLookupByLibrary.simpleMessage("Cash On Delivery"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create new account",
     ),
@@ -63,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
+    "free": MessageLookupByLibrary.simpleMessage("Free"),
     "fullname": MessageLookupByLibrary.simpleMessage("Full Name"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
@@ -74,9 +80,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "Login with Google",
     ),
     "more": MessageLookupByLibrary.simpleMessage("More"),
+    "next": MessageLookupByLibrary.simpleMessage("Next"),
     "orDividerText": MessageLookupByLibrary.simpleMessage("Or"),
     "ourProducts": MessageLookupByLibrary.simpleMessage("Our Products"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "payOnline": MessageLookupByLibrary.simpleMessage("Pay Online"),
     "payment": MessageLookupByLibrary.simpleMessage("Payment"),
     "products": MessageLookupByLibrary.simpleMessage("Products"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),

@@ -44,7 +44,14 @@
 "shipping": "الشحن",
 "payment": "الدفع",
 "address": "العنوان",
-"review": "المراجعة"
+"review": "المراجعة",
+"payOnline": "الدفع اونلاين",
+"cod": "التسليم من المكان",
+"free": "مجاني",
+"cashOnDelivery":"الدفع عند التسليم",
+"PleaseSelectPaymentMethod": "برجاء تحديد طريقة الدفع",
+"next": "التالي"
+
 
 
 }

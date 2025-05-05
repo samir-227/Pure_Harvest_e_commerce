@@ -30,6 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "PleaseAcceptTermsAndConditions": MessageLookupByLibrary.simpleMessage(
       "يجب عليك الموافقة على الشروط والإحكام",
     ),
+    "PleaseSelectPaymentMethod": MessageLookupByLibrary.simpleMessage(
+      "برجاء تحديد طريقة الدفع",
+    ),
     "ProductAddedToCart": MessageLookupByLibrary.simpleMessage(
       "تمت اضافة المنتج الى السلة",
     ),
@@ -49,6 +52,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "bestSelling": MessageLookupByLibrary.simpleMessage("الاكثر مبيعا"),
     "buttonText": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
     "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
+    "cashOnDelivery": MessageLookupByLibrary.simpleMessage("الدفع عند التسليم"),
+    "cod": MessageLookupByLibrary.simpleMessage("التسليم من المكان"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
     "doYouHaveAccount": MessageLookupByLibrary.simpleMessage(
       "تمتلك حساب بالفعل؟",
@@ -56,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
     "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "free": MessageLookupByLibrary.simpleMessage("مجاني"),
     "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -67,9 +73,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "تسجيل بواسطة جوجل",
     ),
     "more": MessageLookupByLibrary.simpleMessage("المزيد"),
+    "next": MessageLookupByLibrary.simpleMessage("التالي"),
     "orDividerText": MessageLookupByLibrary.simpleMessage("أو"),
     "ourProducts": MessageLookupByLibrary.simpleMessage("منتجاتنا"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "payOnline": MessageLookupByLibrary.simpleMessage("الدفع اونلاين"),
     "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
     "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
     "profile": MessageLookupByLibrary.simpleMessage("حسابي"),

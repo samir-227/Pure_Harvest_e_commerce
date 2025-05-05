@@ -44,7 +44,13 @@
     "shipping": "Shipping",
     "payment": "Payment",
     "address": "Address",
-    "review": "Review"
+    "review": "Review",
+    "payOnline": "Pay Online",
+    "cod": "Cash On Delivery",
+    "free": "Free",
+    "cashOnDelivery":"Cash On Delivery",
+    "PleaseSelectPaymentMethod": "Please select payment method",
+    "next": "Next"
     
     
     

@@ -404,6 +404,46 @@ class S {
   String get review {
     return Intl.message('Review', name: 'review', desc: '', args: []);
   }
+
+  /// `Pay Online`
+  String get payOnline {
+    return Intl.message('Pay Online', name: 'payOnline', desc: '', args: []);
+  }
+
+  /// `Cash On Delivery`
+  String get cod {
+    return Intl.message('Cash On Delivery', name: 'cod', desc: '', args: []);
+  }
+
+  /// `Free`
+  String get free {
+    return Intl.message('Free', name: 'free', desc: '', args: []);
+  }
+
+  /// `Cash On Delivery`
+  String get cashOnDelivery {
+    return Intl.message(
+      'Cash On Delivery',
+      name: 'cashOnDelivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select payment method`
+  String get PleaseSelectPaymentMethod {
+    return Intl.message(
+      'Please select payment method',
+      name: 'PleaseSelectPaymentMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message('Next', name: 'next', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
