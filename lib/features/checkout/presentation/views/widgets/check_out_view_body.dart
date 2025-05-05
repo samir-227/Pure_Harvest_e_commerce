@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/widgets/custom_app_bar.dart';
+import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/check_out_steps.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/checkout_page_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
@@ -37,9 +38,18 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
           const SizedBox(height: 16),
           const CheckOutSteps(),
           Expanded(
-              child: CheckoutPageView(
-            controller: pageController,
-          )),
+            child: CheckoutPageView(
+              controller: pageController,
+            ),
+          ),
+          CustomButton(
+              text: S.of(context).next,
+              onPressed: () {
+                pageController.animateToPage(pageController.page!.toInt() + 1,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeIn);
+              }),
+          const SizedBox(height: 50),
         ],
       ),
     );

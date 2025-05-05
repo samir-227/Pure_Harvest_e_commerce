@@ -24,7 +24,7 @@ class ShippingSection extends StatelessWidget {
             price: S.of(context).free,
             isSelected: true),
         const SizedBox(height: 100),
-        CustomButton(text: S.of(context).next, onPressed: () {}),
+        
       ],
     );
   }

@@ -56,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "buttonText": MessageLookupByLibrary.simpleMessage("Get Started"),
     "cart": MessageLookupByLibrary.simpleMessage("Cart"),
     "cashOnDelivery": MessageLookupByLibrary.simpleMessage("Cash On Delivery"),
+    "city": MessageLookupByLibrary.simpleMessage("City"),
     "cod": MessageLookupByLibrary.simpleMessage("Cash On Delivery"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create new account",
@@ -86,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "payOnline": MessageLookupByLibrary.simpleMessage("Pay Online"),
     "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
     "products": MessageLookupByLibrary.simpleMessage("Products"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "register": MessageLookupByLibrary.simpleMessage("Sign Up"),

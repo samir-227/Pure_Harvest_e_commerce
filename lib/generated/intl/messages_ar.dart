@@ -53,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "buttonText": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
     "cart": MessageLookupByLibrary.simpleMessage("سلة التسوق"),
     "cashOnDelivery": MessageLookupByLibrary.simpleMessage("الدفع عند التسليم"),
+    "city": MessageLookupByLibrary.simpleMessage("المدينة"),
     "cod": MessageLookupByLibrary.simpleMessage("التسليم من المكان"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
     "doYouHaveAccount": MessageLookupByLibrary.simpleMessage(
@@ -79,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "payOnline": MessageLookupByLibrary.simpleMessage("الدفع اونلاين"),
     "payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+    "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
     "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "register": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),

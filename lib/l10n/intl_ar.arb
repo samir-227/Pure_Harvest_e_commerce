@@ -50,7 +50,9 @@
 "free": "مجاني",
 "cashOnDelivery":"الدفع عند التسليم",
 "PleaseSelectPaymentMethod": "برجاء تحديد طريقة الدفع",
-"next": "التالي"
+"next": "التالي",
+"city":"المدينة",
+"phoneNumber":"رقم الهاتف"
 
 
 
