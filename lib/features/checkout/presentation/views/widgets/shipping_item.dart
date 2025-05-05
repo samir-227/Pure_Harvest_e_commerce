@@ -15,8 +15,13 @@ class ShippingItem extends StatelessWidget {
     var colors = Theme.of(context).colorScheme;
     return IntrinsicHeight(
       child: Container(
+        decoration: ShapeDecoration(
+          color: colors.outline,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(4)),
+          ),
+        ),
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
-        color: colors.outline,
         child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -45,7 +50,7 @@ class ShippingItem extends StatelessWidget {
               Center(
                   child: Text(
                 price,
-                style: TextStyles.bold13.copyWith(color: colors.primary),
+                style: TextStyles.bold13.copyWith(color: colors.secondary),
               )),
             ]),
       ),
