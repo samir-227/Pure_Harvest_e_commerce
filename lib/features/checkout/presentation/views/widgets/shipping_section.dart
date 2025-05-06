@@ -4,15 +4,28 @@ import 'package:fruits_hub/features/checkout/presentation/views/widgets/shipping
 import 'package:fruits_hub/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
-class ShippingSection extends StatelessWidget {
+class ShippingSection extends StatefulWidget {
   const ShippingSection({super.key});
 
   @override
+  State<ShippingSection> createState() => _ShippingSectionState();
+}
+
+class _ShippingSectionState extends State<ShippingSection> {
+  int currentIndex = 0;
+  @override
   Widget build(BuildContext context) {
+    var oderEntity = context.watch<OrderEntity>();
     return Column(
       children: [
         const SizedBox(height: 32),
         ShippingItem(
+            onTap: () {
+              setState(() {
+                currentIndex = 0;
+                oderEntity.payWithCash = true;
+              });
+            },
             title: S.of(context).cashOnDelivery,
             subtitle: S.of(context).cod,
             price: context
@@ -20,9 +33,15 @@ class ShippingSection extends StatelessWidget {
                 .cartEntity
                 .calculateTotalPrice()
                 .toString(),
-            isSelected: false),
+            isSelected: currentIndex == 0),
         const SizedBox(height: 8),
         ShippingItem(
+            onTap: () {
+              setState(() {
+                currentIndex = 1;
+                oderEntity.payWithCash = false;
+              });
+            },
             title: S.of(context).payOnline,
             subtitle: S.of(context).PleaseSelectPaymentMethod,
             price: context
@@ -30,7 +49,7 @@ class ShippingSection extends StatelessWidget {
                 .cartEntity
                 .calculateTotalPrice()
                 .toString(),
-            isSelected: true),
+            isSelected: currentIndex == 1),
         const SizedBox(height: 100),
       ],
     );
