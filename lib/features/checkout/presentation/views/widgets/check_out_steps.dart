@@ -6,9 +6,10 @@ class CheckOutSteps extends StatelessWidget {
   const CheckOutSteps(
       {super.key,
       required this.currentPageIndex,
-      required this.pageController});
+      required this.pageController,required this.onTap});
   final int currentPageIndex;
   final PageController pageController;
+  final void Function() onTap;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -16,11 +17,7 @@ class CheckOutSteps extends StatelessWidget {
         getCheckOutSteps(context).length,
         (index) => Expanded(
           child: GestureDetector(
-            onTap: () {
-              pageController.animateToPage(index,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeIn);
-            },
+            onTap: onTap,
             child: StepItem(
               index: index + 1,
               isActive: index <= currentPageIndex,
