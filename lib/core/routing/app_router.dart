@@ -4,6 +4,7 @@ import 'package:fruits_hub/features/auth/presentation/views/sign_in_view.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sing_up_view.dart';
 import 'package:fruits_hub/features/best_selling_product/presentation/views/best_selling_product_view.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/check_out_view.dart';
+import 'package:fruits_hub/features/home/domain/entities/cart_entity.dart';
 import 'package:fruits_hub/features/home/presentation/view/main_view.dart';
 import 'package:fruits_hub/features/home/presentation/view/products_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
@@ -65,7 +66,8 @@ sealed class AppRouter {
       GoRoute(
         path: CheckOutView.routeName,
         name: CheckOutView.routeName,
-        builder: (context, state) => const CheckOutView(),
+        builder: (context, state) =>  CheckOutView(cartEntity:
+            state.extra as CartEntity),
       ),
     ],
   );
