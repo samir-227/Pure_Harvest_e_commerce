@@ -14,7 +14,8 @@ class ShippingItem extends StatelessWidget {
   Widget build(BuildContext context) {
     var colors = Theme.of(context).colorScheme;
     return IntrinsicHeight(
-      child: Container(
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 300),
         decoration: ShapeDecoration(
           color: colors.outline,
           shape: const RoundedRectangleBorder(

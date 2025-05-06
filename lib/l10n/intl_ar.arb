@@ -52,7 +52,8 @@
 "PleaseSelectPaymentMethod": "برجاء تحديد طريقة الدفع",
 "next": "التالي",
 "city":"المدينة",
-"phoneNumber":"رقم الهاتف"
+"phoneNumber":"رقم الهاتف",
+"PayPal":"الدفع عبر paypal"
 
 
 

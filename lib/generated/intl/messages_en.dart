@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "GoodAfternoon": MessageLookupByLibrary.simpleMessage("Good Afternoon"),
     "GoodMorning": MessageLookupByLibrary.simpleMessage("Good Morning"),
+    "PayPal": MessageLookupByLibrary.simpleMessage("pay with PayPal"),
     "PleaseAcceptTermsAndConditions": MessageLookupByLibrary.simpleMessage(
       "Please accept terms and conditions",
     ),

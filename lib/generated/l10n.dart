@@ -459,6 +459,11 @@ class S {
       args: [],
     );
   }
+
+  /// `pay with PayPal`
+  String get PayPal {
+    return Intl.message('pay with PayPal', name: 'PayPal', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

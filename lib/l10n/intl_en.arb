@@ -52,7 +52,8 @@
     "PleaseSelectPaymentMethod": "Please select payment method",
     "next": "Next",
     "city":"City",
-    "phoneNumber":"Phone Number"
+    "phoneNumber":"Phone Number",
+    "PayPal":"pay with PayPal"
     
     
     
