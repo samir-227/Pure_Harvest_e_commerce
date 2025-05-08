@@ -53,7 +53,10 @@
 "next": "التالي",
 "city":"المدينة",
 "phoneNumber":"رقم الهاتف",
-"PayPal":"الدفع عبر paypal"
+"PayPal":"الدفع عبر paypal",
+"orderSummary":"ملخص الطلب",
+"deliveryTitle":"عنوان التوصيل",
+"edit":"تعديل"
 
 
 

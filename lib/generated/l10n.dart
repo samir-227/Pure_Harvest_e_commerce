@@ -464,6 +464,31 @@ class S {
   String get PayPal {
     return Intl.message('pay with PayPal', name: 'PayPal', desc: '', args: []);
   }
+
+  /// `Order Summary`
+  String get orderSummary {
+    return Intl.message(
+      'Order Summary',
+      name: 'orderSummary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Address`
+  String get deliveryTitle {
+    return Intl.message(
+      'Delivery Address',
+      name: 'deliveryTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message('Edit', name: 'edit', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

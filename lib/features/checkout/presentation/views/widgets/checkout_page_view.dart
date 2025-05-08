@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/address_input_section.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/shipping_section.dart';
-import 'package:fruits_hub/features/home/presentation/view/widgets/payment_section.dart';
+import 'package:fruits_hub/features/checkout/presentation/views/widgets/payment_section.dart';
 
 class CheckoutPageView extends StatelessWidget {
   const CheckoutPageView(
-      {super.key, required this.controller, required this.formKey, required this.valueNotifier});
+      {super.key,
+      required this.controller,
+      required this.formKey,
+      required this.valueNotifier});
   final PageController controller;
   final GlobalKey<FormState> formKey;
   final ValueNotifier<AutovalidateMode> valueNotifier;
@@ -28,7 +31,9 @@ class CheckoutPageView extends StatelessWidget {
         valueNotifier: valueNotifier,
         formKey: formKey,
       ),
-      const PaymentSection(),
+      PaymentSection(
+        pageController: controller,
+      ),
       const SizedBox(),
     ];
   }

@@ -53,8 +53,10 @@
     "next": "Next",
     "city":"City",
     "phoneNumber":"Phone Number",
-    "PayPal":"pay with PayPal"
-    
+    "PayPal":"pay with PayPal",
+    "orderSummary":"Order Summary",
+    "deliveryTitle":"Delivery Address",
+    "edit":"Edit"
     
     
     

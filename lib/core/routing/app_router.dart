@@ -66,8 +66,8 @@ sealed class AppRouter {
       GoRoute(
         path: CheckOutView.routeName,
         name: CheckOutView.routeName,
-        builder: (context, state) =>  CheckOutView(cartEntity:
-            state.extra as CartEntity),
+        builder: (context, state) =>
+            CheckOutView(cartEntity: state.extra as CartEntity),
       ),
     ],
   );

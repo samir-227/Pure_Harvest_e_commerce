@@ -18,6 +18,8 @@ class AppImages {
 
   static const String imagesCheck = "assets/images/Check.svg";
 
+  static const String imagesEdit = "assets/images/edit.svg";
+
   static const String imagesFacebook = "assets/images/facebook.svg";
 
   static const String imagesFeaturedItemBackground = "assets/images/featured_item_background.svg";
@@ -33,6 +35,8 @@ class AppImages {
   static const String imagesItem1Image = "assets/images/item-1-image.svg";
 
   static const String imagesItem2Image = "assets/images/item-2-image.svg";
+
+  static const String imagesLocation = "assets/images/location.svg";
 
   static const String imagesNotification = "assets/images/notification.svg";
 

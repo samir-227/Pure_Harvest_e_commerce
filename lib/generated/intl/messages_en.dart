@@ -62,12 +62,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create new account",
     ),
+    "deliveryTitle": MessageLookupByLibrary.simpleMessage("Delivery Address"),
     "doYouHaveAccount": MessageLookupByLibrary.simpleMessage(
       "You have an account?",
     ),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account?",
     ),
+    "edit": MessageLookupByLibrary.simpleMessage("Edit"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
     "free": MessageLookupByLibrary.simpleMessage("Free"),
@@ -84,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "more": MessageLookupByLibrary.simpleMessage("More"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
     "orDividerText": MessageLookupByLibrary.simpleMessage("Or"),
+    "orderSummary": MessageLookupByLibrary.simpleMessage("Order Summary"),
     "ourProducts": MessageLookupByLibrary.simpleMessage("Our Products"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "payOnline": MessageLookupByLibrary.simpleMessage("Pay Online"),
