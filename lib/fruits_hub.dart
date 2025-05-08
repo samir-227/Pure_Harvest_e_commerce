@@ -15,12 +15,12 @@ class FruitsHub extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-         ChangeNotifierProvider(create: (context) => LocaleProvider()),
+        ChangeNotifierProvider(create: (context) => LocaleProvider()),
         ChangeNotifierProvider(create: (context) => ThemeProvider()),
       ],
       child: FutureBuilder(
-        future:
-            SharedPreferences.getInstance(), // Ensure SharedPreferences is ready
+        future: SharedPreferences
+            .getInstance(), // Ensure SharedPreferences is ready
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             return Consumer<ThemeProvider>(

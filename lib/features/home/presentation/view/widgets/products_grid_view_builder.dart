@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub/core/cubits/products_cubit/products_cubit.dart';
@@ -18,16 +17,13 @@ class ProductsGridViewBuilder extends StatelessWidget {
         // state.products.length.toString());
         return ProductsGridView(
           products: state.products,
-          
         );
-        
       } else if (state is ProductsFailure) {
         return CustomErrorWidget(message: state.errMessage);
       } else {
         return Skeletonizer.sliver(
           enabled: true,
           child: ProductsGridView(
-           
             products: getDummyProducts(),
           ),
         );

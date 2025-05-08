@@ -11,7 +11,8 @@ class ShippingSection extends StatefulWidget {
   State<ShippingSection> createState() => _ShippingSectionState();
 }
 
-class _ShippingSectionState extends State<ShippingSection> with AutomaticKeepAliveClientMixin {
+class _ShippingSectionState extends State<ShippingSection>
+    with AutomaticKeepAliveClientMixin {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -55,8 +56,7 @@ class _ShippingSectionState extends State<ShippingSection> with AutomaticKeepAli
       ],
     );
   }
-  
-  @override
 
+  @override
   bool get wantKeepAlive => true;
 }

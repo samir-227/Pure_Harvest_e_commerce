@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class CustomNetworkImage extends StatelessWidget {
   const CustomNetworkImage({
     super.key,
@@ -8,7 +7,6 @@ class CustomNetworkImage extends StatelessWidget {
   });
 
   final String imageUrl;
-
 
   @override
   Widget build(BuildContext context) {

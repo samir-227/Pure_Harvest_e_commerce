@@ -6,7 +6,8 @@ class CheckOutSteps extends StatelessWidget {
   const CheckOutSteps(
       {super.key,
       required this.currentPageIndex,
-      required this.pageController,required this.onTap});
+      required this.pageController,
+      required this.onTap});
   final int currentPageIndex;
   final PageController pageController;
   final void Function() onTap;

@@ -4,7 +4,6 @@ import 'package:fruits_hub/core/helpers/get_avg_rating_func.dart';
 
 import 'review_model.dart';
 
-
 class ProductModel extends Equatable {
   final String name;
   final String code;
@@ -90,7 +89,7 @@ class ProductModel extends Equatable {
       'reviews': reviews.map((e) => e.toJson()).toList()
     };
   }
-  
+
   @override
   List<Object?> get props => throw UnimplementedError();
 }

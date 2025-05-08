@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -103,7 +102,6 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
                 } else {
                   OrderEntity orderEntity = context.read<OrderEntity>();
                   context.read<OrdersCubit>().addOrder(orderEntity);
-                
                 }
               }),
           const SizedBox(height: 70),

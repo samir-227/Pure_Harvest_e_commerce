@@ -66,7 +66,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               onPressed: () {
                 CacheHelper.set(key: kIsOnBoardingViewSeen, value: true);
                 context.pushReplacementNamed(SingInView.routeName);
-                
               },
             ),
           ),

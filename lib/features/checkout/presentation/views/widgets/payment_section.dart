@@ -6,7 +6,7 @@ import 'package:fruits_hub/generated/l10n.dart';
 
 class PaymentSection extends StatelessWidget {
   const PaymentSection({super.key, required this.pageController});
-final PageController pageController;
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     var colors = Theme.of(context).colorScheme;
@@ -32,26 +32,24 @@ final PageController pageController;
             ),
             padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 16),
             child: OrderSummaryWidget(colors: colors),
-            
           ),
           const SizedBox(
-          height: 16,
-        ),
-        Container(
-          decoration: ShapeDecoration(
+            height: 16,
+          ),
+          Container(
+            decoration: ShapeDecoration(
               color: colors.outline,
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(4)),
               ),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 5),
-          child: ShippingAddressWidget(
-            pageController: pageController,
+            child: ShippingAddressWidget(
+              pageController: pageController,
+            ),
           ),
-        ),
         ],
       ),
     );
   }
 }
-

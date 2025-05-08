@@ -1,4 +1,3 @@
-
 import 'package:equatable/equatable.dart';
 import 'package:fruits_hub/core/constants/app_images.dart';
 import 'package:fruits_hub/generated/l10n.dart';
@@ -38,7 +37,7 @@ class BottomNavigationBarEntity extends Equatable {
       ),
     ];
   }
-  
+
   @override
   List<Object?> get props => throw UnimplementedError();
 }

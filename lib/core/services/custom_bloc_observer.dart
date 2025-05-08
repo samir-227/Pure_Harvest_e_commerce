@@ -2,7 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:logger/logger.dart';
 
 class CustomBlocObserver extends BlocObserver {
- final Logger logger = Logger();
+  final Logger logger = Logger();
   @override
   void onChange(BlocBase bloc, Change change) {
     super.onChange(bloc, change);
@@ -38,6 +38,4 @@ class CustomBlocObserver extends BlocObserver {
     super.onCreate(bloc);
     logger.i('${bloc.runtimeType} is created');
   }
-
-  
-  }
+}

@@ -1,7 +1,7 @@
 import 'package:fruits_hub/core/entities/product_entity.dart';
 import 'package:fruits_hub/features/home/domain/entities/cart_item_entity.dart';
 
-class CartEntity  {
+class CartEntity {
   final List<CartItemEntity> cartItems;
 
   CartEntity({required this.cartItems});
@@ -35,6 +35,4 @@ class CartEntity  {
     }
     return CartItemEntity(product: productEntity, quantity: 1);
   }
-
- 
 }

@@ -37,7 +37,8 @@ class _CheckOutViewState extends State<CheckOutView> {
       create: (context) => OrdersCubit(ordersRepo: sl()),
       child: Scaffold(
           body: Provider.value(
-              value: orderEntity, child:const OrdersCubitBlocBuilder(child:  CheckOutViewBody()))),
+              value: orderEntity,
+              child: const OrdersCubitBlocBuilder(child: CheckOutViewBody()))),
     );
   }
 }

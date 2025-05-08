@@ -23,4 +23,3 @@ class CartItemList extends StatelessWidget {
         });
   }
 }
-

@@ -17,14 +17,12 @@ class OrderSummaryWidget extends StatelessWidget {
         Row(children: [
           Text(
             "المجموع الفرعي :",
-            style: TextStyles.regular13
-                .copyWith(color: colors.onSecondary),
+            style: TextStyles.regular13.copyWith(color: colors.onSecondary),
           ),
           const Spacer(),
           Text(
             "150 جنيه",
-            style: TextStyles.semiBold16
-                .copyWith(color: colors.onSecondary),
+            style: TextStyles.semiBold16.copyWith(color: colors.onSecondary),
           ),
         ]),
         const SizedBox(
@@ -34,16 +32,15 @@ class OrderSummaryWidget extends StatelessWidget {
           children: [
             Text(
               "التوصيل :",
-              style: TextStyles.regular13
-                  .copyWith(color: colors.onSecondary),
+              style: TextStyles.regular13.copyWith(color: colors.onSecondary),
             ),
             const Spacer(),
             Padding(
               padding: const EdgeInsets.only(left: 22),
               child: Text(
                 "30 جنيه",
-                style: TextStyles.semiBold13
-                    .copyWith(color: colors.onSecondary),
+                style:
+                    TextStyles.semiBold13.copyWith(color: colors.onSecondary),
               ),
             ),
           ],
@@ -56,14 +53,12 @@ class OrderSummaryWidget extends StatelessWidget {
           children: [
             Text(
               " الكلي",
-              style:
-                  TextStyles.bold16.copyWith(color: colors.onSecondary),
+              style: TextStyles.bold16.copyWith(color: colors.onSecondary),
             ),
             const Spacer(),
             Text(
               "180 جنيه",
-              style:
-                  TextStyles.bold16.copyWith(color: colors.onSecondary),
+              style: TextStyles.bold16.copyWith(color: colors.onSecondary),
             ),
           ],
         ),

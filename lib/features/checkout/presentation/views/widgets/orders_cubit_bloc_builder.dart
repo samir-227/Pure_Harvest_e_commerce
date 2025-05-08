@@ -1,4 +1,3 @@
-
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -19,7 +18,7 @@ class OrdersCubitBlocBuilder extends StatelessWidget {
         listener: (context, state) {
           if (state is OrdersSuccess) {
             showBar(context, S.of(context).orderSuccess);
-          }  
+          }
           if (state is OrdersFailure) {
             showBar(context, S.of(context).orderFailedMessage);
             log(state.errMessage);

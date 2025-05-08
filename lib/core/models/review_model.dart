@@ -51,7 +51,7 @@ class ReviewModel extends Equatable {
       'reviewDescription': reviewDescription
     };
   }
-  
+
   @override
   List<Object?> get props => throw UnimplementedError();
 }

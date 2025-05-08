@@ -35,7 +35,7 @@ class AddressInputSection extends StatelessWidget {
                 height: 16,
               ),
               CustomTextFormField(
-                onSaved: (value) {
+                  onSaved: (value) {
                     shippingAddress.email = value;
                   },
                   hintText: S.of(context).email,
@@ -44,7 +44,7 @@ class AddressInputSection extends StatelessWidget {
                 height: 16,
               ),
               CustomTextFormField(
-                onSaved: (value) {
+                  onSaved: (value) {
                     shippingAddress.address = value;
                   },
                   hintText: S.of(context).address,
@@ -53,7 +53,7 @@ class AddressInputSection extends StatelessWidget {
                 height: 16,
               ),
               CustomTextFormField(
-                onSaved: (value) {
+                  onSaved: (value) {
                     shippingAddress.city = value;
                   },
                   hintText: S.of(context).city,
@@ -62,7 +62,7 @@ class AddressInputSection extends StatelessWidget {
                 height: 16,
               ),
               CustomTextFormField(
-                onSaved: (value) {
+                  onSaved: (value) {
                     shippingAddress.phone = value;
                   },
                   hintText: S.of(context).phoneNumber,

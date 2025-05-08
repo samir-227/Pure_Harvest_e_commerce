@@ -7,9 +7,27 @@ class OrderEntity {
   bool? payWithCash;
   ShippingAddressEntity shippingAddress;
 
-  OrderEntity( 
+  OrderEntity(
       {required this.cartEntity,
       required this.uid,
       this.payWithCash,
       required this.shippingAddress});
+  double calculateShippingPrice() {
+    if (payWithCash == true) {
+      return 30;
+    } else {
+      return 0;
+    }
+  }
+
+  double calculateDiscount() {
+    return 0;
+  }
+
+  double calculateTotalPriceAfterShippingAndDiscount() {
+    return cartEntity.calculateTotalPrice() +
+        calculateShippingPrice() -
+        calculateDiscount();
+  }
+
 }

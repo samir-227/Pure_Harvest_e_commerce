@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
 import 'package:fruits_hub/core/widgets/notification_widget.dart';
 
-
 AppBar buildAppBar(context,
     {required String title,
     bool showBackButton = true,

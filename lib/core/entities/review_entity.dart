@@ -13,7 +13,7 @@ class ReviewEntity extends Equatable {
       required this.ratting,
       required this.date,
       required this.reviewDescription});
-      
-        @override
-        List<Object?> get props => throw UnimplementedError();
+
+  @override
+  List<Object?> get props => throw UnimplementedError();
 }

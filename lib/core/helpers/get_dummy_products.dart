@@ -22,4 +22,6 @@ ProductEntity getDummyProduct() {
       isFeatured: true,
       imageUrl: null);
 }
-List<ProductEntity> getDummyProducts() => List.generate(10, (index) => getDummyProduct());
+
+List<ProductEntity> getDummyProducts() =>
+    List.generate(10, (index) => getDummyProduct());

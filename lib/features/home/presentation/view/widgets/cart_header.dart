@@ -17,7 +17,8 @@ class CartHeader extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),
-        child: Text('لديك ${context.watch<CartCubit>().cartEntity.cartItems.length} منتجات في سله التسوق',
+        child: Text(
+            'لديك ${context.watch<CartCubit>().cartEntity.cartItems.length} منتجات في سله التسوق',
             textAlign: TextAlign.center,
             style: TextStyles.regular13.copyWith(
               color: Theme.of(context).colorScheme.primary,

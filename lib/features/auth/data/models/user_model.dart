@@ -24,7 +24,7 @@ class UserModel extends UserEntity with EquatableMixin {
         uId: map['uId'] ?? '');
   }
 
-   toMap() {
+  toMap() {
     return {'email': email, 'name': name, 'uId': uId};
   }
 }
