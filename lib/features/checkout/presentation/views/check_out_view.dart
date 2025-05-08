@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_hub/core/di/get_it.dart';
 import 'package:fruits_hub/core/helpers/get_user_data_func.dart';
 import 'package:fruits_hub/features/checkout/domain/entities/order_entity.dart';
 import 'package:fruits_hub/features/checkout/domain/entities/shipping_address_entity.dart';
+import 'package:fruits_hub/features/checkout/presentation/cubits/orders_cubit/orders_cubit.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/check_out_view_body.dart';
+import 'package:fruits_hub/features/checkout/presentation/views/widgets/orders_cubit_bloc_builder.dart';
 import 'package:fruits_hub/features/home/domain/entities/cart_entity.dart';
 import 'package:fruits_hub/features/home/domain/entities/cart_item_entity.dart';
 import 'package:provider/provider.dart';
@@ -29,8 +33,11 @@ class _CheckOutViewState extends State<CheckOutView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Provider.value(
-            value: orderEntity, child: const CheckOutViewBody()));
+    return BlocProvider(
+      create: (context) => OrdersCubit(ordersRepo: sl()),
+      child: Scaffold(
+          body: Provider.value(
+              value: orderEntity, child:const OrdersCubitBlocBuilder(child:  CheckOutViewBody()))),
+    );
   }
 }

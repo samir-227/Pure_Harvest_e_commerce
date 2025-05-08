@@ -56,7 +56,10 @@
 "PayPal":"الدفع عبر paypal",
 "orderSummary":"ملخص الطلب",
 "deliveryTitle":"عنوان التوصيل",
-"edit":"تعديل"
+"edit":"تعديل",
+"orderSuccess":"تمت العملية بنجاح",
+"orderFailedMessage":"فشل في العملية يرجى المحاولة مرة اخرى"
+
 
 
 

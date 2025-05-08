@@ -56,7 +56,9 @@
     "PayPal":"pay with PayPal",
     "orderSummary":"Order Summary",
     "deliveryTitle":"Delivery Address",
-    "edit":"Edit"
+    "edit":"Edit",
+    "orderSuccess":"Order Success",
+    "orderFailedMessage":"Order Failed Please Try Again"
     
     
     

@@ -79,6 +79,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "more": MessageLookupByLibrary.simpleMessage("المزيد"),
     "next": MessageLookupByLibrary.simpleMessage("التالي"),
     "orDividerText": MessageLookupByLibrary.simpleMessage("أو"),
+    "orderFailedMessage": MessageLookupByLibrary.simpleMessage(
+      "فشل في العملية يرجى المحاولة مرة اخرى",
+    ),
+    "orderSuccess": MessageLookupByLibrary.simpleMessage("تمت العملية بنجاح"),
     "orderSummary": MessageLookupByLibrary.simpleMessage("ملخص الطلب"),
     "ourProducts": MessageLookupByLibrary.simpleMessage("منتجاتنا"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),

@@ -1,7 +1,12 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/widgets/custom_app_bar.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
+import 'package:fruits_hub/features/checkout/domain/entities/order_entity.dart';
+import 'package:fruits_hub/features/checkout/presentation/cubits/orders_cubit/orders_cubit.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/check_out_steps.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/checkout_page_view.dart';
 import 'package:fruits_hub/generated/l10n.dart';
@@ -86,8 +91,7 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
                   pageController.animateToPage(currentPageIndex + 1,
                       duration: const Duration(milliseconds: 300),
                       curve: Curves.easeIn);
-                }
-                if (currentPageIndex == 1) {
+                } else if (currentPageIndex == 1) {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
                     pageController.animateToPage(currentPageIndex + 1,
@@ -96,9 +100,13 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
                   } else {
                     autovalidateMode.value = AutovalidateMode.always;
                   }
+                } else {
+                  OrderEntity orderEntity = context.read<OrderEntity>();
+                  context.read<OrdersCubit>().addOrder(orderEntity);
+                
                 }
               }),
-          const SizedBox(height: 50),
+          const SizedBox(height: 70),
         ],
       ),
     );

@@ -489,6 +489,26 @@ class S {
   String get edit {
     return Intl.message('Edit', name: 'edit', desc: '', args: []);
   }
+
+  /// `Order Success`
+  String get orderSuccess {
+    return Intl.message(
+      'Order Success',
+      name: 'orderSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order Failed Please Try Again`
+  String get orderFailedMessage {
+    return Intl.message(
+      'Order Failed Please Try Again',
+      name: 'orderFailedMessage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
