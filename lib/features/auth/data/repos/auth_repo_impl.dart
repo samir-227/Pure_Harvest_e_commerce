@@ -183,7 +183,7 @@ class AuthRepoImpl implements IAuthRepo {
   /// Add user to database
   @override
   Future addUser({required UserEntity user}) async {
-    await databaseService.addUser(
+    await databaseService.addData(
       path: BackendEndpoint.addUserData,
       data: UserModel.fromEntity(user).toMap(),
       documentId: user.uId,
@@ -195,7 +195,7 @@ class AuthRepoImpl implements IAuthRepo {
   Future<UserEntity> getCurrentUser({required String uId}) async {
     var snapshot = await databaseService.getData(
         path: BackendEndpoint.addUserData, documentId: uId);
-        var user = snapshot.data() as Map<String, dynamic>;
+    var user = snapshot.data() as Map<String, dynamic>;
     return UserModel.fromJson(user);
   }
 
