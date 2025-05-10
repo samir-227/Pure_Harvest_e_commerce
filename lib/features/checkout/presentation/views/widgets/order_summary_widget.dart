@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
+import 'package:fruits_hub/features/checkout/domain/entities/order_entity.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/custom_divider.dart';
+import 'package:provider/provider.dart';
 
 class OrderSummaryWidget extends StatelessWidget {
   const OrderSummaryWidget({
@@ -21,7 +23,7 @@ class OrderSummaryWidget extends StatelessWidget {
           ),
           const Spacer(),
           Text(
-            "150 جنيه",
+           "${ context.read<OrderEntity>().cartEntity.calculateTotalPrice()} جنيه",
             style: TextStyles.semiBold16.copyWith(color: colors.onSecondary),
           ),
         ]),
@@ -38,7 +40,7 @@ class OrderSummaryWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 22),
               child: Text(
-                "30 جنيه",
+                "${ context.read<OrderEntity>().calculateShippingPrice()} جنيه",
                 style:
                     TextStyles.semiBold13.copyWith(color: colors.onSecondary),
               ),
@@ -57,7 +59,7 @@ class OrderSummaryWidget extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              "180 جنيه",
+              "${ context.read<OrderEntity>().calculateTotalPriceAfterShippingAndDiscount()} جنيه",
               style: TextStyles.bold16.copyWith(color: colors.onSecondary),
             ),
           ],

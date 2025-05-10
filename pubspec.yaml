@@ -49,6 +49,7 @@ dependencies:
   flutter_native_splash: ^2.4.5
   flutter_paypal_payment: ^1.0.8
   flutter_secure_storage: ^9.2.4
+  flutter_stripe: ^11.5.0
   flutter_svg: ^2.0.10+1
   flutter_svg_provider: ^1.0.7
   get_it: ^8.0.3
@@ -61,7 +62,6 @@ dependencies:
   shared_preferences: ^2.5.2
   sign_in_with_apple: ^7.0.1
   skeletonizer: ^1.4.3
-
 dev_dependencies:
   flutter_lints: ^3.0.0
   flutter_test:

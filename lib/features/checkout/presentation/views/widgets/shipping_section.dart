@@ -30,11 +30,10 @@ class _ShippingSectionState extends State<ShippingSection>
             },
             title: S.of(context).cashOnDelivery,
             subtitle: S.of(context).cod,
-            price: context
-                .read<OrderEntity>()
-                .cartEntity
-                .calculateTotalPrice()
-                .toString(),
+            price:
+                (context.read<OrderEntity>().cartEntity.calculateTotalPrice() +
+                        30)
+                    .toString(),
             isSelected: currentIndex == 0),
         const SizedBox(height: 8),
         ShippingItem(

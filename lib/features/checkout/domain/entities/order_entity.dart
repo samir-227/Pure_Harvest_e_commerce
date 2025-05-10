@@ -24,10 +24,10 @@ class OrderEntity {
     return 0;
   }
 
-  double calculateTotalPriceAfterShippingAndDiscount() {
-    return cartEntity.calculateTotalPrice() +
+  int calculateTotalPriceAfterShippingAndDiscount() {
+    return (cartEntity.calculateTotalPrice() +
         calculateShippingPrice() -
-        calculateDiscount();
+        calculateDiscount()).toInt();
   }
 
 }

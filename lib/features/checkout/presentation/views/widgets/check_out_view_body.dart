@@ -1,7 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:fruits_hub/core/constants/constants.dart';
+
+import 'package:fruits_hub/core/helpers/get_currency.dart';
+import 'package:fruits_hub/core/networking/payment_service.dart';
 import 'package:fruits_hub/core/widgets/custom_app_bar.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/features/checkout/domain/entities/order_entity.dart';
@@ -43,6 +46,7 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
   int currentPageIndex = 0;
   @override
   Widget build(BuildContext context) {
+    var orderEntity = context.read<OrderEntity>();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
       child: Column(
@@ -56,21 +60,20 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
                 pageController.animateToPage(currentPageIndex + 1,
                     duration: const Duration(milliseconds: 300),
                     curve: Curves.easeIn);
-              }
-              if (currentPageIndex == 1) {
+              } else if (currentPageIndex == 1) {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
                   pageController.animateToPage(currentPageIndex + 1,
                       duration: const Duration(milliseconds: 300),
-                      curve: Curves.easeIn);
+                      curve: Curves.bounceIn);
                 } else {
                   autovalidateMode.value = AutovalidateMode.always;
                 }
-                if (currentPageIndex == 2) {
-                  pageController.animateToPage(currentPageIndex + 1,
-                      duration: const Duration(milliseconds: 300),
-                      curve: Curves.easeIn);
-                }
+              } else {
+                PaymentService.makePayment(
+                    orderEntity.calculateTotalPriceAfterShippingAndDiscount(),
+                    getCurrency());
+                context.read<OrdersCubit>().addOrder(orderEntity);
               }
             },
             pageController: pageController,
@@ -84,26 +87,29 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
             ),
           ),
           CustomButton(
-              text: getButtonText(context, currentPageIndex),
-              onPressed: () {
-                if (currentPageIndex == 0) {
+            text: getButtonText(context, currentPageIndex),
+            onPressed: () {
+              if (currentPageIndex == 0) {
+                pageController.animateToPage(currentPageIndex + 1,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeIn);
+              } else if (currentPageIndex == 1) {
+                if (formKey.currentState!.validate()) {
+                  formKey.currentState!.save();
                   pageController.animateToPage(currentPageIndex + 1,
                       duration: const Duration(milliseconds: 300),
-                      curve: Curves.easeIn);
-                } else if (currentPageIndex == 1) {
-                  if (formKey.currentState!.validate()) {
-                    formKey.currentState!.save();
-                    pageController.animateToPage(currentPageIndex + 1,
-                        duration: const Duration(milliseconds: 300),
-                        curve: Curves.easeIn);
-                  } else {
-                    autovalidateMode.value = AutovalidateMode.always;
-                  }
+                      curve: Curves.bounceIn);
                 } else {
-                  OrderEntity orderEntity = context.read<OrderEntity>();
-                  context.read<OrdersCubit>().addOrder(orderEntity);
+                  autovalidateMode.value = AutovalidateMode.always;
                 }
-              }),
+              } else {
+                PaymentService.makePayment(
+                    orderEntity.calculateTotalPriceAfterShippingAndDiscount(),
+                    getCurrency());
+                context.read<OrdersCubit>().addOrder(orderEntity);
+              }
+            },
+          ),
           const SizedBox(height: 70),
         ],
       ),

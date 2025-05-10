@@ -27,6 +27,8 @@ class OrdersModel {
         paymentMethod: ordersEntity.payWithCash! ? 'Cash' : 'PayPal',
       );
   toJson() => {
+        'status': 'pending',
+        'date': DateTime.now().toString(),
         'shippingAddress': shippingAddressModel.toJson(),
         'orderProducts': orderProducts.map((e) => e.toJson()).toList(),
         'totalPrice': totalPrice,
