@@ -73,7 +73,7 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
                 PaymentService.makePayment(
                     orderEntity.calculateTotalPriceAfterShippingAndDiscount(),
                     getCurrency());
-                context.read<OrdersCubit>().addOrder(orderEntity);
+                context.read<OrdersCubit>().addOrder(order:  orderEntity);
               }
             },
             pageController: pageController,
@@ -106,7 +106,7 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
                 PaymentService.makePayment(
                     orderEntity.calculateTotalPriceAfterShippingAndDiscount(),
                     getCurrency());
-                context.read<OrdersCubit>().addOrder(orderEntity);
+                context.read<OrdersCubit>().addOrder(order:orderEntity);
               }
             },
           ),

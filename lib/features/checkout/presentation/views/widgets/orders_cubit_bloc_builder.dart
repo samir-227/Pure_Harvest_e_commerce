@@ -20,8 +20,8 @@ class OrdersCubitBlocBuilder extends StatelessWidget {
             showBar(context, S.of(context).orderSuccess);
           }
           if (state is OrdersFailure) {
-            showBar(context, S.of(context).orderFailedMessage);
             log(state.errMessage);
+            showBar(context, S.of(context).orderFailedMessage);
           }
         });
   }
