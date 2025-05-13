@@ -71,7 +71,14 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "edit": MessageLookupByLibrary.simpleMessage("Edit"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
+    "enterYourEmail": MessageLookupByLibrary.simpleMessage("Enter Your Email"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
+    "forgetPasswordViewSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Don\'t worry, just type your email address and we will send you a link to reset your password",
+    ),
+    "forgotPasswordAppBar": MessageLookupByLibrary.simpleMessage(
+      "Forgot Password",
+    ),
     "free": MessageLookupByLibrary.simpleMessage("Free"),
     "fullname": MessageLookupByLibrary.simpleMessage("Full Name"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -99,6 +106,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "products": MessageLookupByLibrary.simpleMessage("Products"),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "register": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+    "resetPasswordSuccess": MessageLookupByLibrary.simpleMessage(
+      "Please check your email",
+    ),
     "result": MessageLookupByLibrary.simpleMessage("Result"),
     "review": MessageLookupByLibrary.simpleMessage("Review"),
     "searchBarHintText": MessageLookupByLibrary.simpleMessage(
@@ -106,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "state": MessageLookupByLibrary.simpleMessage("State"),
     "subtitle1": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide range of fresh and high-quality fruits and get the best deals and top quality.",
     ),

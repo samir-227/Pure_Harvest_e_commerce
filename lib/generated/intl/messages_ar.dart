@@ -64,7 +64,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("لا تمتلك حساب؟"),
     "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
     "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
+    "enterYourEmail": MessageLookupByLibrary.simpleMessage(
+      "ادخل بريدك الالكتروني",
+    ),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "forgetPasswordViewSubtitle": MessageLookupByLibrary.simpleMessage(
+      "لا تقلق ما عليك سوى ادخال بريدك الالكتروني وسنرسل اليك رابط اعادة تعيين كلمة السر",
+    ),
+    "forgotPasswordAppBar": MessageLookupByLibrary.simpleMessage(
+      "نسيان كلمة المرور",
+    ),
     "free": MessageLookupByLibrary.simpleMessage("مجاني"),
     "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
@@ -92,11 +101,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
     "profile": MessageLookupByLibrary.simpleMessage("حسابي"),
     "register": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+    "resetPassword": MessageLookupByLibrary.simpleMessage(
+      "اعادة تعيين كلمة المرور",
+    ),
+    "resetPasswordSuccess": MessageLookupByLibrary.simpleMessage(
+      "قم بالتحقق من البريد الالكتروني",
+    ),
     "result": MessageLookupByLibrary.simpleMessage("نتائج"),
     "review": MessageLookupByLibrary.simpleMessage("المراجعة"),
     "searchBarHintText": MessageLookupByLibrary.simpleMessage("ابحث عن ...."),
     "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+    "state": MessageLookupByLibrary.simpleMessage("المحافظة"),
     "subtitle1": MessageLookupByLibrary.simpleMessage(
       "اكتشف تجربة تسوق فريدة مع FruitHUB .استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية",
     ),

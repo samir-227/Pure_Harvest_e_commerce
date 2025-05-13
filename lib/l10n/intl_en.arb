@@ -58,7 +58,13 @@
     "deliveryTitle":"Delivery Address",
     "edit":"Edit",
     "orderSuccess":"Order Success",
-    "orderFailedMessage":"Order Failed Please Try Again"
+    "orderFailedMessage":"Order Failed Please Try Again",
+    "forgotPasswordAppBar":"Forgot Password",
+    "forgetPasswordViewSubtitle": "Don't worry, just type your email address and we will send you a link to reset your password",
+    "enterYourEmail":"Enter Your Email",
+    "resetPassword":"Reset Password",
+    "resetPasswordSuccess":"Please check your email",
+    "state":"State"
     
     
     

@@ -70,6 +70,12 @@ class FirebaseService {
     }
   }
 
+   Future resetPassword(String email) async {
+   
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
+   
+  }
+
   // Method to sign in a user with email and password
   Future<User> signInWithEmailAndPassword({
     required String email,

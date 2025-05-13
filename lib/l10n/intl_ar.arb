@@ -58,7 +58,13 @@
 "deliveryTitle":"عنوان التوصيل",
 "edit":"تعديل",
 "orderSuccess":"تمت العملية بنجاح",
-"orderFailedMessage":"فشل في العملية يرجى المحاولة مرة اخرى"
+"orderFailedMessage":"فشل في العملية يرجى المحاولة مرة اخرى",
+"forgotPasswordAppBar":"نسيان كلمة المرور",
+"forgetPasswordViewSubtitle": "لا تقلق ما عليك سوى ادخال بريدك الالكتروني وسنرسل اليك رابط اعادة تعيين كلمة السر",
+"enterYourEmail":"ادخل بريدك الالكتروني",
+"resetPassword":"اعادة تعيين كلمة المرور",
+"resetPasswordSuccess":"قم بالتحقق من البريد الالكتروني",
+"state":"المحافظة"
 
 
 

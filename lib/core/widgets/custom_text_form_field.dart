@@ -8,15 +8,17 @@ class CustomTextFormField extends StatelessWidget {
       this.suffixIcon,
       this.obscureText = false,
       required this.keyboardType,
-      this.onSaved});
+      this.onSaved, this.controller});
   final String hintText;
   final Widget? suffixIcon;
   final TextInputType keyboardType;
   final bool obscureText;
   final void Function(String?)? onSaved;
+  final TextEditingController? controller;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller:controller ,
       validator: (value) => value!.isEmpty ? 'Field is required' : null,
       obscureText: obscureText,
       onSaved: onSaved,

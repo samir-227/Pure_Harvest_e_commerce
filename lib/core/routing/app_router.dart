@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/helpers/cache_helper.dart';
+import 'package:fruits_hub/features/auth/presentation/views/reset_password_view.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sign_in_view.dart';
 import 'package:fruits_hub/features/auth/presentation/views/sing_up_view.dart';
 import 'package:fruits_hub/features/best_selling_product/presentation/views/best_selling_product_view.dart';
@@ -68,6 +69,11 @@ sealed class AppRouter {
         name: CheckOutView.routeName,
         builder: (context, state) =>
             CheckOutView(cartEntity: state.extra as CartEntity),
+      ),
+      GoRoute(
+        path: ResetPasswordView.routeName,
+        name: ResetPasswordView.routeName,
+        builder: (context, state) => const ResetPasswordView(),
       ),
     ],
   );

@@ -47,12 +47,12 @@ class AddressInputSection extends StatelessWidget {
                   onSaved: (value) {
                     shippingAddress.address = value;
                   },
-                  hintText: S.of(context).address,
+                  hintText: S.of(context).state,
                   keyboardType: TextInputType.streetAddress),
               const SizedBox(
                 height: 16,
               ),
-              CustomTextFormField(
+              CustomTextFormField(  
                   onSaved: (value) {
                     shippingAddress.city = value;
                   },

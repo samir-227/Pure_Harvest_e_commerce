@@ -9,11 +9,13 @@ import 'package:fruits_hub/core/theming/app_text_style.dart';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
 import 'package:fruits_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_hub/features/auth/presentation/cubits/sign_in_cubit/sign_in_cubit.dart';
+import 'package:fruits_hub/features/auth/presentation/views/reset_password_view.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/dont_have_account_widget.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/or_divider.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/password_field.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/social_login_button.dart';
 import 'package:fruits_hub/generated/l10n.dart';
+import 'package:go_router/go_router.dart';
 
 class SingInViewBody extends StatefulWidget {
   const SingInViewBody({super.key});
@@ -57,10 +59,15 @@ class _SingInViewBodyState extends State<SingInViewBody> {
               const SizedBox(
                 height: 16,
               ),
-              Text(
-                S.of(context).forgetPassword,
-                style: TextStyles.semiBold13.copyWith(
-                  color: colors.secondary,
+              GestureDetector(
+                onTap: () {
+                  context.pushNamed(ResetPasswordView.routeName);
+                },
+                child: Text(
+                  S.of(context).forgetPassword,
+                  style: TextStyles.semiBold13.copyWith(
+                    color: colors.secondary,
+                  ),
                 ),
               ),
               const SizedBox(

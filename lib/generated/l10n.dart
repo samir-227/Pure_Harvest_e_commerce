@@ -509,6 +509,61 @@ class S {
       args: [],
     );
   }
+
+  /// `Forgot Password`
+  String get forgotPasswordAppBar {
+    return Intl.message(
+      'Forgot Password',
+      name: 'forgotPasswordAppBar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't worry, just type your email address and we will send you a link to reset your password`
+  String get forgetPasswordViewSubtitle {
+    return Intl.message(
+      'Don\'t worry, just type your email address and we will send you a link to reset your password',
+      name: 'forgetPasswordViewSubtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Your Email`
+  String get enterYourEmail {
+    return Intl.message(
+      'Enter Your Email',
+      name: 'enterYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Password`
+  String get resetPassword {
+    return Intl.message(
+      'Reset Password',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please check your email`
+  String get resetPasswordSuccess {
+    return Intl.message(
+      'Please check your email',
+      name: 'resetPasswordSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `State`
+  String get state {
+    return Intl.message('State', name: 'state', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
