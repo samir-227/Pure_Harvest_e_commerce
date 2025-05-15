@@ -2,84 +2,91 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fruits_hub/core/networking/data_base_service.dart';
 
 class FirestoreService implements DatabaseService {
-  FirebaseFirestore firestore = FirebaseFirestore.instance;
+
+  final FirebaseFirestore _firestore;
+
+  FirestoreService({FirebaseFirestore? firestore})
+      : _firestore = firestore ??
+            FirebaseFirestore.instance; // Dependency Injection added
+
   @override
   Future<void> addData({
     required String path,
     required Map<String, dynamic> data,
     String? documentId,
   }) async {
-    if (documentId != null) {
-      await firestore.collection(path).doc(documentId).set(data);
-    } else {
-      await firestore.collection(path).add(data);
+    final collection = _firestore
+        .collection(path);
 
+    if (documentId != null) {
+      await collection.doc(documentId).set(data);
+    } else {
+      await collection.add(data);
     }
   }
 
-  // @override
-  // Future<dynamic> getData({
-  //   required String path,
-  //   String? documentId,
-  //   Map<String, dynamic>? query,
-  // }) async {
-  //   if (documentId != null) {
-  //     final result = firestore.collection(path).doc(documentId).get();
-  //     return await result;
-  //   } else {
-  //     Query<Map<String, dynamic>> data = firestore.collection(path);
-  //     if (query != null) {
-  //       if (query['orderBy'] != null) {
-  //         data.orderBy(query['orderBy'], descending: query['descending']);
-  //       }
-  //       if (query['limit'] != null) {
-  //         data.limit(query['limit']);
-  //       }
-  //     }
-  //     var result = await data.get();
-  //     return result.docs.map((e) => e.data()).toList();
-  //   }
-  // }
   @override
-Future<dynamic> getData({
-  required String path,
-  String? documentId,
-  Map<String, dynamic>? query,
-}) async {
-  try {
-    if (documentId != null) {
-      final doc = await firestore.collection(path).doc(documentId).get();
-      if (doc.exists) {
-        return doc.data();
+  Future<dynamic> getData({
+    required String path,
+    String? documentId,
+    Map<String, dynamic>? query,
+  }) async {
+    try {
+      final collection = _firestore.collection(path);
+
+      if (documentId != null) {
+        //  Extracted logic for single document fetch to a private helper
+        return await _getSingleDocument(collection, documentId);
       } else {
-        return null;
+        //  Extracted logic for querying collection to another helper
+        return await _getCollectionDocuments(collection, query);
       }
-    } else {
-      Query<Map<String, dynamic>> data = firestore.collection(path);
-
-      if (query != null) {
-        if (query['orderBy'] != null) {
-          data = data.orderBy(
-            query['orderBy'],
-            descending: query['descending'] ?? false,
-          );
-        }
-        if (query['limit'] != null) {
-          data = data.limit(query['limit']);
-        }
-      }
-
-      final result = await data.get();
-      return result.docs.map((e) => e.data()).toList();
+    } catch (e) {
+      rethrow; 
     }
-  } catch (e) {
-    rethrow;
   }
-}
+
+
+  Future<Map<String, dynamic>?> _getSingleDocument(
+    CollectionReference<Map<String, dynamic>> collection,
+    String documentId,
+  ) async {
+    final doc = await collection.doc(documentId).get();
+    return doc.exists ? doc.data() : null;
+  }
+
+
+  Future<List<Map<String, dynamic>>> _getCollectionDocuments(
+    CollectionReference<Map<String, dynamic>> collection,
+    Map<String, dynamic>? query,
+  ) async {
+    Query<Map<String, dynamic>> queryRef = collection;
+
+    if (query != null) {
+      if (query.containsKey('orderBy')) {
+        queryRef = queryRef.orderBy(
+          query['orderBy'],
+          descending: query['descending'] ?? false,
+        );
+      }
+
+      if (query.containsKey('limit')) {
+        queryRef = queryRef.limit(query['limit']);
+      }
+    }
+
+    final snapshot = await queryRef.get();
+    return snapshot.docs.map((doc) => doc.data()).toList();
+  }
 
   @override
-  Future<bool> isDataExist({required String path, String? documentId}) async {
-    final doc = await firestore.collection(path).doc(documentId).get();
+  Future<bool> isDataExist({
+    required String path,
+    String? documentId,
+  }) async {
+    if (documentId == null) return false; 
+
+    final doc = await _firestore.collection(path).doc(documentId).get();
     return doc.exists;
   }
 }

@@ -73,10 +73,10 @@ class AuthRepoImpl implements IAuthRepo {
       CacheHelper.set(key: 'isUserLoggedIn', value: isUserLoggedIn);
 
       // Get current user
-      var userEntity = await getCurrentUser(uId: user.uid);
+      var userEntity = await getCurrentUser(email: user.email!);
 
       // Save user data
-      await saveUserData(user: userEntity);
+      await saveUserDataInCash(user: userEntity);
 
       // Return user entity
       return Right(userEntity);
@@ -101,12 +101,13 @@ class AuthRepoImpl implements IAuthRepo {
       user = await authService.signInWithGoogle();
 
       // Check if user is already logged in
+      /********* */
       var isUserExist = await databaseService.isDataExist(
-          documentId: user.uid, path: BackendEndpoint.addUserData);
+          documentId: user.email!, path: BackendEndpoint.addUserData);
 
       // If user is already logged in
       if (isUserExist) {
-        await getCurrentUser(uId: user.uid);
+        await getCurrentUser(email: user.email!);
       } else {
         // Add user to database
         await addUser(user: UserModel.fromFireBase(user));
@@ -140,13 +141,13 @@ class AuthRepoImpl implements IAuthRepo {
     try {
       user = await authService.signInWithFacebook();
 
-      // Check if user is already logged in
+      // Check if user is already exist
       var isUserExist = await databaseService.isDataExist(
-          documentId: user.uid, path: BackendEndpoint.addUserData);
+          documentId: user.email!, path: BackendEndpoint.addUserData);
 
       // If user is already logged in
       if (isUserExist) {
-        await getCurrentUser(uId: user.uid);
+        await getCurrentUser(email: user.email!);
       } else {
         // Add user to database
         await addUser(user: UserModel.fromFireBase(user));
@@ -190,15 +191,15 @@ class AuthRepoImpl implements IAuthRepo {
 
   /// Get current user
   @override
-  Future<UserEntity> getCurrentUser({required String uId}) async {
+  Future<UserEntity> getCurrentUser({required String email}) async {
     var user = await databaseService.getData(
-        path: BackendEndpoint.addUserData, documentId: uId);
+        path: BackendEndpoint.addUserData, documentId: email);
     return UserModel.fromJson(user);
   }
 
   /// Save user data
   @override
-  Future saveUserData({required UserEntity user}) async {
+  Future saveUserDataInCash({required UserEntity user}) async {
     var jsonData = jsonEncode(UserModel.fromEntity(user).toMap());
     await CacheHelper.set(key: kUserData, value: jsonData);
   }
