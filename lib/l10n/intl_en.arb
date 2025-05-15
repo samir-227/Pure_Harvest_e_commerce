@@ -64,7 +64,24 @@
     "enterYourEmail":"Enter Your Email",
     "resetPassword":"Reset Password",
     "resetPasswordSuccess":"Please check your email",
-    "state":"State"
+    "state":"State",
+    "general":"General",
+    "myProfile":"My Profile",
+    "myOrders":"My Orders",
+    "favorites":"Favourites",
+    "signOut":"Sign Out",
+    "arabic":"Arabic",
+    "english":"English",
+    "language":"Language",
+    "mode":"Mode",
+    "cartProductsNumber":"products in cart",
+    "sales":"Sales",
+    "shopNow":"Shop Now",
+    "discount":"Discount 25%",
+    "darkMode":"Dark Mode",
+    "lightMode":"Light Mode"
+
+    
     
     
     

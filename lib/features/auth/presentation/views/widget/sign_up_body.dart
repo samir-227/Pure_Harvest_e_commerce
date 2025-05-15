@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub/core/constants/constants.dart';
+import 'package:fruits_hub/core/helpers/build_snack_bar';
 import 'package:fruits_hub/core/widgets/custom_button.dart';
-import 'package:fruits_hub/core/widgets/custom_error_bar.dart';
 import 'package:fruits_hub/core/widgets/custom_text_form_field.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/i_have_account_widget.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/password_field.dart';
@@ -75,9 +75,8 @@ class _SignUpBodyState extends State<SignUpBody> {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
                     if (!termsAccepted) {
-                      CustomErrorWidget(
-                          message:
-                              S.of(context).PleaseAcceptTermsAndConditions);
+                      showBar(context,
+                          S.of(context).PleaseAcceptTermsAndConditions);
                       return;
                     }
 

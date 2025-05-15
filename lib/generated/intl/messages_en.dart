@@ -52,17 +52,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "address": MessageLookupByLibrary.simpleMessage("Address"),
     "appBarLoginTitle": MessageLookupByLibrary.simpleMessage("Login"),
     "appBarRegisterTitle": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
     "bestSeller": MessageLookupByLibrary.simpleMessage("Best Seller"),
     "bestSelling": MessageLookupByLibrary.simpleMessage("Best Selling"),
     "buttonText": MessageLookupByLibrary.simpleMessage("Get Started"),
     "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+    "cartProductsNumber": MessageLookupByLibrary.simpleMessage(
+      "products in cart",
+    ),
     "cashOnDelivery": MessageLookupByLibrary.simpleMessage("Cash On Delivery"),
     "city": MessageLookupByLibrary.simpleMessage("City"),
     "cod": MessageLookupByLibrary.simpleMessage("Cash On Delivery"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create new account",
     ),
+    "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
     "deliveryTitle": MessageLookupByLibrary.simpleMessage("Delivery Address"),
+    "discount": MessageLookupByLibrary.simpleMessage("Discount 25%"),
     "doYouHaveAccount": MessageLookupByLibrary.simpleMessage(
       "You have an account?",
     ),
@@ -71,7 +77,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "edit": MessageLookupByLibrary.simpleMessage("Edit"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
+    "english": MessageLookupByLibrary.simpleMessage("English"),
     "enterYourEmail": MessageLookupByLibrary.simpleMessage("Enter Your Email"),
+    "favorites": MessageLookupByLibrary.simpleMessage("Favourites"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
     "forgetPasswordViewSubtitle": MessageLookupByLibrary.simpleMessage(
       "Don\'t worry, just type your email address and we will send you a link to reset your password",
@@ -81,7 +89,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "free": MessageLookupByLibrary.simpleMessage("Free"),
     "fullname": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "general": MessageLookupByLibrary.simpleMessage("General"),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
+    "language": MessageLookupByLibrary.simpleMessage("Language"),
+    "lightMode": MessageLookupByLibrary.simpleMessage("Light Mode"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "loginWithApple": MessageLookupByLibrary.simpleMessage("Login with Apple"),
     "loginWithFacebook": MessageLookupByLibrary.simpleMessage(
@@ -90,7 +101,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "loginWithGoogle": MessageLookupByLibrary.simpleMessage(
       "Login with Google",
     ),
+    "mode": MessageLookupByLibrary.simpleMessage("Mode"),
     "more": MessageLookupByLibrary.simpleMessage("More"),
+    "myOrders": MessageLookupByLibrary.simpleMessage("My Orders"),
+    "myProfile": MessageLookupByLibrary.simpleMessage("My Profile"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
     "orDividerText": MessageLookupByLibrary.simpleMessage("Or"),
     "orderFailedMessage": MessageLookupByLibrary.simpleMessage(
@@ -112,10 +126,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "result": MessageLookupByLibrary.simpleMessage("Result"),
     "review": MessageLookupByLibrary.simpleMessage("Review"),
+    "sales": MessageLookupByLibrary.simpleMessage("Sales"),
     "searchBarHintText": MessageLookupByLibrary.simpleMessage(
       "Search about...",
     ),
     "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
+    "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
+    "signOut": MessageLookupByLibrary.simpleMessage("Sign Out"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "state": MessageLookupByLibrary.simpleMessage("State"),
     "subtitle1": MessageLookupByLibrary.simpleMessage(

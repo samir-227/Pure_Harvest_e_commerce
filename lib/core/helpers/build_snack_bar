@@ -5,7 +5,7 @@ void showBar(BuildContext context, String message) {
     SnackBar(
       backgroundColor: Theme.of(context).colorScheme.primary,
       behavior: SnackBarBehavior.floating,
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(seconds: 1),
       content: Text(message),
     ),
   );

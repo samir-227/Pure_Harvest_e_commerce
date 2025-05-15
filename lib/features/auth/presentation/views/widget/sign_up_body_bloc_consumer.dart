@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' show BlocConsumer;
-import 'package:fruits_hub/core/widgets/custom_error_bar.dart';
+import 'package:fruits_hub/core/helpers/build_snack_bar';
 import 'package:fruits_hub/features/auth/presentation/cubits/sign_up_cubit/sign_up_state.dart'
     show SignUpFailure, SignUpLoading, SignUpState, SignUpSuccess;
 import 'package:fruits_hub/features/auth/presentation/views/widget/sign_up_body.dart';
@@ -16,7 +16,7 @@ BlocConsumer<SignUpCubit, SignUpState> signUpBodyBlocConsumer() {
         Navigator.pop(context);
       }
       if (state is SignUpFailure) {
-        CustomErrorWidget(message: state.message);
+        showBar(context, state.message);
       }
     },
     builder: (context, state) {

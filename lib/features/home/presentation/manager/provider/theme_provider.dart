@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub/core/constants/constants.dart';
+import 'package:fruits_hub/core/helpers/cache_helper.dart';
 import 'package:fruits_hub/core/theming/theme_data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -13,15 +15,13 @@ class ThemeProvider extends ChangeNotifier {
 
 // Get the current ThemeData based on the theme state
   Future<void> loadCurrentMode() async {
-    final pref = await SharedPreferences.getInstance();
-    isDarkMode = pref.getBool(_themeKey) ?? false;
+    isDarkMode = CacheHelper.getBool(key: kIsDarkMode) ?? false;
     notifyListeners();
   }
 
   /// Save the theme preference to SharedPreferences
   Future<void> saveTheme() async {
-    final pref = await SharedPreferences.getInstance();
-    pref.setBool(_themeKey, isDarkMode);
+    CacheHelper.set(key: kIsDarkMode, value: isDarkMode);
     notifyListeners();
   }
 

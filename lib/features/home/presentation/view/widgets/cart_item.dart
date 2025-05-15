@@ -5,8 +5,8 @@ import 'package:fruits_hub/core/constants/app_images.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
 import 'package:fruits_hub/core/widgets/custom_network_image.dart';
 import 'package:fruits_hub/features/home/domain/entities/cart_item_entity.dart';
-import 'package:fruits_hub/features/home/presentation/cubits/cart_cubit/cart_cubit.dart';
-import 'package:fruits_hub/features/home/presentation/cubits/cart_item_cubit/cart_item_cubit.dart';
+import 'package:fruits_hub/features/home/presentation/manager/cart_cubit/cart_cubit.dart';
+import 'package:fruits_hub/features/home/presentation/manager/cart_item_cubit/cart_item_cubit.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/cart_item_actions_button.dart';
 
 class CartViewItem extends StatelessWidget {

@@ -10,13 +10,13 @@ class CustomSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Color(0x0A000000),
-            blurRadius: 9,
-            offset: Offset(0, 2),
-            spreadRadius: 0,
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
+            blurRadius: 1,
+            offset: const Offset(0, .2),
+            spreadRadius: .3,
           )
         ],
       ),
@@ -24,7 +24,7 @@ class CustomSearchBar extends StatelessWidget {
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
           filled: true,
-          fillColor: Colors.white,
+          fillColor: Theme.of(context).colorScheme.outline,
           border: const OutlineInputBorder(borderSide: BorderSide.none),
           hintText: S.of(context).searchBarHintText,
           hintStyle: TextStyles.regular16,

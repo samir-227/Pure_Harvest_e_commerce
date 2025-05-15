@@ -35,13 +35,13 @@ class _HomeViewBodyState extends State<HomeViewBody> {
             child: Column(
               children: [
                 UserAppBar(),
-                SizedBox(height: 8),
+                SizedBox(height: 16),
                 CustomSearchBar(),
-                SizedBox(height: 8),
+                SizedBox(height: 16),
                 FeaturedListOfItem(),
                 SizedBox(height: 16),
                 BestSellerBar(),
-                SizedBox(height: 8),
+                SizedBox(height: 16),
               ],
             ),
           ),

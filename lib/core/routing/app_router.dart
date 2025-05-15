@@ -8,6 +8,7 @@ import 'package:fruits_hub/features/checkout/presentation/views/check_out_view.d
 import 'package:fruits_hub/features/home/domain/entities/cart_entity.dart';
 import 'package:fruits_hub/features/home/presentation/view/main_view.dart';
 import 'package:fruits_hub/features/home/presentation/view/products_view.dart';
+import 'package:fruits_hub/features/home/presentation/view/profile_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -74,6 +75,11 @@ sealed class AppRouter {
         path: ResetPasswordView.routeName,
         name: ResetPasswordView.routeName,
         builder: (context, state) => const ResetPasswordView(),
+      ),
+      GoRoute(
+        path: ProfileView.routeName,
+        name: ProfileView.routeName,
+        builder: (context, state) => const ProfileView(),
       ),
     ],
   );

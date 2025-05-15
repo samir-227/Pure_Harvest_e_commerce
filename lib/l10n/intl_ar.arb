@@ -64,7 +64,24 @@
 "enterYourEmail":"ادخل بريدك الالكتروني",
 "resetPassword":"اعادة تعيين كلمة المرور",
 "resetPasswordSuccess":"قم بالتحقق من البريد الالكتروني",
-"state":"المحافظة"
+"state":"المحافظة",
+"general":"عام",
+"myProfile":"الملف الشخصى",
+"myOrders":"طلباتى",
+"favorites":"المفضلة",
+"signOut":"تسجيل الخروج",
+"arabic":"العربية",
+"english":"الانجليزية",
+"language":"اللغة",
+"mode":"الوضع",
+"cartProductsNumber":" منتجات في سله التسوق",
+"sales":"عروض العيد",
+"shopNow":"تسوق الان",
+"discount":"خصم 25%",
+"darkMode":"الوضع الداكن",
+"lightMode":"الوضع الفاتح"
+
+
 
 
 

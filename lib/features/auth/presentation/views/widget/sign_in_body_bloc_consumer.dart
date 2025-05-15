@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_hub/core/helpers/build_snack_bar';
 import 'package:fruits_hub/core/widgets/custom_error_bar.dart';
 import 'package:fruits_hub/features/auth/presentation/cubits/sign_in_cubit/sign_in_cubit.dart';
 import 'package:fruits_hub/features/auth/presentation/views/widget/sign_in_view_body.dart';
@@ -15,11 +16,11 @@ BlocConsumer<SignInCubit, SignInState> signInBodyConsumer() {
         if (FirebaseAuth.instance.currentUser!.emailVerified) {
           context.goNamed(MainView.routeName);
         } else {
-          CustomErrorWidget(message: S.of(context).EmailNotVerified);
+         showBar(context, S.of(context).EmailNotVerified);
         }
       }
       if (state is SignInFailure) {
-        CustomErrorWidget(message: state.message);
+        showBar(context, state.message);
       }
     },
     builder: (context, state) {

@@ -564,6 +564,86 @@ class S {
   String get state {
     return Intl.message('State', name: 'state', desc: '', args: []);
   }
+
+  /// `General`
+  String get general {
+    return Intl.message('General', name: 'general', desc: '', args: []);
+  }
+
+  /// `My Profile`
+  String get myProfile {
+    return Intl.message('My Profile', name: 'myProfile', desc: '', args: []);
+  }
+
+  /// `My Orders`
+  String get myOrders {
+    return Intl.message('My Orders', name: 'myOrders', desc: '', args: []);
+  }
+
+  /// `Favourites`
+  String get favorites {
+    return Intl.message('Favourites', name: 'favorites', desc: '', args: []);
+  }
+
+  /// `Sign Out`
+  String get signOut {
+    return Intl.message('Sign Out', name: 'signOut', desc: '', args: []);
+  }
+
+  /// `Arabic`
+  String get arabic {
+    return Intl.message('Arabic', name: 'arabic', desc: '', args: []);
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message('English', name: 'english', desc: '', args: []);
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message('Language', name: 'language', desc: '', args: []);
+  }
+
+  /// `Mode`
+  String get mode {
+    return Intl.message('Mode', name: 'mode', desc: '', args: []);
+  }
+
+  /// `products in cart`
+  String get cartProductsNumber {
+    return Intl.message(
+      'products in cart',
+      name: 'cartProductsNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sales`
+  String get sales {
+    return Intl.message('Sales', name: 'sales', desc: '', args: []);
+  }
+
+  /// `Shop Now`
+  String get shopNow {
+    return Intl.message('Shop Now', name: 'shopNow', desc: '', args: []);
+  }
+
+  /// `Discount 25%`
+  String get discount {
+    return Intl.message('Discount 25%', name: 'discount', desc: '', args: []);
+  }
+
+  /// `Dark Mode`
+  String get darkMode {
+    return Intl.message('Dark Mode', name: 'darkMode', desc: '', args: []);
+  }
+
+  /// `Light Mode`
+  String get lightMode {
+    return Intl.message('Light Mode', name: 'lightMode', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

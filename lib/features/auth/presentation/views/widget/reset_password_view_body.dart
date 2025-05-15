@@ -18,7 +18,7 @@ class ResetPasswordViewBody extends StatefulWidget {
 
 TextEditingController emailController = TextEditingController();
 Future resetPassword =
-    FirebaseService().resetPassword(emailController.text.trim());
+    FirebaseAuthService().resetPassword(emailController.text.trim());
 
 class _ResetPasswordViewBodyState extends State<ResetPasswordViewBody> {
   @override

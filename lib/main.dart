@@ -18,13 +18,14 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  FirebaseService.firebaseUserState();
+
   initDi();
   Bloc.observer = CustomBlocObserver();
+
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await CacheHelper.init();
   FlutterNativeSplash.remove();
-  Stripe.publishableKey=ApiKeys.publishableKey;
+  Stripe.publishableKey = ApiKeys.publishableKey;
   runApp(
     const FruitsHub(),
   );

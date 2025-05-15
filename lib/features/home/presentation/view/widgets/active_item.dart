@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
+import 'package:fruits_hub/features/home/presentation/manager/provider/locale_provider.dart';
+import 'package:provider/provider.dart';
 
 class ActiveItem extends StatelessWidget {
   const ActiveItem({super.key, required this.title, required this.image});
   final String title, image;
   @override
   Widget build(BuildContext context) {
+    var locale = Provider.of<LocaleProvider>(context, listen: false);
     final colors = Theme.of(context).colorScheme;
     return Center(
       child: Container(
-        padding: const EdgeInsets.only(left: 16),
+        padding: locale.locale.languageCode == 'ar'
+            ? const EdgeInsets.only(left: 8)
+            : const EdgeInsets.only(right: 8),
         decoration: BoxDecoration(
           color: colors.outline,
           borderRadius: const BorderRadius.all(

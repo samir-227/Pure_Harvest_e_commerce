@@ -23,8 +23,7 @@ class UserAppBar extends StatelessWidget {
         ),
       ),
       subtitle: Text(
-        getUserDataFromCache().name,
-        textAlign: TextAlign.right,
+        getUserDataFromCache().name ,
         style: TextStyles.bold16.copyWith(
           color: colors.onSurface,
         ),

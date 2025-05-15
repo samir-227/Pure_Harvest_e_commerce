@@ -7,21 +7,21 @@ import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/errors/exceptions.dart';
 import 'package:fruits_hub/core/errors/failure.dart';
 import 'package:fruits_hub/core/helpers/cache_helper.dart';
+import 'package:fruits_hub/core/networking/auth_service.dart';
 import 'package:fruits_hub/core/networking/data_base_service.dart';
-import 'package:fruits_hub/core/networking/firebase_auth_service.dart';
 import 'package:fruits_hub/features/auth/data/models/user_model.dart';
 import 'package:fruits_hub/features/auth/domain/entities/user_entity.dart';
 import 'package:fruits_hub/features/auth/domain/repos/auth_repo.dart';
 
 class AuthRepoImpl implements IAuthRepo {
   /// Firebase service for authentication
-  final FirebaseService firebaseService;
+  final AuthService authService;
 
   /// Database service for storing and retrieving user data
   final DatabaseService databaseService;
 
   /// Constructor
-  AuthRepoImpl({required this.databaseService, required this.firebaseService});
+  AuthRepoImpl({required this.databaseService, required this.authService});
 
   /// Create user with email and password
   /// and save user to database
@@ -31,8 +31,7 @@ class AuthRepoImpl implements IAuthRepo {
     User? user;
     try {
       // Create user with email and password
-      user = await firebaseService.createUserWithEmailAndPassword(
-          email: email, password: password);
+      user = await authService.signUpWithEmail(email, password);
 
       // Convert user model to user entity
       UserEntity userEntity =
@@ -67,11 +66,10 @@ class AuthRepoImpl implements IAuthRepo {
   Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
       String email, String password) async {
     try {
-      final user = await firebaseService.signInWithEmailAndPassword(
-          email: email, password: password);
+      final user = await authService.signInWithEmail(email, password);
 
       // Check if user is already logged in
-      var isUserLoggedIn = firebaseService.isLoggedIn();
+      var isUserLoggedIn = authService.isLoggedIn();
       CacheHelper.set(key: 'isUserLoggedIn', value: isUserLoggedIn);
 
       // Get current user
@@ -100,7 +98,7 @@ class AuthRepoImpl implements IAuthRepo {
   Future<Either<Failure, UserEntity>> signInWithGoogle() async {
     User? user;
     try {
-      user = await firebaseService.signInWithGoogle();
+      user = await authService.signInWithGoogle();
 
       // Check if user is already logged in
       var isUserExist = await databaseService.isDataExist(
@@ -113,7 +111,7 @@ class AuthRepoImpl implements IAuthRepo {
         // Add user to database
         await addUser(user: UserModel.fromFireBase(user));
       }
-      var isUserLoggedIn = firebaseService.isLoggedIn();
+      var isUserLoggedIn = authService.isLoggedIn();
       CacheHelper.set(key: kIsUserLoggedIn, value: isUserLoggedIn);
       return Right(UserModel.fromFireBase(user));
     } on CustomException catch (e) {
@@ -140,7 +138,7 @@ class AuthRepoImpl implements IAuthRepo {
   Future<Either<Failure, UserEntity>> signInWithFacebook() async {
     User? user;
     try {
-      user = await firebaseService.signInWithFacebook();
+      user = await authService.signInWithFacebook();
 
       // Check if user is already logged in
       var isUserExist = await databaseService.isDataExist(
@@ -186,16 +184,15 @@ class AuthRepoImpl implements IAuthRepo {
     await databaseService.addData(
       path: BackendEndpoint.addUserData,
       data: UserModel.fromEntity(user).toMap(),
-      documentId: user.uId,
+      documentId: user.email,
     );
   }
 
   /// Get current user
   @override
   Future<UserEntity> getCurrentUser({required String uId}) async {
-    var snapshot = await databaseService.getData(
+    var user = await databaseService.getData(
         path: BackendEndpoint.addUserData, documentId: uId);
-    var user = snapshot.data() as Map<String, dynamic>;
     return UserModel.fromJson(user);
   }
 

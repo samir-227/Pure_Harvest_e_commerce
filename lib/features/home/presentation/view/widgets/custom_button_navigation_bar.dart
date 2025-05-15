@@ -19,19 +19,19 @@ class _CustomButtonNavigationBarState extends State<CustomButtonNavigationBar> {
       width: 375,
       height: 70,
       decoration: ShapeDecoration(
-        color: colors.onPrimary,
+        color: colors.surface,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
           ),
         ),
-        shadows: const [
+        shadows: [
           BoxShadow(
-            color: Color(0x19000000),
-            blurRadius: 50,
-            offset: Offset(0, -2),
-            spreadRadius: 0,
+            color: colors.onSurfaceVariant,
+            blurRadius: 1,
+            offset: const Offset(0, -.2),
+            spreadRadius: .5,
           ),
         ],
       ),

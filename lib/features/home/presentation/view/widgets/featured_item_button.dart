@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
+import 'package:fruits_hub/generated/l10n.dart';
 
 class FeaturedItemButton extends StatelessWidget {
   const FeaturedItemButton({
@@ -24,7 +25,7 @@ class FeaturedItemButton extends StatelessWidget {
       ),
       onPressed: () {},
       child: Text(
-        'تسوق الآن',
+        S.of(context).shopNow,
         style: TextStyles.bold13.copyWith(
           color: colors.primary,
         ),

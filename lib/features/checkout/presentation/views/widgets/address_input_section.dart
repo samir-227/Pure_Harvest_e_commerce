@@ -52,7 +52,7 @@ class AddressInputSection extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              CustomTextFormField(  
+              CustomTextFormField(    
                   onSaved: (value) {
                     shippingAddress.city = value;
                   },

@@ -13,32 +13,69 @@ class FirestoreService implements DatabaseService {
       await firestore.collection(path).doc(documentId).set(data);
     } else {
       await firestore.collection(path).add(data);
+
     }
   }
 
+  // @override
+  // Future<dynamic> getData({
+  //   required String path,
+  //   String? documentId,
+  //   Map<String, dynamic>? query,
+  // }) async {
+  //   if (documentId != null) {
+  //     final result = firestore.collection(path).doc(documentId).get();
+  //     return await result;
+  //   } else {
+  //     Query<Map<String, dynamic>> data = firestore.collection(path);
+  //     if (query != null) {
+  //       if (query['orderBy'] != null) {
+  //         data.orderBy(query['orderBy'], descending: query['descending']);
+  //       }
+  //       if (query['limit'] != null) {
+  //         data.limit(query['limit']);
+  //       }
+  //     }
+  //     var result = await data.get();
+  //     return result.docs.map((e) => e.data()).toList();
+  //   }
+  // }
   @override
-  Future<dynamic> getData({
-    required String path,
-    String? documentId,
-    Map<String, dynamic>? query,
-  }) async {
+Future<dynamic> getData({
+  required String path,
+  String? documentId,
+  Map<String, dynamic>? query,
+}) async {
+  try {
     if (documentId != null) {
-      final result = firestore.collection(path).doc(documentId).get();
-      return await result;
+      final doc = await firestore.collection(path).doc(documentId).get();
+      if (doc.exists) {
+        return doc.data();
+      } else {
+        return null;
+      }
     } else {
       Query<Map<String, dynamic>> data = firestore.collection(path);
+
       if (query != null) {
         if (query['orderBy'] != null) {
-          data.orderBy(query['orderBy'], descending: query['descending']);
+          data = data.orderBy(
+            query['orderBy'],
+            descending: query['descending'] ?? false,
+          );
         }
         if (query['limit'] != null) {
-          data.limit(query['limit']);
+          data = data.limit(query['limit']);
         }
       }
-      var result = await data.get();
+
+      final result = await data.get();
       return result.docs.map((e) => e.data()).toList();
     }
+  } catch (e) {
+    rethrow;
   }
+}
 
   @override
   Future<bool> isDataExist({required String path, String? documentId}) async {

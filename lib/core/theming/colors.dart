@@ -42,5 +42,5 @@ class DarkThemeColors {
   static const Color onSurface = Color(0xFFFFFFFF); // Main text
   static const Color onBackground = Color(0xFFFFFFFF); // Text on background
 
-  static const Color outline = Color(0xffF3F5F7); // Borders
+  static const Color outline = Color(0xff171717); // Borders
 }
