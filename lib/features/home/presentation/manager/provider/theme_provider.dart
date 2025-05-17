@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/helpers/cache_helper.dart';
 import 'package:fruits_hub/core/theming/theme_data.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class ThemeProvider extends ChangeNotifier {
 // Key for storing theme preference in SharedPreferences
-  static const String _themeKey = "isDarkMode";
 
 // Track the current theme state
-// _isDarkMode my Theme State
   bool isDarkMode = false;
   ThemeData get() => isDarkMode ? AppThemes.darkTheme : AppThemes.lightTheme;
 

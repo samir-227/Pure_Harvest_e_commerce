@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:fruits_hub/core/helpers/cache_helper.dart';
 import 'package:fruits_hub/core/routing/app_router.dart';
 import 'package:fruits_hub/core/theming/theme_data.dart';
 import 'package:fruits_hub/features/home/presentation/manager/provider/locale_provider.dart';
 import 'package:fruits_hub/features/home/presentation/manager/provider/theme_provider.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-class FruitsHub extends StatelessWidget {
+class FruitsHub extends StatefulWidget {
   const FruitsHub({super.key});
 
+  @override
+  State<FruitsHub> createState() => _FruitsHubState();
+}
+
+class _FruitsHubState extends State<FruitsHub> {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -19,8 +24,7 @@ class FruitsHub extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => ThemeProvider()),
       ],
       child: FutureBuilder(
-        future: SharedPreferences
-            .getInstance(), // Ensure SharedPreferences is ready
+        future: CacheHelper.init(), // Ensure SharedPreferences is ready
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             return Consumer<ThemeProvider>(

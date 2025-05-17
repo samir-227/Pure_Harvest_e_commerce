@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:fruits_hub/core/constants/app_images.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
-import 'package:fruits_hub/generated/l10n.dart';
+
 
 class ProfileItem extends StatelessWidget {
   const ProfileItem({
