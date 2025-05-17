@@ -8,9 +8,7 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:fruits_hub/core/errors/exceptions.dart';
 import 'package:fruits_hub/core/networking/auth_service.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-// Open/Closed Principle applied in this class. I can extend FirebaseAuthService by adding new methods like signInWithApple without changing existing logic.
 
-// singleton responsibility pattern applied in this class. FirebaseAuthService is responsible only for authentication logic and not for any other business logic or handling ui & create only one instance of signIn methods.
 class FirebaseAuthService implements AuthService {
   final FirebaseAuth _firebaseAuth;
   final GoogleSignIn _googleSignIn;
@@ -88,6 +86,8 @@ class FirebaseAuthService implements AuthService {
       throw CustomException(message: "فشل تسجيل الخروج.");
     }
   }
+  
+
 
   @override
   Future<User> signInWithGoogle() async {
@@ -179,4 +179,11 @@ class FirebaseAuthService implements AuthService {
             message: 'لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى.');
     }
   }
+  
+  @override
+  Future<void> deleteUser() async {
+    await FirebaseAuth.instance.currentUser!.delete();
+
+  }
+
 }

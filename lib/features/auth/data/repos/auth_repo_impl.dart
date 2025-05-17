@@ -7,6 +7,7 @@ import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/errors/exceptions.dart';
 import 'package:fruits_hub/core/errors/failure.dart';
 import 'package:fruits_hub/core/helpers/cache_helper.dart';
+import 'package:fruits_hub/core/networking/auth_result.dart';
 import 'package:fruits_hub/core/networking/auth_service.dart';
 import 'package:fruits_hub/core/networking/data_base_service.dart';
 import 'package:fruits_hub/features/auth/data/models/user_model.dart';
@@ -14,7 +15,7 @@ import 'package:fruits_hub/features/auth/domain/entities/user_entity.dart';
 import 'package:fruits_hub/features/auth/domain/repos/auth_repo.dart';
 
 class AuthRepoImpl implements IAuthRepo {
-  /// Firebase service for authentication
+  /// Auth service for authentication
   final AuthService authService;
 
   /// Database service for storing and retrieving user data
@@ -95,43 +96,78 @@ class AuthRepoImpl implements IAuthRepo {
   /// Sign in user with Google
   /// and return user entity
   @override
-  Future<Either<Failure, UserEntity>> signInWithGoogle() async {
-    User? user;
-    try {
-      user = await authService.signInWithGoogle();
+  Future<Either<Failure, SocialSignInResult>> signInWithGoogle() async {
+  User? user;
+  try {
+    // Sign in with Google
+    user = await authService.signInWithGoogle();
 
-      // Check if user is already logged in
-      /********* */
-      var isUserExist = await databaseService.isDataExist(
-          documentId: user.email!, path: BackendEndpoint.addUserData);
+    // Check if user exists in Firestore
+    final isUserExist = await databaseService.isDataExist(
+      documentId: user.email!,
+      path: BackendEndpoint.addUserData,
+    );
 
-      // If user is already logged in
-      if (isUserExist) {
-        await getCurrentUser(email: user.email!);
-      } else {
-        // Add user to database
-        await addUser(user: UserModel.fromFireBase(user));
-      }
-      var isUserLoggedIn = authService.isLoggedIn();
-      CacheHelper.set(key: kIsUserLoggedIn, value: isUserLoggedIn);
-      return Right(UserModel.fromFireBase(user));
-    } on CustomException catch (e) {
-      if (user != null) {
-        await user.delete();
-      }
-      return left(ServerFailure(message: e.message));
-    } catch (e) {
-      if (user != null) {
-        await user.delete();
-      }
-      log(" Exception in AuthRepoImpl.signInWithGoogle: ${e.toString()}");
-      return left(
-        ServerFailure(
-          message: 'حدث خطأ ما. الرجاء المحاولة مرة اخرى.',
-        ),
-      );
+    final isLoggedIn = authService.isLoggedIn();
+    CacheHelper.set(key: kIsUserLoggedIn, value: isLoggedIn);
+
+    if (!isUserExist) {
+      // User is new -> go to complete sign-up
+      final newUser = UserModel.fromFireBase(user);
+      return Right(SocialSignInResult(user: newUser, isNewUser: true));
+    } else {
+      // Existing user -> fetch their profile
+      final existingUser = await getCurrentUser(email: user.email!);
+      await saveUserDataInCash(user: existingUser);
+      return Right(SocialSignInResult(user: existingUser, isNewUser: false));
     }
+  } on CustomException catch (e) {
+    if (user != null) await user.delete();
+    return left(ServerFailure(message: e.message));
+  } catch (e) {
+    if (user != null) await user.delete();
+    log("Exception in signInWithGoogle: ${e.toString()}");
+    return left(ServerFailure(message: 'حدث خطأ ما. الرجاء المحاولة مرة أخرى.'));
   }
+}
+
+  // Future<Either<Failure, UserEntity>> signInWithGoogle() async {
+  //   User? user;
+  //   try {
+  //     user = await authService.signInWithGoogle();
+
+  //     // Check if user is already logged in
+  //     /********* */
+  //     var isUserExist = await databaseService.isDataExist(
+  //         documentId: user.email!, path: BackendEndpoint.addUserData);
+
+  //     // If user is already logged in
+  //     if (isUserExist) {
+  //       await getCurrentUser(email: user.email!);
+  //     } else {
+  //       // Add user to database
+  //       await addUser(user: UserModel.fromFireBase(user));
+  //     }
+  //     var isUserLoggedIn = authService.isLoggedIn();
+  //     CacheHelper.set(key: kIsUserLoggedIn, value: isUserLoggedIn);
+  //     return Right(UserModel.fromFireBase(user));
+  //   } on CustomException catch (e) {
+  //     if (user != null) {
+  //       await user.delete();
+  //     }
+  //     return left(ServerFailure(message: e.message));
+  //   } catch (e) {
+  //     if (user != null) {
+  //       await user.delete();
+  //     }
+  //     log(" Exception in AuthRepoImpl.signInWithGoogle: ${e.toString()}");
+  //     return left(
+  //       ServerFailure(
+  //         message: 'حدث خطأ ما. الرجاء المحاولة مرة اخرى.',
+  //       ),
+  //     );
+  //   }
+  // }
 
   /// Sign in user with Facebook
   /// and return user entity

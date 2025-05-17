@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:fruits_hub/core/errors/failure.dart';
+import 'package:fruits_hub/core/networking/auth_result.dart';
 import 'package:fruits_hub/features/auth/domain/entities/user_entity.dart';
 
 abstract class IAuthRepo {
@@ -11,7 +12,7 @@ abstract class IAuthRepo {
   Future addUser({required UserEntity user});
   Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
       String email, String password);
-  Future<Either<Failure, UserEntity>> signInWithGoogle();
+  Future<Either<Failure, SocialSignInResult>> signInWithGoogle();
   Future<Either<Failure, UserEntity>> signInWithFacebook();
   Future<Either<Failure, UserEntity>> signInWithApple();
   Future<UserEntity> getCurrentUser({required String email});

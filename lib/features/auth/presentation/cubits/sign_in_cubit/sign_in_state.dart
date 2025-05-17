@@ -7,6 +7,12 @@ sealed class SignInState extends Equatable {
   List<Object> get props => [];
 }
 
+
+final class AuthState extends SignInState {
+  final UserEntity user;
+  final bool isNewUser;
+  const AuthState(this.user, this.isNewUser);
+}
 final class SignInInitial extends SignInState {}
 
 final class SignInLoading extends SignInState {}

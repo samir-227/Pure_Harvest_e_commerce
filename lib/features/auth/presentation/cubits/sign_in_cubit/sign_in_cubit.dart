@@ -23,7 +23,7 @@ class SignInCubit extends Cubit<SignInState> {
     final result = await authRepo.signInWithGoogle();
     result.fold(
       (failure) => emit(SignInFailure(failure.message)),
-      (user) => emit(SignInSuccess(user)),
+      (result) => emit(AuthState(result.user, result.isNewUser)),
     );
   }
 
