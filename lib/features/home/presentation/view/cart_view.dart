@@ -9,7 +9,7 @@ class CartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => CartItemCubit(),
+      create: (context) => CartItemCubit()..fetchLocalProducts(),
       child: const CartViewBody(),
     );
   }

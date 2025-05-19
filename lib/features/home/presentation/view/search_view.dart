@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruits_hub/core/cubits/products_cubit/products_cubit.dart';
 import 'package:fruits_hub/core/di/get_it.dart';
 import 'package:fruits_hub/core/repos/products_repo.dart';
 import 'package:fruits_hub/core/widgets/custom_app_bar.dart';
@@ -19,7 +18,7 @@ class SearchView extends StatelessWidget {
       child: Scaffold(
         appBar: buildAppBar(context, title: S.of(context).search),
         body: BlocProvider(
-          create: (context) => SearchCubit(sl<ProductsRepo>()),
+          create: (context) => SearchCubit(sl<ProductsRepo>())..getProducts(),
           child: const SearchViewBody(),
         ),
       ),

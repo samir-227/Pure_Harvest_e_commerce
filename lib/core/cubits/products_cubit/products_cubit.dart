@@ -9,13 +9,14 @@ class ProductsCubit extends Cubit<ProductsState> {
   ProductsCubit(this.productsRepo) : super(ProductsInitial());
   final ProductsRepo productsRepo;
   int productsLength = 0;
-
+  List<ProductEntity> products = [];
   Future<void> getProducts() async {
     emit(ProductsLoading());
     final result = await productsRepo.getProducts();
     result.fold((failure) => emit(ProductsFailure(errMessage: failure.message)),
         (products) {
       productsLength = products.length;
+      products = products;
       emit(ProductsSuccess(products: products));
     });
   }
@@ -30,18 +31,4 @@ class ProductsCubit extends Cubit<ProductsState> {
     });
   }
 
-  Future <void> getProductsByName(String name) async {
-    emit(ProductsLoading());
-    try {
-      final result = await productsRepo.getProductsByName(name);
-      result.fold((failure) => emit(ProductsFailure(errMessage: failure.message)),
-          (products) {
-        productsLength = products.length;
-        emit(ProductsSuccess(products: products));
-      });
-    } catch (e) {
-      emit(ProductsFailure(errMessage: e.toString()));
-    }
-    
-  }
 }

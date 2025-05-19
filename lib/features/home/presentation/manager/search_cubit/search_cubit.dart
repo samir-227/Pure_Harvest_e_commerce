@@ -8,21 +8,22 @@ part 'search_state.dart';
 class SearchCubit extends Cubit<SearchState> {
   SearchCubit(this.productsRepo) : super(SearchInitial());
   final ProductsRepo productsRepo;
-   int productsLength = 0;
-
-      Future <void> getProductsByName(String name) async {
+  int productsLength = 0;
+  List<ProductEntity> products = [];
+  Future<void> getProducts() async {
     emit(SearchLoading());
-    try {
-      final result = await productsRepo.getProductsByName(name);
-      result.fold((failure) => emit(SearchFailure( failure.message)),
-          (products) {
-        productsLength = products.length;
-        emit(SearchSuccess(products));
-      });
-    } catch (e) {
-      emit(SearchFailure( e.toString()));
-    }
-    
-  }
+    final result = await productsRepo.getProducts();
+    result.fold((failure) => emit(SearchFailure(failure.message)), (products) {
+      productsLength = products.length;
+      this.products = products;
+      emit(SearchSuccess(products));
+    });
   }
 
+  void getProductsByName(String name) {
+    emit(SearchLoading());
+    final result = productsRepo.getProductsByName(name, products);
+    productsLength = result.length;
+    emit(SearchSuccess(result));
+  }
+}

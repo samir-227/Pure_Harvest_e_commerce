@@ -21,7 +21,8 @@ class _FruitsHubState extends State<FruitsHub> {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => LocaleProvider()),
-        ChangeNotifierProvider(create: (context) => ThemeProvider()),
+        ChangeNotifierProvider(
+            create: (context) => ThemeProvider()..loadCurrentMode()),
       ],
       child: FutureBuilder(
         future: CacheHelper.init(), // Ensure SharedPreferences is ready
