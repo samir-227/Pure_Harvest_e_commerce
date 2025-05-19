@@ -9,6 +9,7 @@ import 'package:fruits_hub/features/home/domain/entities/cart_entity.dart';
 import 'package:fruits_hub/features/home/presentation/view/main_view.dart';
 import 'package:fruits_hub/features/home/presentation/view/products_view.dart';
 import 'package:fruits_hub/features/home/presentation/view/profile_view.dart';
+import 'package:fruits_hub/features/home/presentation/view/search_view.dart';
 import 'package:fruits_hub/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -80,6 +81,11 @@ sealed class AppRouter {
         path: ProfileView.routeName,
         name: ProfileView.routeName,
         builder: (context, state) => const ProfileView(),
+      ),
+      GoRoute(
+        path: SearchView.routeName,
+        name: SearchView.routeName,
+        builder: (context, state) => const SearchView(),
       ),
     ],
   );

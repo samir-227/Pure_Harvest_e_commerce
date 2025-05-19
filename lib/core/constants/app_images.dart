@@ -78,6 +78,8 @@ class AppImages {
 
   static const String imagesSearchIcon = "assets/images/search_icon.svg";
 
+  static const String imagesSearchResult = "assets/images/search_result.svg";
+
   static const String imagesSplashCircles = "assets/images/splash-Circles.svg";
 
   static const String imagesSplashLogo = "assets/images/splash_logo.svg";

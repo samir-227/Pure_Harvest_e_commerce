@@ -44,14 +44,4 @@ class ProductsCubit extends Cubit<ProductsState> {
     }
     
   }
-
-  // Future<void> getProductsByName(String name) async {
-  //   emit(ProductsLoading());
-  //   final result = await productsRepo.getProductsByName(name);
-  //   result.fold((failure) => emit(ProductsFailure(errMessage: failure.message)),
-  //       (products) {
-  //     productsLength = products.length;
-  //     emit(ProductsSuccess(products: products));
-  //   });
-  // }
 }

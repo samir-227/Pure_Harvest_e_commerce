@@ -74,6 +74,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "enterYourEmail": MessageLookupByLibrary.simpleMessage(
       "ادخل بريدك الالكتروني",
     ),
+    "failedSearch": MessageLookupByLibrary.simpleMessage(
+      "لم يتم العثور على نتايج من فضلك قم باعادة البحث",
+    ),
     "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "forgetPasswordViewSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -124,7 +127,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "result": MessageLookupByLibrary.simpleMessage("نتائج"),
     "review": MessageLookupByLibrary.simpleMessage("المراجعة"),
     "sales": MessageLookupByLibrary.simpleMessage("عروض العيد"),
+    "search": MessageLookupByLibrary.simpleMessage("البحث"),
     "searchBarHintText": MessageLookupByLibrary.simpleMessage("ابحث عن ...."),
+    "searchResult": MessageLookupByLibrary.simpleMessage("نتايج البحث"),
     "shipping": MessageLookupByLibrary.simpleMessage("الشحن"),
     "shopNow": MessageLookupByLibrary.simpleMessage("تسوق الان"),
     "signOut": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),

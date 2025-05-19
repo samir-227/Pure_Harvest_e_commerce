@@ -644,6 +644,31 @@ class S {
   String get lightMode {
     return Intl.message('Light Mode', name: 'lightMode', desc: '', args: []);
   }
+
+  /// `Search`
+  String get search {
+    return Intl.message('Search', name: 'search', desc: '', args: []);
+  }
+
+  /// `Search Result`
+  String get searchResult {
+    return Intl.message(
+      'Search Result',
+      name: 'searchResult',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No search results found please try again`
+  String get failedSearch {
+    return Intl.message(
+      'No search results found please try again',
+      name: 'failedSearch',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

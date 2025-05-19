@@ -79,6 +79,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "enterYourEmail": MessageLookupByLibrary.simpleMessage("Enter Your Email"),
+    "failedSearch": MessageLookupByLibrary.simpleMessage(
+      "No search results found please try again",
+    ),
     "favorites": MessageLookupByLibrary.simpleMessage("Favourites"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
     "forgetPasswordViewSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -127,9 +130,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "result": MessageLookupByLibrary.simpleMessage("Result"),
     "review": MessageLookupByLibrary.simpleMessage("Review"),
     "sales": MessageLookupByLibrary.simpleMessage("Sales"),
+    "search": MessageLookupByLibrary.simpleMessage("Search"),
     "searchBarHintText": MessageLookupByLibrary.simpleMessage(
       "Search about...",
     ),
+    "searchResult": MessageLookupByLibrary.simpleMessage("Search Result"),
     "shipping": MessageLookupByLibrary.simpleMessage("Shipping"),
     "shopNow": MessageLookupByLibrary.simpleMessage("Shop Now"),
     "signOut": MessageLookupByLibrary.simpleMessage("Sign Out"),

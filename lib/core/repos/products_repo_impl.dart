@@ -40,7 +40,7 @@ class ProductsRepoImpl implements ProductsRepo {
       return Left(ServerFailure(message: 'Failed to get products'));
     }
   }
-
+@override
   Future<Either<Failure, List<ProductEntity>>> getProductsByName(String productName) async {
   try {
     var result = await databaseService.getData(

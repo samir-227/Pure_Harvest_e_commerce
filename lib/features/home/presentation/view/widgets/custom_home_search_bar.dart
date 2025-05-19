@@ -4,24 +4,26 @@ import 'package:fruits_hub/core/constants/app_images.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 
-class CustomSearchBar extends StatelessWidget {
-  const CustomSearchBar({super.key});
+class CustomHomeSearchBar extends StatelessWidget {
+  const CustomHomeSearchBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 40,
       decoration: BoxDecoration(
+       
         boxShadow: [
           BoxShadow(
             color: Theme.of(context).colorScheme.onSurfaceVariant,
-            blurRadius: 1,
+            blurRadius: 5,
             offset: const Offset(0, .2),
             spreadRadius: .3,
           )
         ],
       ),
       child: TextField(
+        enabled: false,
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
           filled: true,

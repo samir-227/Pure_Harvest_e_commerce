@@ -79,7 +79,10 @@
     "shopNow":"Shop Now",
     "discount":"Discount 25%",
     "darkMode":"Dark Mode",
-    "lightMode":"Light Mode"
+    "lightMode":"Light Mode",
+    "search":"Search",
+    "searchResult":"Search Result",
+    "failedSearch":"No search results found please try again"
 
     
     
