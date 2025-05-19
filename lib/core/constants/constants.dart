@@ -4,3 +4,4 @@ const kIsOnBoardingViewSeen = 'isOnBoardingViewSeen';
 const kIsUserLoggedIn = 'isUserLoggedIn';
 const kUserData = 'userData';
 const kIsDarkMode = 'isDarkMode';
+const kLanguageCode = 'languageCode';

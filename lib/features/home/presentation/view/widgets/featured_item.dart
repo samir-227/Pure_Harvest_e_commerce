@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:fruits_hub/core/constants/app_images.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
+import 'package:fruits_hub/features/home/presentation/manager/provider/settings_provider.dart';
 import 'package:fruits_hub/features/home/presentation/view/widgets/featured_item_button.dart';
-import 'package:fruits_hub/features/home/presentation/manager/provider/locale_provider.dart';
 import 'package:fruits_hub/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
@@ -39,7 +39,7 @@ class FeaturedItem extends StatelessWidget {
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: Provider.of<LocaleProvider>(context)
+                    crossAxisAlignment: Provider.of<SettingsProvider>(context)
                                 .locale
                                 .languageCode ==
                             'ar'

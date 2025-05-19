@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
-import 'package:fruits_hub/features/home/presentation/manager/provider/locale_provider.dart';
+import 'package:fruits_hub/features/home/presentation/manager/provider/settings_provider.dart';
 import 'package:provider/provider.dart';
 
 class ActiveItem extends StatelessWidget {
@@ -9,7 +9,7 @@ class ActiveItem extends StatelessWidget {
   final String title, image;
   @override
   Widget build(BuildContext context) {
-    var locale = Provider.of<LocaleProvider>(context, listen: false);
+    var locale = Provider.of<SettingsProvider>(context, listen: false);
     final colors = Theme.of(context).colorScheme;
     return Center(
       child: Container(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/theming/app_text_style.dart';
 import 'package:fruits_hub/core/widgets/notification_widget.dart';
-import 'package:fruits_hub/features/home/presentation/manager/provider/theme_provider.dart';
+import 'package:fruits_hub/features/home/presentation/manager/provider/settings_provider.dart';
 import 'package:provider/provider.dart';
 
 AppBar buildAppBar(context,
@@ -25,7 +25,7 @@ AppBar buildAppBar(context,
         onTap: () {
           Navigator.pop(context);
         },
-        child: Provider.of<ThemeProvider>(context).isDarkMode
+        child: Provider.of<SettingsProvider>(context).isDarkMode
             ? const Icon(
                 Icons.arrow_back_ios_new,
                 color: Colors.white,

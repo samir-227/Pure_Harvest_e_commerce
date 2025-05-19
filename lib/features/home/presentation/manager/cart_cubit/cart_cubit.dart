@@ -9,12 +9,13 @@ class CartCubit extends Cubit<CartState> {
   CartCubit() : super(CartInitial());
   CartEntity cartEntity = CartEntity(cartItems: []);
   void addProduct(ProductEntity productEntity) {
-    CartItemEntity cartItemEntity = cartEntity.getCartItem(productEntity);
-    if (cartEntity.isExist(productEntity)) {
-      cartItemEntity.incrementQuantity();
-    } else {
-      cartEntity.addCartItem(cartItemEntity);
-    }
+    // Cache Helper
+    // CartItemEntity cartItemEntity = cartEntity.getCartItem(productEntity);
+    // if (cartEntity.isExist(productEntity)) {
+    //   cartItemEntity.incrementQuantity();
+    // } else {
+    //   cartEntity.addCartItem(cartItemEntity);
+    // }
     emit(CartProductAdded());
   }
 
