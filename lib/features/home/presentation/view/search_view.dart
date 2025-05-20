@@ -13,14 +13,11 @@ class SearchView extends StatelessWidget {
   static const String routeName = '/search';
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CartCubit(),
-      child: Scaffold(
-        appBar: buildAppBar(context, title: S.of(context).search),
-        body: BlocProvider(
-          create: (context) => SearchCubit(sl<ProductsRepo>())..getProducts(),
-          child: const SearchViewBody(),
-        ),
+    return Scaffold(
+      appBar: buildAppBar(context, title: S.of(context).search),
+      body: BlocProvider(
+        create: (context) => SearchCubit(sl<ProductsRepo>())..getProducts(),
+        child: const SearchViewBody(),
       ),
     );
   }

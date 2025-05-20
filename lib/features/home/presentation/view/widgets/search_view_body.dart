@@ -34,7 +34,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
                   },
                 ),
                 const SizedBox(height: 16),
-                  Text(
+                Text(
                   S.of(context).searchResult,
                   style: TextStyles.regular13.copyWith(
                       color: Theme.of(context).colorScheme.onSurfaceVariant),

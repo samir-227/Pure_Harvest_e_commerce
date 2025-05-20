@@ -14,6 +14,7 @@ class CartViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var cartCubit = context.watch<CartCubit>();
     return Scaffold(
       body: Stack(
         children: [
@@ -44,21 +45,20 @@ class CartViewBody extends StatelessWidget {
                     ? const SizedBox()
                     : const CustomDivider(),
               ),
-              CartItemList(
-                  cartItems: context.watch<CartCubit>().cartEntity.cartItems),
+              CartItemList(cartItems: cartCubit.cartEntity.cartItems),
               SliverToBoxAdapter(
-                child: context.watch<CartCubit>().cartEntity.cartItems.isEmpty
+                child: context.read<CartCubit>().cartEntity.cartItems.isEmpty
                     ? const SizedBox()
                     : const CustomDivider(),
               ),
             ],
           ),
-          context.watch<CartCubit>().cartEntity.cartItems.isEmpty
+          context.read<CartCubit>().cartEntity.cartItems.isEmpty
               ? const SizedBox()
               : Positioned(
                   left: 16,
                   right: 16,
-                  bottom: MediaQuery.of(context).size.height * .09,
+                  bottom: MediaQuery.of(context).size.height * .07,
                   child: const CustomCartButton(),
                 )
         ],

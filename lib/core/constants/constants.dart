@@ -5,3 +5,4 @@ const kIsUserLoggedIn = 'isUserLoggedIn';
 const kUserData = 'userData';
 const kIsDarkMode = 'isDarkMode';
 const kLanguageCode = 'languageCode';
+const kCartBoxName = 'cartItems';

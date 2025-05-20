@@ -6,6 +6,10 @@ sealed class CartState {
 
 final class CartInitial extends CartState {}
 
-final class CartProductAdded extends CartState {}
+final class CartLoaded extends CartState {
+  final CartEntity cartEntity;
+
+  const CartLoaded({required this.cartEntity});
+}
 
 final class CartProductRemoved extends CartState {}

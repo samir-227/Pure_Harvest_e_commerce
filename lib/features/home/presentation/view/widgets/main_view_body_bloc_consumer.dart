@@ -12,7 +12,7 @@ class MainViewBodyBlocConsumer extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<CartCubit, CartState>(
         listener: (context, state) {
-          if (state is CartProductAdded) {
+          if (state is CartLoaded) {
             showBar(
                 context,
                 S

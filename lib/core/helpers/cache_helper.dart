@@ -1,16 +1,23 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:fruits_hub/core/constants/constants.dart';
+import 'package:fruits_hub/features/home/domain/entities/cart_item_entity.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+/// Cache helper class that provides methods to store and retrieve data
+/// from SharedPreferences and FlutterSecureStorage.
 class CacheHelper {
   static late SharedPreferences _prefs;
-
-  static const _storage = FlutterSecureStorage();
-
+  static late FlutterSecureStorage _storage;
   static Future<void> init() async {
     _prefs = await SharedPreferences.getInstance();
+    _storage = const FlutterSecureStorage();
+
+
   }
 
-  // writing data
+
   static Future<void> set({required String key, required dynamic value}) async {
     if (value is String) {
       await _prefs.setString(key, value);
@@ -27,7 +34,7 @@ class CacheHelper {
     }
   }
 
-  // Retrieving data
+
   static String getString({required String key}) {
     return _prefs.getString(key) ?? '';
   }
@@ -40,10 +47,12 @@ class CacheHelper {
     return _prefs.getBool(key);
   }
 
+
   static double? getDouble({required String key}) {
     return _prefs.getDouble(key);
   }
 
+  // Retrieves a list of strings from SharedPreferences.
   static List<String>? getStringList({required String key}) {
     return _prefs.getStringList(key);
   }
@@ -69,7 +78,7 @@ class CacheHelper {
     return _storage.read(key: key);
   }
 
-  // Removing Secure Data for specific key
+  // Removing Secure Data for specific key.
   static Future<void> deleteSecureData({required String key}) async {
     await _storage.delete(key: key);
   }
@@ -78,4 +87,41 @@ class CacheHelper {
   static Future<void> deleteAllSecureData() async {
     await _storage.deleteAll();
   }
+
+
+  // Opens the box to store cart items.
+  // Future<Box<CartItemEntity>> _openBox() async {
+  //   return await Hive.openBox<CartItemEntity>(kCartBoxName);
+  // }
+
+  // // Retrieves all cart items.
+  // Future<List<CartItemEntity>> getCartItems() async {
+  //   final box = await _openBox();
+  //   return box.values.toList();
+  // }
+
+  // // Adds a cart item.
+  // Future<void> addCartItem(CartItemEntity item) async {
+  //   final box = await _openBox();
+  //   await box.put(item.product.code, item);
+  // }
+
+  // // Updates a cart item.
+  // Future<void> updateCartItem(CartItemEntity item) async {
+  //   final box = await _openBox();
+  //   await box.put(item.product.code, item);
+  // }
+
+  // // Deletes a cart item.
+  // Future<void> deleteCartItem(String productCode) async {
+  //   final box = await _openBox();
+  //   await box.delete(productCode);
+  // }
+
+  // // Clears the cart.
+  // Future<void> clearCart() async {
+  //   final box = await _openBox();
+  //   await box.clear();
+  // }
 }
+

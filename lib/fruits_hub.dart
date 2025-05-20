@@ -31,7 +31,7 @@ class _FruitsHubState extends State<FruitsHub> {
                   darkTheme: AppThemes.darkTheme,
                   themeMode: context.watch<SettingsProvider>().isDarkMode
                       ? ThemeMode.dark
-                      : ThemeMode.light, // Dynamic theme mode
+                      : ThemeMode.light, 
                   localizationsDelegates: const [
                     S.delegate,
                     GlobalMaterialLocalizations.delegate,
