@@ -7,7 +7,7 @@ import 'package:fruits_hub/core/di/get_it.dart';
 import 'package:fruits_hub/core/helpers/cache_helper.dart';
 import 'package:fruits_hub/core/services/custom_bloc_observer.dart';
 import 'package:fruits_hub/core/utlis/api/api_keys.dart';
-import 'package:fruits_hub/fruits_hub.dart';
+import 'package:fruits_hub/pure_harvest.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -42,7 +42,7 @@ void main() async {
   runApp(
     BlocProvider(
       create: (context) => sl<CartCubit>(),
-      child: const FruitsHub(),
+      child: const PureHarvest(),
     ),
   );
 }

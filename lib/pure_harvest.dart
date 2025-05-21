@@ -7,14 +7,14 @@ import 'package:fruits_hub/features/home/presentation/manager/provider/settings_
 import 'package:fruits_hub/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
-class FruitsHub extends StatefulWidget {
-  const FruitsHub({super.key});
+class PureHarvest extends StatefulWidget {
+  const PureHarvest({super.key});
 
   @override
-  State<FruitsHub> createState() => _FruitsHubState();
+  State<PureHarvest> createState() => _PureHarvestState();
 }
 
-class _FruitsHubState extends State<FruitsHub> {
+class _PureHarvestState extends State<PureHarvest> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -31,7 +31,7 @@ class _FruitsHubState extends State<FruitsHub> {
                   darkTheme: AppThemes.darkTheme,
                   themeMode: context.watch<SettingsProvider>().isDarkMode
                       ? ThemeMode.dark
-                      : ThemeMode.light, 
+                      : ThemeMode.light,
                   localizationsDelegates: const [
                     S.delegate,
                     GlobalMaterialLocalizations.delegate,

@@ -50,7 +50,8 @@ class PageViewItem extends StatelessWidget {
                       context.pushReplacementNamed(SingInView.routeName);
                     },
                     child: Padding(
-                      padding: const EdgeInsets.all(16),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 32),
                       child: Text(S.of(context).skip,
                           style: TextStyles.regular13.copyWith(
                             color: const Color(0xFF949D9E),

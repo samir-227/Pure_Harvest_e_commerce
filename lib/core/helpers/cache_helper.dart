@@ -1,8 +1,4 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:fruits_hub/core/constants/constants.dart';
-import 'package:fruits_hub/features/home/domain/entities/cart_item_entity.dart';
-import 'package:hive/hive.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Cache helper class that provides methods to store and retrieve data

@@ -2,8 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 	<dict>
-	<key>GIDClientID</key>
-		<string>550455957560-q4hjftin1g0g1048537cmueb0comjb0b.apps.googleusercontent.com</string>		
+		<key>GIDClientID</key>
+		<string>550455957560-q4hjftin1g0g1048537cmueb0comjb0b.apps.googleusercontent.com</string>
 		<key>CFBundleDevelopmentRegion</key>
 		<string>$(DEVELOPMENT_LANGUAGE)</string>
 		<key>CFBundleDisplayName</key>
@@ -56,20 +56,20 @@
 				<string>Editor</string>
 				<key>CFBundleURLSchemes</key>
 				<array>
-			<!-- TODO Replace this value: -->
-			<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
-			<string>com.googleusercontent.apps.550455957560-q4hjftin1g0g1048537cmueb0comjb0b</string>
+					<!-- TODO Replace this value: -->
+					<!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+					<string>com.googleusercontent.apps.550455957560-q4hjftin1g0g1048537cmueb0comjb0b</string>
 				</array>
 			</dict>
-		</array>	
+		</array>
 		<key>CFBundleURLTypes</key>
 		<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-			<string>fb3938147563165444</string>
-			</array>
-		</dict>
+			<dict>
+				<key>CFBundleURLSchemes</key>
+				<array>
+					<string>fb3938147563165444</string>
+				</array>
+			</dict>
 		</array>
 		<key>FacebookAppID</key>
 		<string>3938147563165444</string>
@@ -79,8 +79,8 @@
 		<string>{your-app-name}</string>
 		<key>LSApplicationQueriesSchemes</key>
 		<array>
-		<string>fbapi</string>
-		<string>fb-messenger-share-api</string>
-		</array>	
+			<string>fbapi</string>
+			<string>fb-messenger-share-api</string>
+		</array>
 	</dict>
 </plist>
