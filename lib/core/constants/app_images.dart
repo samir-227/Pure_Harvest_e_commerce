@@ -16,6 +16,8 @@ class AppImages {
 
   static const String imagesBoldVector = "assets/images/bold/vector.svg";
 
+  static const String imagesBranding = "assets/images/branding.png";
+
   static const String imagesCamera = "assets/images/Camera.png";
 
   static const String imagesCheck = "assets/images/Check.svg";
@@ -41,6 +43,8 @@ class AppImages {
   static const String imagesFilter2 = "assets/images/filter2.svg";
 
   static const String imagesGoogle = "assets/images/google.svg";
+
+  static const String imagesGroup20 = "assets/images/Group20.png";
 
   static const String imagesItem1BackgroundImage = "assets/images/item-1-background-image.svg";
 
@@ -81,8 +85,6 @@ class AppImages {
   static const String imagesSearchResult = "assets/images/search_result.svg";
 
   static const String imagesSplashCircles = "assets/images/splash-Circles.svg";
-
-  static const String imagesSplashLogo = "assets/images/splash_logo.svg";
 
   static const String imagesSplashLogoAndroid12 = "assets/images/splash_logo_android_12.png";
 

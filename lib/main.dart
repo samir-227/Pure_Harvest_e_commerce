@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:fruits_hub/core/constants/constants.dart';
 import 'package:fruits_hub/core/di/get_it.dart';
 import 'package:fruits_hub/core/helpers/cache_helper.dart';
 import 'package:fruits_hub/core/services/custom_bloc_observer.dart';
@@ -19,7 +18,7 @@ import 'package:fruits_hub/features/home/presentation/manager/cart_cubit/cart_cu
 void main() async {
   final WidgetsBinding widgetsBinding =
       WidgetsFlutterBinding.ensureInitialized();
-
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -27,8 +26,6 @@ void main() async {
   initDi();
   Bloc.observer = CustomBlocObserver();
 
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  FlutterNativeSplash.remove();
   Stripe.publishableKey = ApiKeys.publishableKey;
   await CacheHelper.init();
 
@@ -38,7 +35,7 @@ void main() async {
   Hive.registerAdapter(CartItemEntityAdapter());
 
   // Open Hive box for cart items
-
+  FlutterNativeSplash.remove();
   runApp(
     BlocProvider(
       create: (context) => sl<CartCubit>(),
