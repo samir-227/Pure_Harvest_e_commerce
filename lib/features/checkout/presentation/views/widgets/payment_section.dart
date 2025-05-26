@@ -12,43 +12,45 @@ class PaymentSection extends StatelessWidget {
     var colors = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(height: 24),
-          Text(
-            "${S.of(context).orderSummary} :",
-            style: TextStyles.bold13.copyWith(color: colors.onSecondary),
-          ),
-          const SizedBox(
-            height: 8,
-          ),
-          Container(
-            decoration: ShapeDecoration(
-              color: colors.outline,
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(4)),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 24),
+            Text(
+              "${S.of(context).orderSummary} :",
+              style: TextStyles.bold13.copyWith(color: colors.onSecondary),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Container(
+              decoration: ShapeDecoration(
+                color: colors.outline,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(4)),
+                ),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 16),
+              child: OrderSummaryWidget(colors: colors),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Container(
+              decoration: ShapeDecoration(
+                color: colors.outline,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(4)),
+                ),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 5),
+              child: ShippingAddressWidget(
+                pageController: pageController,
               ),
             ),
-            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 16),
-            child: OrderSummaryWidget(colors: colors),
-          ),
-          const SizedBox(
-            height: 16,
-          ),
-          Container(
-            decoration: ShapeDecoration(
-              color: colors.outline,
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(4)),
-              ),
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 5),
-            child: ShippingAddressWidget(
-              pageController: pageController,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

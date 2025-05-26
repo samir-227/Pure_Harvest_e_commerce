@@ -30,7 +30,7 @@ class FeaturedItem extends StatelessWidget {
                 ),
                 alignment: Alignment.bottomRight,
                 child: Container(
-                  padding: const EdgeInsets.only(right: 33),
+                  padding: const EdgeInsets.only(right: 16, left: 16),
                   width: itemWidth * .5,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
@@ -68,9 +68,7 @@ class FeaturedItem extends StatelessWidget {
                         height: 32,
                         child: FeaturedItemButton(colors: colors),
                       ),
-                      const SizedBox(
-                        height: 29,
-                      ),
+                      const Spacer(),
                     ],
                   ),
                 ),

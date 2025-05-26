@@ -8,7 +8,6 @@ import 'package:fruits_hub/features/checkout/presentation/cubits/orders_cubit/or
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/check_out_view_body.dart';
 import 'package:fruits_hub/features/checkout/presentation/views/widgets/orders_cubit_bloc_builder.dart';
 import 'package:fruits_hub/features/home/domain/entities/cart_entity.dart';
-import 'package:fruits_hub/features/home/domain/entities/cart_item_entity.dart';
 import 'package:provider/provider.dart';
 
 class CheckOutView extends StatefulWidget {
