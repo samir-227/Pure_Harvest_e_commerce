@@ -1,6 +1,9 @@
 # 🛒 Pure Harvest E‑Commerce App
 
 A full-featured E‑Commerce mobile application built with **Flutter** and powered by **Firebase** backend. It uses **Clean Architecture** and **BLoC** for scalable and maintainable code.
+## 🖼 App Preview
+
+![App Screenshot](assets/images/app_screenshot.jpg)
 
 ## 📦 Tech Stack
 
@@ -23,5 +26,3 @@ A full-featured E‑Commerce mobile application built with **Flutter** and power
 - Place and track orders
 - Change the App theme
 - Localization to Change the App Language
-
-
