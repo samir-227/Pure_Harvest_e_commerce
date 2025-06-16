@@ -1,16 +1,27 @@
-# fruits_hub
+# 🛒 Pure Harvest E‑Commerce App
 
-A new Flutter project.
+A full-featured E‑Commerce mobile application built with **Flutter** and powered by **Firebase** backend. It uses **Clean Architecture** and **BLoC** for scalable and maintainable code.
 
-## Getting Started
+## 📦 Tech Stack
 
-This project is a starting point for a Flutter application.
+- **Flutter (Dart)** for cross-platform UI
+- **Firebase** for:
+  - Authentication (Email & Password)
+  - Cloud Firestore (Database)
+  - Firebase Storage (Images)
+- **Subapase** for:
+  - Storage (Orders & Products data)
+- **Cubit & Provider** for state management
+- **Stripe** for payment processing
+- **Clean Architecture** for code separation and scalability
 
-A few resources to get you started if this is your first Flutter project:
+## ✅ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Sign up / Login with Firebase
+- Browse products (from Firestore)
+- Add to cart, update quantity
+- Place and track orders
+- Change the App theme
+- Localization to Change the App Language
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
