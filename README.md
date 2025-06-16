@@ -50,7 +50,7 @@ Pure_Harvest_e_commerce/
 │   ├── app.dart
 │   └── main.dart
 ├── test/
-│   ├── features/
+│   ├── critical_path_test.dart
 │   └── widget_test.dart
 ├── pubspec.yaml
 └── README.md
